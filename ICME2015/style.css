@@ -1,0 +1,173 @@
+body{
+	background-color: #bfceff;
+	width: 1000px;
+	margin: 20px auto;
+}
+
+a {
+	text-decoration: none;
+}
+a:link {
+	color: #c3d7f1;	
+}
+a:visited {
+	color: #c3d7f1;	
+}
+a:hover {
+	color: #4e6179;	
+}
+
+h2 a {
+	text-decoration: none;
+}
+h2 a:link {
+	color: #4c5e75;	
+}
+h2 a:visited {
+	color: #4c5e75;	
+}
+h2 a:hover {
+	color: #c3d7f1;	
+}
+
+p a {
+	text-decoration: none;
+}
+p a:link {
+	color: #4e6179;	
+}
+p a:visited {
+	color: #4e6179;	
+}
+p a:hover {
+	color: #c3d7f1;	
+}
+
+li a {
+	text-decoration: none;
+}
+li a:link {
+	color: #4e6179;	
+}
+li a:visited {
+	color: #4e6179;	
+}
+li a:hover {
+	color: #c3d7f1;	
+}
+
+td a {
+	text-decoration: none;
+}
+td a:link {
+	color: #4e6179;	
+}
+td a:visited {
+	color: #4e6179;	
+}
+td a:hover {
+	color: #c3d7f1;	
+}
+
+h1{
+	color: #5e7592;
+	font-size: 24px;
+	margin: 0 0 10px 0;
+}
+
+h2{
+	color: #4c5e75;
+	font-size: 20px;
+	margin-top: 0;
+}
+
+h3{
+	margin-bottom: 0;
+	margin-left: 10px;
+	color: #27303c;
+	font-size: 18px;
+}
+
+h4{
+	margin: 15px 0 5px 15px;
+	color: #27303c;
+	font-size: 16px;
+}
+
+img{
+	border: none;
+}
+
+hr{
+	margin: 3px 0;
+	height: 1px;
+	background-color: #bfceff;
+	border: 0;
+}
+
+#top{
+	background-image: url('images/xxx5.jpg');
+	width: 1000px;
+	height: 450px;
+	background-repeat: no-repeat;
+}
+
+#navigate{
+	float: left;
+	width: 200px;
+	padding-top: 5px;
+	padding-bottom: 10px;
+	background-color: #6c86a7;
+}
+
+#mainContent{
+	float: left;
+	width: 770px;
+	padding: 15px;
+	background-color: #ffffff;
+}
+
+#leftContainer{
+	float: left;
+	width: 200px;
+}
+
+#copyright{
+	float: left;
+	width: 1000px;
+	text-align: center;
+	color: #c3d7f1;
+	background-image: url('images/bottom.png');
+	margin: 5px 0;
+	padding: 5px 0;
+}
+
+.navLink{
+	margin-top: 5px;
+	margin-left: 10px;
+}
+
+.indented{
+	position: relative;
+	margin-left: 20px;
+}
+
+.width300{
+	float: left;
+	margin-left: 50px;
+	width: 300px;
+}
+
+.width400{
+	float: left;
+	margin-left: 50px;
+	width: 400px;
+}
+
+.highlighted{
+	color: #6c86a7;
+}
+
+.sponsorImage{
+	margin-left: 120px;
+}

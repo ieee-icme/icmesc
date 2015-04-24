@@ -1,0 +1,958 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="2009 IEEE International Conference on Multimedia &amp; Expo (ICME 2009)" />
+<meta name="keywords" content="ICME, IEEE Conference, Multimedia, Signal processing, Virtual reality, 3-D imaging, human-machine interface, Multimedia networking, Multimedia security, social media, Multimedia applications" />
+<title>2009 IEEE International Conference on Multimedia &amp; Expo (ICME 2009)</title>
+<style type="text/css">
+	@import "style.css";
+</style>
+
+<script type="text/javascript">
+      
+/***********************************************
+* Ultimate Fade-In Slideshow (v1.51): © Dynamic Drive (http://www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit http://www.dynamicdrive.com/ for this script and 100s more.
+***********************************************/
+ 
+var fadeimages=new Array()
+//SET IMAGE PATHS. Extend or contract array as needed
+fadeimages[0]=["images/h_right_1.jpg", "", ""] //plain image syntax
+fadeimages[1]=["images/h_right_3.jpg", "", ""] 
+fadeimages[2]=["images/h_right_4.jpg", "", ""] 
+fadeimages[3]=["images/h_right_5.jpg", "", ""] 
+fadeimages[4]=["images/h_right_6.jpg", "", ""] 
+fadeimages[5]=["images/h_right_7.jpg", "", ""] 
+
+//fadeimages[2]=["photo3.jpg", "http://www.javascriptkit.com", "_new"] //image with link and target syntax
+
+/*
+var fadeimages2=new Array() //2nd array set example. Remove or add more sets as needed.
+//SET IMAGE PATHS. Extend or contract array as needed
+fadeimages2[0]=["photo1.jpg", "", ""] //plain image syntax
+fadeimages2[1]=["photo2.jpg", "http://www.cssdrive.com", ""] //image with link syntax
+fadeimages2[2]=["photo3.jpg", "http://www.javascriptkit.com", "_new"] //image with link and target syntax
+*/
+
+var fadebgcolor="white"
+
+////NO need to edit beyond here/////////////
+ 
+var fadearray=new Array() //array to cache fadeshow instances
+var fadeclear=new Array() //array to cache corresponding clearinterval pointers
+ 
+var dom=(document.getElementById) //modern dom browsers
+var iebrowser=document.all
+ 
+function fadeshow(theimages, fadewidth, fadeheight, borderwidth, delay, pause, displayorder){
+this.pausecheck=pause
+this.mouseovercheck=0
+this.delay=delay
+this.degree=10 //initial opacity degree (10%)
+this.curimageindex=0
+this.nextimageindex=1
+fadearray[fadearray.length]=this
+this.slideshowid=fadearray.length-1
+this.canvasbase="canvas"+this.slideshowid
+this.curcanvas=this.canvasbase+"_0"
+if (typeof displayorder!="undefined")
+theimages.sort(function() {return 0.5 - Math.random();}) //thanks to Mike (aka Mwinter) :)
+this.theimages=theimages
+this.imageborder=parseInt(borderwidth)
+this.postimages=new Array() //preload images
+for (p=0;p<theimages.length;p++){
+this.postimages[p]=new Image()
+this.postimages[p].src=theimages[p][0]
+}
+ 
+var fadewidth=fadewidth+this.imageborder*2
+var fadeheight=fadeheight+this.imageborder*2
+ 
+if (iebrowser&&dom||dom) //if IE5+ or modern browsers (ie: Firefox)
+document.write('<div id="master'+this.slideshowid+'" style="position:relative;width:'+fadewidth+'px;height:'+fadeheight+'px;overflow:hidden;"><div id="'+this.canvasbase+'_0" style="position:absolute;width:'+fadewidth+'px;height:'+fadeheight+'px;top:0;left:0;filter:progid:DXImageTransform.Microsoft.alpha(opacity=10);opacity:0.1;-moz-opacity:0.1;-khtml-opacity:0.1;background-color:'+fadebgcolor+'"></div><div id="'+this.canvasbase+'_1" style="position:absolute;width:'+fadewidth+'px;height:'+fadeheight+'px;top:0;left:0;filter:progid:DXImageTransform.Microsoft.alpha(opacity=10);opacity:0.1;-moz-opacity:0.1;-khtml-opacity:0.1;background-color:'+fadebgcolor+'"></div></div>')
+else
+document.write('<div><img name="defaultslide'+this.slideshowid+'" src="'+this.postimages[0].src+'"></div>')
+ 
+if (iebrowser&&dom||dom) //if IE5+ or modern browsers such as Firefox
+this.startit()
+else{
+this.curimageindex++
+setInterval("fadearray["+this.slideshowid+"].rotateimage()", this.delay)
+}
+}
+
+function fadepic(obj){
+if (obj.degree<100){
+obj.degree+=10
+if (obj.tempobj.filters&&obj.tempobj.filters[0]){
+if (typeof obj.tempobj.filters[0].opacity=="number") //if IE6+
+obj.tempobj.filters[0].opacity=obj.degree
+else //else if IE5.5-
+obj.tempobj.style.filter="alpha(opacity="+obj.degree+")"
+}
+else if (obj.tempobj.style.MozOpacity)
+obj.tempobj.style.MozOpacity=obj.degree/101
+else if (obj.tempobj.style.KhtmlOpacity)
+obj.tempobj.style.KhtmlOpacity=obj.degree/100
+else if (obj.tempobj.style.opacity&&!obj.tempobj.filters)
+obj.tempobj.style.opacity=obj.degree/101
+}
+else{
+clearInterval(fadeclear[obj.slideshowid])
+obj.nextcanvas=(obj.curcanvas==obj.canvasbase+"_0")? obj.canvasbase+"_0" : obj.canvasbase+"_1"
+obj.tempobj=iebrowser? iebrowser[obj.nextcanvas] : document.getElementById(obj.nextcanvas)
+obj.populateslide(obj.tempobj, obj.nextimageindex)
+obj.nextimageindex=(obj.nextimageindex<obj.postimages.length-1)? obj.nextimageindex+1 : 0
+setTimeout("fadearray["+obj.slideshowid+"].rotateimage()", obj.delay)
+}
+}
+ 
+fadeshow.prototype.populateslide=function(picobj, picindex){
+var slideHTML=""
+if (this.theimages[picindex][1]!="") //if associated link exists for image
+slideHTML='<a href="'+this.theimages[picindex][1]+'" target="'+this.theimages[picindex][2]+'">'
+slideHTML+='<img src="'+this.postimages[picindex].src+'" border="'+this.imageborder+'px">'
+if (this.theimages[picindex][1]!="") //if associated link exists for image
+slideHTML+='</a>'
+picobj.innerHTML=slideHTML
+}
+ 
+ 
+fadeshow.prototype.rotateimage=function(){
+if (this.pausecheck==1) //if pause onMouseover enabled, cache object
+var cacheobj=this
+if (this.mouseovercheck==1)
+setTimeout(function(){cacheobj.rotateimage()}, 100)
+else if (iebrowser&&dom||dom){
+this.resetit()
+var crossobj=this.tempobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+crossobj.style.zIndex++
+fadeclear[this.slideshowid]=setInterval("fadepic(fadearray["+this.slideshowid+"])",50)
+this.curcanvas=(this.curcanvas==this.canvasbase+"_0")? this.canvasbase+"_1" : this.canvasbase+"_0"
+}
+else{
+var ns4imgobj=document.images['defaultslide'+this.slideshowid]
+ns4imgobj.src=this.postimages[this.curimageindex].src
+}
+this.curimageindex=(this.curimageindex<this.postimages.length-1)? this.curimageindex+1 : 0
+}
+ 
+fadeshow.prototype.resetit=function(){
+this.degree=10
+var crossobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+if (crossobj.filters&&crossobj.filters[0]){
+if (typeof crossobj.filters[0].opacity=="number") //if IE6+
+crossobj.filters(0).opacity=this.degree
+else //else if IE5.5-
+crossobj.style.filter="alpha(opacity="+this.degree+")"
+}
+else if (crossobj.style.MozOpacity)
+crossobj.style.MozOpacity=this.degree/101
+else if (crossobj.style.KhtmlOpacity)
+crossobj.style.KhtmlOpacity=this.degree/100
+else if (crossobj.style.opacity&&!crossobj.filters)
+crossobj.style.opacity=this.degree/101
+}
+ 
+ 
+fadeshow.prototype.startit=function(){
+var crossobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+this.populateslide(crossobj, this.curimageindex)
+if (this.pausecheck==1){ //IF SLIDESHOW SHOULD PAUSE ONMOUSEOVER
+var cacheobj=this
+var crossobjcontainer=iebrowser? iebrowser["master"+this.slideshowid] : document.getElementById("master"+this.slideshowid)
+crossobjcontainer.onmouseover=function(){cacheobj.mouseovercheck=1}
+crossobjcontainer.onmouseout=function(){cacheobj.mouseovercheck=0}
+}
+this.rotateimage()
+}
+
+</script>
+</head>
+
+<body>
+	<div id="page">
+    	<div id="pageheader">
+        	<div id="header"><h1>ICME2009CANCUN</h1></div>
+            <div id="left">
+            	<h2>2009 IEEE<br />
+                        International<br />
+                        Conference on<br />
+                        Multimedia and Expo<br />
+                        <br />
+                        June 28 - July 3, 2009<br />
+                        Hilton Cancun, Cancun, Mexico</h2>
+            </div>
+            <div id="right"><img src="images/h_right_1.jpg" width="555" height="120" alt="cancun photo"/>
+                <!--script type="text/javascript">
+				//new fadeshow(IMAGES_ARRAY_NAME, slideshow_width, slideshow_height, borderwidth, delay, pause (0=no, 1=yes), optionalRandomOrder)
+				//new fadeshow(fadeimages, 140, 225, 0, 3000, 1, "R")
+				new fadeshow(fadeimages, 555, 120, 0, 3000, 1);
+				</script-->
+            </div>
+    	</div>
+        
+        <div class="clr"></div>
+            
+        <div id="sidebarContainer">
+        	<div id="sidehead"></div>
+        	<div id="sidebar">
+              <!-- sidebar list here-->
+              <h1><a href="index.html">Home</a></h1>
+        	  <h1><a href="call_for_paper.html">Call for papers</a></h1>
+        	  <h2 class="disable">online submission
+        	      <!--a href="submission.html">online submission</a-->
+      	    </h2>
+        	  <h2><a href="paperkit.html">paper kit</a></h2>
+        	  <h2><a href="importantdate.html">Important dates</a></h2>
+        	  <h1>Programs
+        	      <!--a href="programs.html">Programs</a-->
+      	    </h1>
+        	  <h2><a href="call_for_workshops.html">Call for workshops</a></h2>
+        	  <h2><a href="call_for_specialsessions.html">Call for special session</a></h2>
+        	  <h2><a href="call_for_tutorials.html">Call for tutorials</a></h2>
+        	  <h2><a href="workshops.html">Workshops</a></h2>        	  
+        	  <h2><a href="panels.html">Web 2.0 and Panels</a></h2>        	          	  
+        	  <h2 class="disable">Keynote</h2>
+        	  <h2 class="disable">Social Events</h2>
+        	  <h1>Registration
+        	      <!--a href="register.html">Registration</a-->
+      	    </h1>
+        	  <h1><a href="city.html">Venue</a></h1>
+        	  <h2><a href="city.html">City information</a></h2>
+        	  <h2 class="disable">Travel &amp; Visa</h2>
+        	  <h1><a href="committee.html">Organizing Committee</a></h1>
+        	  <h1><a href="sponsors.html">Sponsors</a></h1>
+        	  <!--h1><a href="#">Contact us</a></h1-->
+              <div class="spacer"></div>
+        	  <!-- sidebar list end-->
+            </div>
+       	  <div id="sidefoot"></div>
+			<div id="sponsor">
+            	<img src="images/IEEE_Logo.png" />
+                <img src="images/SP_Logo.png" />
+                <img src="images/CAS_Logo.png" />
+                <img src="images/CS_Logo.png" />
+                <img src="images/CompSoc_Logo.png" />
+            </div>
+        </div>
+        
+        <div id="content">
+        <!-- content here-->
+
+          <h1>Gerneral Information</h1>
+   <h2>Table of Contents</h2>
+
+<h3><a href="#PartI">Part I: General Information</a></h3>
+
+<ul>
+  <li><a href="#Procedure">Procedure</a></li>
+  <li><a href="#Requirements">Requirements</a></li>
+  <li><a href="#Deadlines">Deadlines and Important Dates</a></li>
+  <li><a href="#Correspondence">Correspondence</a></li>
+</ul>
+
+<h3><a href="#PartII">Part II: Preparation of the Paper</a></h3>
+
+<ul>
+  <li><a href="#DocumentFormatting">Document Formatting</a></li>
+  <li><a href="#Templates">Templates</a></li>
+  <!--<li><a href="#PDFExpress">Using IEEE's PDF Express to check your PDFs</a></li>-->
+</ul>
+
+<h3><a href="#PartIII">Part III: Submission and Review of the Paper</a></h3>
+
+<ul>
+  <li><a href="#FileFormat">File Format</a></li>
+  <li><a href="#LaTeXInfo">Information for LaTeX users</a></li>
+  <li><a href="#CreatingPS">Creating a Postscript (PS) File</a></li>
+  <li><a href="#FileSizeLimit">File Size Limit</a></li>
+  <li><a href="#FileName">File Name</a></li>
+  <li><a href="#Submission">Electronic Paper Submission</a></li>
+  <li><a href="#CopyrightForm">IEEE Copyright Transfer Form</a></li>
+  <li><a href="#ReviewProcess">Online Review Process</a></li>
+  <li><a href="#MonitorStatus">Monitor Your Submission Status</a></li>
+  <li><a href="#Notification">Notification of Acceptance</a></li>
+  <li><a href="#AuthorRegistration">Required Author Registration</a></li>
+  <li><a href="#CopyrightIssues">Copyright Issues for Web Publication</a></li>
+</ul>
+<h3><a href="#PartIV">Part IV: Preparation of the Presentation</a></h3>
+
+<ul>
+  <li><a href="#LecturePresentations">Lecture Presentations</a></li>
+  <li><a href="#PosterPresentations">Poster Presentations</a></li>
+</ul>
+<div class="sepbig"></div>
+
+<h2><a name="PartI"></a>Part I: General Information</h2>
+
+<h4><a name="Procedure"></a>Procedure</h4>
+
+<p>The ICME 2009 paper submission and review process is being conducted in a
+manner similar to previous ICME conferences:</p>
+
+<ul>
+
+  <li>Authors who wish to participate in the conference will create documents
+  consisting of a complete description of their ideas and applicable research
+  results in a maximum of 4 pages.</li>
+  
+  <li>Submit the paper electronically and copyright form by fax. This paper
+  submission must be submitted in final, publishable form before the submission
+  deadline listed below.</li>
+  
+	<li>Check the ICME 2009 website for the status of your paper.</li>
+
+  <li>Paper submissions will be reviewed by experts selected by the conference
+  committee for their demonstrated knowledge of particular topics.  The
+  progress and results of the review process will be posted on this website,
+  and authors will also be notified of the review results by email.</li>
+
+  <li>Prepare a lecture or poster presentation following the guidelines
+  included in this document.</li>
+
+</ul>
+
+<p>The review process is being conducted entirely online. To make the review
+process easy for the reviewers, and to assure that the paper submissions will
+be readable through the online review system, we ask that authors submit paper
+documents that are formatted according to the Paper Kit instructions included
+here.</p>
+
+<div class="sep"></div>
+
+<h4><a name="Requirements"></a>Requirements</h4>
+
+<p>Papers may be no longer than 4 pages, including all text, figures, and references.</p>
+
+<p>Papers must be submitted by the deadline date. There will be no exceptions.</p>
+
+<p>Accepted papers <strong>MUST</strong> be presented at the conference by one
+of the authors, or, if none of the authors are able to attend, by a qualified
+surrogate. The presenter <strong>MUST</strong> register for the conference at
+one of the non-student rates offered, and <strong>MUST</strong> register before
+the deadline given for author registration. Failure to register before the
+deadline will result in automatic withdrawal of your paper from the conference
+proceedings and program.</p>
+
+<div class="sep"></div>
+
+<h4><a name="Deadlines"></a>Deadlines and Important Dates</h4>
+
+<table style="border-collapse: collapse;">
+  <tr>
+    <th>Event</th>
+    <th>Date</th>
+  </tr>
+  <tr>
+    <td>Special Session Proposal Due</td><td><strong>December 1, 2008</strong></td>
+  </tr>
+  <tr>
+    <td>Tutorial Proposal Due</td><td><strong>December 1, 2008</strong></td>
+  </tr>
+  <tr>
+    <td class="important">Regular Paper Submission</td><td><strong><span style="color: red;">December 31, 2008</span></strong></td>
+  </tr>
+  <tr>
+    <td>Notification of acceptance</td><td><strong>March 10, 2009</strong></td>
+  </tr>
+  <tr>
+    <td>Camera-Ready Paper Due</td><td><strong>March 31, 2009</strong></td>
+  </tr>
+  <tr>
+    <td colspan="2">(At least one author per paper must register and attend the conference.)</td>
+  </tr>
+</table>
+
+<div class="sep"></div>
+
+
+
+<blockquote>&nbsp;</blockquote>
+
+<div class="sepbig"></div>
+
+<h2><a name="PartII"></a>Part II: Preparation of the Paper</h2>
+
+<h4><a name="DocumentFormatting"></a>Document Formatting</h4>
+
+<p>Use the following guidelines when preparing your document:</p>
+
+<p><span class="important">LENGTH: You are allowed a total of 4 pages for your
+document. This is the maximum number of pages that will be accepted, including
+all figures, tables, and references.</span> Any documents that exceed the 4
+page limit will be rejected.</p>
+
+<p><strong>LANGUAGE</strong>: All proposals must be in English.</p>
+
+<p><strong>MARGINS</strong>: Documents should be formatted for standard
+<strong>letter-size (8-1/2 inch by 11 inch or 216mm by 279mm) paper</strong>. Any text
+or other material outside the margins specified below will not be accepted:</p>
+
+<ul>
+
+  <li>All text and figures must be contained in a 178 mm x 229 mm (7 inch x 9
+  inch) image area.</li>
+  
+  <li>The left margin must be 19 mm (0.75 inch).</li>
+  
+  <li>The top margin must be 25 mm (1.0 inch), except for the title page
+  where it must be 35 mm (1.375 inches).</li>
+  
+  <li>Text should appear in two columns, each 86 mm (3.39 inch) wide with 6
+  mm (0.24 inch) space between columns.</li>
+  
+  <li>On the first page, the top 50 mm (2 inch) of both columns is reserved for
+  the title, author(s), and affiliation(s). These items should be centered
+  across both columns, starting at 35 mm (1.375 inch) from the top of the
+  page.</li>
+  
+  <li>The paper abstract should appear at the top of the left-hand column of
+  text, about 12 mm (0.5 inch) below the title area and no more than 80 mm
+  (3.125 inch) in length. Leave 12 mm (0.5 inch) of space between the end of the
+  abstract and the beginning of the main text.</li>
+
+</ul>
+
+<div class="sidebar">
+
+<p>A format sheet with the margins and placement guides is available in the
+following file formats:</p>
+
+<ul>
+  <li><a href="PaperFormat/format.pdf">PDF file</a> (When you print this file, make sure the &quot;shrink to fit&quot; box is not checked!)</li>
+  <li><a href="PaperFormat/format.ps">PostScript file</a></li>
+</ul>
+
+<p>These files contain lines and boxes showing the margins and print areas. If
+you print one of these files, then stack it atop your printed page and hold it
+up to the light, you can easily check your margins to see if your print area
+fits within the space allowed.</p>
+
+</div>
+
+<p><strong>TYPE</strong>:</p>
+
+<div style="margin-left: 1em;">
+  <p><strong>Face</strong>: To achieve the best viewing experience for the
+  review process and conference proceedings, we strongly encourage authors to
+  use Times-Roman or Computer Modern fonts. If a font face is used that is not
+  recognized by the submission system, your proposal will not be reproduced
+  correctly.</p>
+
+  <p><strong>Size</strong>: Use a font size that is no smaller than 9 points
+  throughout the paper, including figure captions. In 9-point type font,
+  capital letters are 2 mm high. For 9-point type font, there should be no more
+  than 3.2 lines/cm (8 lines/inch) vertically. This is a minimum spacing; 2.75
+  lines/cm (7 lines/inch) will make the proposal much more readable. Larger
+  type sizes require correspondingly larger vertical spacing.</p>
+</div>
+
+<p><strong>TITLE</strong>: The paper title must appear in boldface letters and
+should be in Title Case (each non-minor word should begin with a capital
+letter).  Do not use LaTeX math notation ($x_y$) in the title; the title must
+be representable in the Unicode character set. Also try to avoid uncommon
+acronyms in the title.</p>
+
+<p><strong>AUTHOR LIST</strong>: The authors' name(s) and affiliation(s) appear
+below the title in capital and lower case letters.  Proposals with multiple
+authors and affiliations may require two or more lines for this information.
+The order of the authors on the document should exactly match in number and
+order the authors typed into the online submission form.</p>
+
+<p><strong>ABSTRACT</strong>: Each paper should contain an abstract of 100 to
+150 words that appears at the beginning of the document. Use the same text that
+is submitted electronically along with the author contact information.</p>
+
+<p><strong>BODY</strong>: Major headings appear in boldface CAPITAL letters,
+centered in the column. Subheadings appear in capital and lower case, either
+underlined or in boldface. They start at the left margin of the column on a
+separate line.  Sub-subheadings are discouraged, but if they must be used, they
+should appear in capital and lower case, and start at the left margin on a
+separate line. They may be underlined or in italics.</p>
+
+<p><strong>REFERENCES</strong>: List and number all references at the end of
+the document. The references can be numbered in alphabetical order or in order
+of appearance in the paper. When referring to them in the text, type the
+corresponding reference number in square brackets as shown at the end of this
+sentence [1].  The end of the document should include a list of references
+containing information similar to the following example:</p>
+
+<p style="text-indent: 2em;">[1] D. E. Ingalls, &quot;Image Processing for Experts,&quot; IEEE Trans. ASSP, vol. ASSP-36, pp. 1932-1948, 1988.</p>
+
+<p><strong>ILLUSTRATIONS &amp; COLOR</strong>: Illustrations must appear within
+the designated margins. They may span the two columns. If possible, position
+illustrations at the top of columns, rather than in the middle or at the
+bottom. Caption and number every illustration. All halftone illustrations must
+be clear in black and white. Since the printed proceedings will be produced in
+black and white, be sure that your images are acceptable when printed in black
+and white (the CD-ROM and IEEE Xplore proceedings will retain the colors in
+your document).</p>
+
+<p><span class="important">PAGE NUMBERS: <strong>Do not put page numbers on
+your document</strong>. Appropriate page numbers will be added to accepted
+papers when the conference proceedings are assembled.</span></p>
+
+<div class="sep"></div>
+
+<h4><a name="Templates"></a>Templates</h4>
+
+<p>The following style files and templates are available for users of LaTeX and Microsoft Word:</p>
+
+<ul>
+	<li><a href="PaperFormat/spconf.sty">LaTeX style file with margin, page layout, font, etc. definitions.</a></li>
+	<li><a href="PaperFormat/IEEEbib.bst">BiBTeX style file with bibliography style definitions.</a></li>
+	<li><a href="PaperFormat/Template.tex">LaTeX template file, an example of using the &quot;spconf.sty&quot; and &quot;IEEEbib.bst&quot; files above.</a></li>
+	<li><a href="PaperFormat/Template.pdf">PDF generated from the template file.</a></li>
+	<li><a href="PaperFormat/WordTemplate.doc">Word 97/2000 Sample, a template of correct formatting and font use.</a></li>
+</ul>
+
+<p>We recommend that you use the Word file or LaTeX files to produce your
+document, since they have been set up to meet the formatting guidelines listed
+above.  When using these files, double-check the paper size in your page setup
+to make sure you are using the letter-size paper layout (8.5 inch X 11 inch).  The
+LaTeX environment files specify suitable margins, page layout, text, and a
+bibliography style.</p>
+
+<p>In particular, with LaTeX, there are cases where the top-margin of the
+resulting Postscript or PDF file does not meet the specified parameters. In
+this case, you may need to add a <span style="font-family:monospace;">\topmargin=0mm</span>
+command just after the <span style="font-family:monospace;">\begin{document}</span> command in your
+.tex file. The spacing of the top margin is not critical, as the page contents
+will be adjusted on the proceedings. The critical dimensions are the actual
+width and height of the page content.</p>
+
+<!--
+<div class="sep"></div>
+
+<h4><a name="PDFExpress"></a>Using IEEE's PDF Express to check your PDFs</h4>
+
+<p>ISBI 2008 has registered for use of a new IEEE tool: IEEE PDF eXpress™</p>
+
+<p>IEEE PDF eXpress is a free service to IEEE conferences, allowing their authors to make IEEE Xplore-compatible PDFs (Conversion function) or to check PDFs that authors have made themselves for IEEE Xplore compatibility (PDF Check function).</p>
+
+<p>Steps for checking or converting PDFs using IEEE PDF Express:</p>
+
+<ol>
+  <li>Create your manuscript(s)</li>
+  <li>Proofread and check layout of manuscript (it is highly recommended that you do this BEFORE going to IEEE PDF eXpress.)</li>
+  <li>Create IEEE PDF eXpress account</li>
+  <li>Upload source file(s) for Conversion; and/or PDF(s) for Checking</li>
+  <li>Use IEEE PDF eXpress to attain IEEE Xplore-compatible PDF(s). The site contains extensive instructions, resources, helpful hints, and access to technical support.</li>
+  <li>Submit final, IEEE Xplore-compatible PDF(s) per the instructions in Part III below. <strong>Uploading a paper to IEEE PDF Express is not the same as submitting the paper to the symposium for review. You will still need to submit the checked PDF by the normal means.</strong></li>
+</ol>
+
+<p><strong>Procedure:</strong></p>
+
+<p>IEEE PDF eXpress: <a href="http://216.228.1.34/pdfexpress/log.asp" target="_blank">http://216.228.1.34/pdfexpress/log.asp</a><br />
+Conference ID: <span style="font-weight: bolder; color: red;">icme06</span></p>
+
+<ol>
+  <li>Access the IEEE PDF eXpress site</li>
+
+<p>First-time users:</p>
+<ol style="list-style-type: lower-alpha;">
+  <li>Click "New Users - Click Here".</li>
+  <li>Enter <span style="font-weight: bolder; color: red;">icme06</span> for the Conference ID, your email address, and choose a new password. Continue to enter information as prompted.</li>
+  <li>You will receive online and email confirmation of successful account setup.</li>
+</ol>
+
+<p>Previous users, but using it the first time for a new conference:</p>
+<ol style="list-style-type: lower-alpha;">
+  <li>Enter <span style="font-weight: bolder; color: red;">icme06</span> for the Conference ID, your email address, and enter the password you used for your old account.</li>
+  <li>When you click "Login", you’ll receive an error saying you need to set up an account. Simply click "Continue". By entering your previously used email address and password combination, you will enable your old account for access to this new conference.</li>
+  <li>Check that the contact information is still valid, and click "Submit".</li>
+  <li>You will receive online and email confirmation of successful account setup.</li>
+</ol>
+
+<p>Returning users:</p>
+<ol style="list-style-type: lower-alpha;">
+  <li style="margin-bottom: 1em;">Enter <span style="font-weight: bolder; color: red;">icme06</span> for the Conference ID, email address and password.</li>
+</ol>
+
+  <li>For each conference paper, click "Create New Title".</li>
+  <li>Enter identifying text for the paper (title is recommended but not required)</li>
+  <li>Click "Submit PDF for Checking" or "Submit Source Files for Conversion"</li>
+  <li>Indicate platform, source file type (if applicable), click Browse and navigate to file, and click "Upload File". You will receive online and email confirmation of successful upload</li>
+  <li>You will receive an email with your Checked PDF or IEEE PDF eXpress-converted PDF attached. If you submitted a PDF for Checking, the email willshow if your file passed or failed.</li>
+</ol>
+-->
+
+<div class="sepbig"></div>
+
+<h2><a name="PartIII"></a>Part III: Submission and Review of the Paper</h2>
+
+<p>The review process will be performed from the electronic submission of your
+paper. To ensure that your document is compatible with the review system,
+please adhere to the following compatibility requirements:</p>
+
+<h4><a name="FileFormat"></a>File Format</h4>
+
+<p class="important">The 'IEEE Requirements for PDF Documents' <span style="text-decoration: underline;">MUST be
+followed EXACTLY</span>. The conference is required to ensure that documents
+follow this specification. The requirements are enumerated in:</p>
+
+<ul>
+  <li><a href="PaperFormat/Author-PDF-Guide-V32.pdf">IEEE Requirements for PDF Documents v3.2</a> [PDF]</li>
+</ul>
+
+<p>Papers must be submitted in either PostScript (PS) or Adobe's Portable Document
+Format (PDF) format.</p>
+
+<p>PDF and Postscript files:</p>
+
+<ul>
+  <li>must not have Adobe Document Protection or Document Security enabled,</li>
+  <li>must have either 'US Letter' or 'A4' sized pages,</li>
+  <li>must be in first-page-first order, and</li>
+  <li>must have <strong>ALL FONTS</strong> embedded and subset.</li>
+</ul>
+    
+<p class="important">ALL FONTS MUST be embedded in the PDF or PostScript file.
+There is no guarantee that the viewers of the paper (reviewers and those who
+view the proceedings CD-ROM after publication) have the same fonts used in the
+document.  If fonts are not embedded in the submission, you will be contacted
+by CMS and asked to submit a file that has all fonts embedded.  Please refer to
+your PDF or PS file generation utility's user guide to find out how to embed
+all fonts.</p>
+
+<div class="sidebar">
+
+<h4><a name="LaTeXInfo"></a>Information for LaTeX users</h4>
+
+<p>Generating a PostScript file is straightforward for all LaTeX
+packages we are aware of. When preparing the proposal under LaTeX, it is
+preferable to use scalable fonts such as Type I, Computer Modern. However,
+quite good results can be obtained with the fonts defined in the style file
+recommended above (spconf.sty).</p>
+
+<p>PDF files with Postscript Type 3 fonts are highly discouraged. PDF and
+PostScript files utilizing Type 3 fonts are typically produced by the LaTeX
+system and are lower-resolution bitmapped versions of the letters and figures.
+It is possible to perform a few simple changes to the configuration or
+command-line to produce files that use PostScript Type 1 fonts, which are a
+vector representation of the letters and figures. An excellent set of
+instructions is found at:</p>
+
+<div style="margin-left: 1em;">
+  <a href="http://www.utdallas.edu/~cantrell/online/543e.html">Creating quality Adobe PDF files from TeX with DVIPS</a>
+</div>
+
+<p>For most installations of LaTeX, you can cause
+<span style="font-family:monospace;">dvips</span> to output Type 1 fonts
+instead of Type 3 fonts by including <span style="font-family:monospace;">-Ppdf</span> option to
+<span style="font-family:monospace;">dvips</span>. The resulting Postscript file will
+reference the Type 1 Computer Modern fonts, rather than embedding the bitmapped
+Type 3 versions, which cause problems with printers.</p>
+
+<p>You may also need to tell <span style="font-family: monospace;">dvips</span> to force
+letter sized paper with the option: <span style="font-family: monospace;">-t letter</span>.</p>
+
+<p>Some LaTeX installations also include <span
+style="font-family:monospace;">pdflatex</span>, which produces acceptable PDF files as well.</p>
+
+</div>
+
+<div class="sep"></div>
+
+<h4><a name="CreatingPS"></a>Creating a Postscript (PS) File</h4>
+
+<p>Windows users: To save a document as a PostScript file:</p>
+
+<ul>
+  <li>Install and select a PostScript printer driver.  We recommend <a href="http://www.adobe.com/support/downloads/product.jsp?product=pdrv&platform=win">Adobe Systems' PostScript Driver</a>.</li>
+  <li>In your word processor, on the File menu, click Print.</li>
+  <li>Select the PostScript printer which will be used to generate the file.</li>
+  <li>Select the Print to File check box, and then click OK.</li>
+  <li>In the File name box, type a file name. The file is saved with a '.prn' extension by default. Rename the file to give it the extension '.ps'.</li>
+</ul>
+
+<p>Macintosh users: To save a document as a PostScript file:</p>
+
+<ul>
+  <li>Install and select a PostScript printer driver.  We recommend <a href="http://www.adobe.com/support/downloads/product.jsp?product=pdrv&platform=mac">Adobe Systems' PostScript Driver</a>.</li>
+  <li>In your word processor, on the File&gt;Print menu, click General.</li>
+  <li>Go down to &quot;Save as File.&quot;</li>
+  <li>Make the following selections:
+  <ul>
+    <li>Format: PostScript Job</li>
+    <li>PostScript Level: Level 1 Compatible</li>
+    <li>Data Format: BINARY</li>
+    <li>Font Inclusion: All</li>
+    <li>Destination: File</li>
+  </ul></li>
+  <li>Click &quot;Save&quot; and specify a file name.</li>
+</ul>
+
+<div class="sep"></div>
+
+
+<h4><a name="FileName"></a>File Name</h4>
+
+<p>The filename of the document file should be the first author's last name,
+followed by the appropriate extension (.ps or .pdf). For example, if the first
+author's name is Johan Smith, you would submit your file as &quot;smith.ps&quot; or
+&quot;smith.pdf&quot;. To speed transmission of your PostScript and PDF files, you may
+use a compression utility that will produce compressed archives that are 100%
+compatible with the ZIP compression format defined by PKWare or the GZip format
+common on UNIX and Linux systems. Such a utility can be downloaded from
+PKWare's website at: <a href="http://www.pkware.org">www.pkware.org</a>. This
+compression is not required, but it is allowed and encouraged so that file
+transfer times may be reduced. If you do submit a compressed version of the
+document file, use the same filename specification mentioned earlier, with the
+appropriate file extension (for example, &quot;smith.zip&quot; or &quot;smith.gz&quot;). The paper
+submission process will append the filename with a unique identifier when it is
+stored on our system, so multiple submissions with the same name will not
+overwrite each other and will be distinguishable.</p>
+
+<div class="sep"></div>
+
+<h4><a name="Submission"></a>Electronic Paper Submission</h4>
+
+<p>When you have your document file ready, gather the following information
+before entering the submission system:</p>
+
+<ul>
+	<li>Document file in PDF or PS format</li>
+	<li>Affiliation, email address, and mailing address for each author</li>
+	<li>Paper title</li>
+	<li>Text file containing paper abstract text, in ASCII text format (for copying and pasting into web page form)</li>
+</ul>
+
+<p>To submit your document and author information, go to the 'Paper Submission'
+link on the ICME 2009 homepage: </p>
+
+<p><a href="http://www.icme2009.org/">http://www.icme2009.org/</a></p>
+
+<p>The submission system will present an entry form to allow you to enter the
+paper title, abstract text, review category, and author contact information.</p>
+
+<p class="important">ALL authors must be entered in the online form, and must
+appear in the online form in the same order in which the authors appear on the
+PDF.</p>
+
+<p>After you submit this information, the system will display a page with the
+data that you entered so that you may verify its accuracy.  If you need to
+change the data to fix a mistake, you may use the back button on your browser
+to return to the information entry form.  Once you approve of the data that you
+have entered, you may choose your document file for upload at the bottom of the
+verification page.  When you click on the button labeled 'Continue' at the
+bottom of this page, the page will check the filename extension to make sure it
+matches the submission criteria, then your browser will upload your file to our
+server.  Depending on the size of your file and your internet connection speed,
+this upload may take a few minutes.  At the end of a successful upload, you
+will see a confirmation page displaying the paper number that is assigned to
+you, and and email message will be sent to the authors' email addresses to
+confirm that the file has been uploaded.  If you do not see the confirmation
+page after uploading your file, we may not have successfully received your file
+upload.</p>  
+
+
+<div class="sep"></div>
+
+<h4><a name="ReviewProcess"></a>Online Review Process</h4>
+
+<p>Your submitted paper will be converted to PDF format by the submission
+system if necessary, then visually inspected by our submission system staff to
+assure that the document is readable and meets all formatting requirements to
+be included in a visually pleasing and consistant proceedings publication for
+ICME 2009.  If our submission inspectors encounter errors with your submitted
+file, they will contact you to resolve the issue.  If your paper passes
+inspection, it will be entered into the review process.  A committee of
+reviewers selected by the conference committee will review the documents and
+rate them according to quality, relevence, and correctness.  The conference
+technical committee will use these reviews to determine which papers will be
+accepted for presentation in the conference.  The result of the technical
+committee's decision will be communicated to the submitting authors by email,
+along with any reviewer comments, if any.</p>
+
+
+<div class="sep"></div>
+
+<h4><a name="Notification"></a>Notification of Acceptance</h4>
+
+<p>Authors will be notified of paper acceptance or non-acceptance by email as
+close as possible to the published author notification date. The email
+notification will include the presentation format chosen for your paper
+(lecture or poster) and may also include the presentation date and time, if
+available.</p>
+
+<p>The notification email will include comments from the reviewers. The
+conference cannot guarantee that all of the reviewers will provide the level of
+comment desired by you. However, reviewers are encouraged to submit as detailed
+comments as possible.</p>
+
+<p>Because of the short amount of time between paper acceptance decisions and
+the beginning of the publication process, ICME 2009 is not able to allow for
+a two-way discourse between the authors and the reviewers of a paper. </p>
+
+<div class="sep"></div>
+
+<h4><a name="AuthorRegistration"></a>Required Author Registration</h4>
+
+<p>Be sure that at least one author registers to attend the conference using
+the online registration system available through the conference website.  Each
+paper must have at least one author registered, with the <strong>payment
+received</strong> by the author registration deadline (see above) to avoid
+being withdrawn from the conference.</p>
+
+
+<div class="sep"></div>
+
+<h4><a name="CopyrightIssues"></a>Copyright Issues for Web Publication</h4>
+
+<p>If you plan to publish a copy of an accepted paper on the Internet by any
+means, you <strong>MUST</strong> display the following IEEE copyright notice on
+the first page that displays IEEE published (and copyrighted) material:</p>
+
+<p style="margin-left: 1em;">Copyright 2009 IEEE. Published in the 2009
+International Conference on Multimedia and Expo (ICME 2009), scheduled for
+June 28-Julu 3, 2009 in Hilton Cancun, Cancun, Mexico.  Personal use of this material is
+permitted.  However, permission to reprint/republish this material for
+advertising or promotional purposes or for creating new collective works for
+resale or redistribution to servers or lists, or to reuse any copyrighted
+component of this work in other works, must be obtained from the IEEE. Contact:
+Manager, Copyrights and Permissions / IEEE Service Center / 445 Hoes Lane /
+P.O. Box 1331 / Piscataway, NJ 08855-1331, USA. Telephone: + Intl.
+908-562-3966.</p>
+
+<p>If you post an electronic version of an accepted paper, you must provide the
+IEEE with the electronic address (URL, FTP address, etc.) of the posting.</p>
+
+<div class="sepbig"></div>
+
+<h2><a name="PartIV"></a>Part IV: Preparation of the Presentation</h2>
+
+<p>To help authors prepare for lecture
+and poster presentations, the following suggestions have been created:</p>
+
+<h4><a name="LecturePresentations"></a>Lecture Presentations</h4>
+
+<p><strong>PRESENTATION TIME</strong>: Presentation time is critical; each paper has to be 
+presented within its allocated time slot within 20 minutes for lecture 
+sessions. We recommend that presentation of your slides should take about 17-18
+minutes, leaving 2-3 minutes for introduction, summary, and questions from the
+audience. To achieve appropriate timing, organize your slides or viewgraphs
+around the points you intend to make, using no more than one slide per minute.
+A reasonable strategy is to allocate about 2 minutes per slide when there are
+equations or important key points to make, and one minute per slide when the
+content is less complex. Slides attract and hold attention, and reinforce what
+you say - provided you keep them simple and easy to read. Plan on covering at
+most 6 points per slide, covered by 6 to 12 spoken sentences and no more than
+about two spoken minutes.</p>
+
+<p><strong>ORGANIZATION OF IDEAS</strong>: Make sure each of your key points is
+easy to explain with aid of the material on your slides. Do not read directly
+from the slide during your presentation. You shouldn't need to prepare a
+written speech, although it is often a good idea to prepare the opening and
+closing sentences in advance. It is <strong>very</strong> important that you
+rehearse your presentation in front of an audience before you give your
+presentation at ICME. Surrogate presenters <strong>must</strong> be
+sufficiently familiar with the material being presented to answer detailed
+questions from the audience. In addition, the surrogate presenter must contact
+the Session Chair in advance of the presenter's session.</p>
+
+<p><strong>EQUIPMENT PROVIDED</strong>: A computer-driven slideshow for use
+with a data projector is recommended for your talk at ICME. All presentation
+rooms will be equipped with a computer, a data projector, a microphone (for
+large rooms), a lectern, and a pointing device. An overhead projector will be
+provided upon request.</p>
+
+<p>Each presenter is expected to preload the presentation in the
+laptop computer at the <strong>beginning</strong> of the respective session.</p>
+
+<p><strong>VISUAL AIDS</strong>: Some of the lecture presentations will be
+given in quite large lecture halls. We recommend that you prepare your slides
+according to the following guidelines to ensure that the entire audience will
+be able to see your presentation.  Your Session Chair might contact you in
+advance of the conference to request copies of your visual aids for approval
+before the conference.</p>
+
+<div style="margin-left: 1em;">
+
+<p><strong>Transparencies</strong> (viewgraphs) should be oriented vertically.
+Their contents should fit within a rectangle 19cm wide by 23cm high. Lettering:
+A minimum font (type) size of 24 point (capital letters at least 6mm high)
+should be used, set in a &quot;sans serif&quot; font (for example &quot;cmss&quot; in the Computer
+Modern family or the &quot;Helvetica&quot; PostScript font).  Spacing: A
+<strong>minimum</strong> of 5mm of blank space should be left between lines;
+more is preferable. Leave as much &quot;white space&quot; as possible to make them easily
+readable. Following these guidelines, you will easily be able to put as much
+information on the viewgraph as your audience can absorb in one minute.
+Remember, you can expand upon some points in your lecture presentation; the
+viewgraphs need not contain every minor piece of information.  It is more
+important that they be easily readable by the audience.</p>
+
+</div>
+
+<div class="sep"></div>
+
+<h4><a name="PosterPresentations"></a>Poster Presentations</h4>
+
+<p>Poster sessions are a good medium for authors to present papers and meet
+with interested attendees for in-depth technical discussions. In addition,
+attendees find the poster sessions a good way to sample many papers in parallel
+sessions. Thus it is important that you display your message clearly and
+noticeably to attract people who might have an interest in your paper.</p>
+
+<p><strong>ORGANIZATION OF IDEAS</strong>: Your poster should cover the key points of your 
+work and has to be presented within the allocated time slot. It need not, and 
+should not, attempt to include all the details; you can describe them in 
+person to people who are interested. The
+ideal poster is designed to attract attention, provide a brief overview of your
+work, and initiate discussion.  Carefully and completely prepare your poster
+well in advance of the conference.  Try tacking up the poster before you leave
+for the conference to see what it will look like and to make sure that you have
+all of the necessary pieces.</p>
+
+<p><strong>DIMENSIONS</strong>: For your poster, a board will be provided in size
+ <strong>Din A0 Portrait (841mm × 1189mm)</strong>.</p>
+
+<p><strong>FORMATTING</strong>: The title of your poster should appear at the
+top in CAPITAL letters about 25mm high. Below the title put the author(s)'
+name(s) and affiliation(s). The flow of your poster should be from the top left
+to the bottom right. Use arrows to lead your viewer through the poster. Use
+color for highlighting and to make your poster more attractive.  Use pictures,
+diagrams, cartoons, figures, etc., rather than text wherever possible. Try to
+state your main result in 6 lines or less, in lettering about 15mm high so that
+people can read the poster from a distance. The smallest text on your poster
+should be at least 9mm high, and the important points should be in a larger
+size. Use a sans-serif font (such as &quot;cmss&quot; in the Computer Modern family or
+the &quot;Helvetica&quot; PostScript font) to make the print easier to read from a
+distance.</p>
+
+<p>Make your poster as self-explanatory as possible. This will save your 
+efforts for technical discussions. There will not be any summaries given at 
+the beginning of the poster sessions at ICME 2009, so authors need not 
+prepare any overhead slides for their poster presentations. Power supply will 
+be available if you intend to bring additional audio or visual aids to 
+enhance your presentation.</p>
+
+<p><strong>TIME</strong>: Prepare a short presentation of about 5 or 10 minutes
+that you can periodically give to those assembled around your poster throughout
+the <strong>1 hour</strong> poster session. If possible, more than one author should attend the
+session to aid in presentations and discussions, and to provide the presenters
+with the chance to rest or briefly view other posters.</p>             
+      </div>
+        
+        <div class="clr"></div>
+        
+        <div id="footer">
+		© Copyright 2008-2009 IEEE ICME
+		<div>
+			<!-- Site Meter -->
+			<script type="text/javascript" src="http://s50.sitemeter.com/js/counter.js?site=s50icme09">
+			</script>
+			<noscript>
+				<a href="http://s50.sitemeter.com/stats.asp?site=s50icme09" target="_top">
+					<img src="http://s50.sitemeter.com/meter.asp?site=s50icme09" alt="Site Meter" border="0"/></a>
+			</noscript>
+			<!-- Copyright (c)2006 Site Meter -->
+		</div>
+        </div>
+        
+	</div>
+</body>
+</html>

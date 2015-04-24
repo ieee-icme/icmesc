@@ -1,0 +1,160 @@
+@charset "utf-8";
+*{
+	font-size: 14px;
+	margin: 0px;
+	padding: 0px;
+}
+html{
+	text-align: center;
+	overflow:auto
+}
+body{
+	margin: 0px auto;
+	width: 774px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+	text-align: left;
+	background-color: #fff0bf;
+}
+em{
+	color: #661100;
+	font-style: normal;
+}
+h1,h2,h3,h4,h5{
+	color: #661100;
+}
+h1{
+	font-size: 18px;
+	margin: 2px 0px;
+}
+h1 em{
+	font-size: 18px;
+	font-style: italic;
+}
+h2{
+	font-size: 16px;
+	margin: 1px 0px;
+	margin-bottom: 1px;
+}
+h3{
+	font-size: 14px;
+	font-style: italic;
+}
+h4,h5{
+	font-size: 14px;
+	font-style: normal;
+}
+p{
+	margin: 10px 0px;
+}
+a {
+	color: #770000;
+	text-decoration: none;
+}
+a:hover{
+	color: #FFDD33;
+	text-decoration: underline;
+}
+a.na {
+	color: #770000;
+	text-decoration: none;
+}
+a.na:hover{
+	color: #770000;
+	text-decoration: none;
+}
+dl{
+	margin-left: 15px;
+}
+dt{
+	margin-top: 20px;
+	margin-bottom: 3px;
+}
+dd{
+	margin-left: 15px;
+	margin-top: 2px;
+}
+#header{
+	width: 100%;
+	height: 230px;
+	background-image: url(header.jpg);
+	margin-bottom: 1px;
+	text-indent: -999999px;
+}
+#sidebar {
+	float:left;
+	width: 200px;
+	margin-right: 1px;
+}
+#sidebar ul{
+	list-style: none;
+}
+#sidebar li{
+	background-color: #d29242;
+	margin-bottom: 1px;
+}
+#sidebar ul a{
+	font-size: 15px;
+	text-decoration: none;
+	padding: 1px 15px;
+}
+#sidebar ul ul a{
+	color: #663300;
+	font-size: 13px;
+	margin-left: 20px;
+}
+#sidebar ul ul a:hover{
+	color: #FFDD33;
+}
+#sidebar li.current{
+	background-color: #FFBB00;
+}
+#content{
+	text-align: justify;
+	min-height: 850px;
+	margin-left: 201px;
+	background-color: #ffffff;
+	padding: 15px;
+	line-height:130%
+}
+#content ul{
+	margin-left: 20px;
+	padding: 3px 20px;
+	list-style-type: circle;
+}
+#footer{
+	font-size: 12px;
+	margin-top: 1px;
+	padding: 10px 0px;
+	clear: both;
+	width: 100%;
+	text-align: center;
+	color: #FFDD33;
+	background-color: #773300;
+}
+img{
+    display: inline;
+    border: none;   
+}
+table{
+	margin: 10px 0px;
+}
+td{
+	vertical-align: top;
+}
+table.full{
+	width: 100%;
+}
+table.narrow{
+	margin-left: 30px;
+	width: 90%;
+}
+tr.odd{
+	background-color: #FFFFDD;
+}
+tr.hidden{
+	display: none;
+}
+th{
+	text-align: center;
+}

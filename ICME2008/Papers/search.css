@@ -1,0 +1,113 @@
+body.Itinerary {
+  background-image: url("../images/stripes.gif");
+  background-attachment: fixed;
+  font-family: sans-serif;
+}
+
+h2.Help {
+  font-size: 18pt;
+  color: red;
+}
+
+table.MyScheduleMenu {
+  border-style: none;
+  border-top-style:solid;
+  border-bottom-style: solid;
+  border-width: 1px;
+  border-color: black;
+  width: 100%;
+  margin-bottom: 1mm;
+}
+
+table.MyScheduleMenu td {
+  border-style: none;
+  border-right-style: double;
+  border-width: 3px;
+  text-align: center;
+}
+
+table.MyScheduleMenu a {
+  text-decoration: none;
+  border-style: none;
+  padding: 3px;
+  margin: 0;
+}
+
+table.MyScheduleMenu a:hover {
+  text-decoration: none;
+  border-style: none;
+  padding: 3px;
+  margin: 0;
+}
+
+table.ResultsForm {
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  background-color: white;
+  width: 97%;
+  margin: 2mm;
+}
+
+table.ResultsForm td {
+  vertical-align: top;
+}
+
+table.MyScheduleItinerary {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  width: 100%;
+  background-color: white;
+  margin-bottom: 1mm;
+}
+
+table.MyScheduleItinerary td {
+  text-align: left;
+}
+
+table.MyScheduleItinerary th {
+  font-weight: bold;
+  text-align: right;
+  border-style: none;
+  padding: 0;
+  padding-right: 1mm;
+  width: 120pt;
+  vertical-align: top;
+}
+
+.Session {
+  border-left-style: solid;
+  border-bottom-style: solid;
+  border-color: blue;
+  border-width: 1px;
+  padding: 1mm;
+  margin-bottom: 1mm;
+  padding-left: 5mm;
+}
+
+.SessionName {
+  font-weight: bold;
+  color: blue;
+  background-color: inherit;
+}
+
+.Time {
+
+}
+
+.DateTimeBlock {
+  border-left-style: solid;
+  border-bottom-style: solid;
+  border-width: 2px;
+  border-color: red;
+  padding: 1mm;
+  margin-bottom: 1mm;
+  padding-left: 5mm;
+}
+
+.DateTime {
+  font-weight: bold;
+  color: red;
+  background-color: inherit;
+}

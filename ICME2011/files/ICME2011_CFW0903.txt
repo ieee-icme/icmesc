@@ -1,0 +1,41 @@
+----- ICME 2011 CALL FOR WORKSHOP PROPOSALS -----
+
+IEEE International Conference on Multimedia and Expo (ICME) 2011
+================================================================
+July 11-15, 2011 • BARCELONA, Spain
+http://www.icme2011.org
+Contact Email: ieee.icme2011@gmail.com
+
+ICME Workshops should be “clearly focused” and facilitating active discussions and constructive interactions on current or emerging topics of interest. They should allow members of the community to compare and discuss approaches, methods, and new concepts on research topics pertinent to the main conference. These topics often offer emerging interests to the multimedia research community or bridge the community with other areas.
+
+Workshop proposals for ICME 2011 should include: 
+
+- The title, goals of the workshop; 
+- The specific topics that will be addressed by the workshop; 
+- The relevance and significance of this workshop to the main conference; 
+- The history of the workshop if it is not the first version;
+- A draft workshop call for papers with: 
+
+1. The names, affiliations, addresses, phone numbers and email addresses 
+of the workshop organizers, who should be experts in the related topics 
+and preferably from multiple institutions; 
+2. The paper selection process; 
+3. A list of potential Program Committee members and their affiliations. 
+
+Workshop proposals should not exceed 3 pages and should be submitted to the Workshop Chairs, Abdulmotaleb El Saddik (elsaddik AT mcrlab.uottawa.ca) and Xian-Sheng Hua (xshua AT microsoft.com). Workshop proposals will be evaluated based on various criteria including the quality and level of details of the proposal, the theme of the workshop, its relevance to the main conference, and the overall balance of the conference workshop program. 
+
+Important Dates:
+
+Proposal Submission Deadline:---October 15, 2010
+Proposal Acceptance:------------November 1, 2010
+Workshop Day:-------------------July 11/15, 2011
+
+Contacts:
+
+Workshop Co-chairs:
+
+Abdulmotaleb El Saddik (elsaddik@mcrlab.uottawa.ca), University of Ottawa, Canada
+Xian-Sheng Hua (xshua@microsoft.com), Microsoft Research Asia, China
+
+Main conference email: ieee.icme2011@gmail.com 
+Main conference website: www.icme2011.org 

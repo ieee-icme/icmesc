@@ -1,0 +1,210 @@
+1. Sibel Adali 
+   Amos Eaton 125
+   Department of Computer Science
+   Rensselaer Polytechnic Institute
+   Troy, NY 12180
+   USA
+   
+2. Kiyo Aizawa,
+     Aizawa Laboratory, 
+     Graduate School of Frontier Sciences, 
+     The University of Tokyo,
+     7-3-1 Hongo, Bunkyo-ku, 
+     Tokyo, 113-0033, 
+     JAPAN   
+
+3. Alberto del Bimbo
+    Dipartimento di Sistemi e Informatica,
+    Universita degli Studi di Firenze,
+    Via S. Marta 3, 50139 Firenze, Italy
+ 
+4. Shih-Fu Chang,
+      Dept. of Electrical Engineering &
+      Digital Video/Multimedia Research Group
+      Columbia University,
+      New York, NY 10027 
+      USA 
+ 
+5. Mohamed Daoudi,
+     LIFL - Laboratoire d'Informatique Fondamentale de Lille 
+     Université des Sciences et Technologies de Lille
+     Bâtiment M3
+     59655 Villeneuve d'Ascq Cédex
+     FRANCE 
+     
+6. Chabane Djeraba, 
+    Institut de Recherche en Informatique de Nantes (IRIN)
+    Université de Nantes
+    2, rue de la Houssinière
+    BP 92208, F-44322 Nantes Cedex 3
+    France 
+     
+  
+7. Theo Gevers,
+     Faculty of Science,
+     University of Amsterdam
+     Kruislaan 403,
+     1098 SJ Amsterdam
+
+8. Alan Hanjalic, 
+     Delft University of Technology,
+     Faculty of Information Technology and Systems,
+     Department of Mediamatics,
+     Mekelweg 4,
+     2628 CD Delft,
+     The Netherlands
+
+
+9. Thomas Huang, 
+     Beckman Institute
+     University of Illinois at Urbana-Champaign
+     405 N. Mathews
+     Urbana, IL 61801
+     USA
+
+10. Joemon Jose
+      Department of Computing Science,    
+      University of Glasgow
+      17, Lilybank Gardens    
+      Glasgow G12 8QQ,
+      Scotland, UK
+      
+11. Brigitte Kerherve
+      Département d'informatique
+      Université du Québec à Montréal
+      Case postale 8888, succursale Centre-ville
+      Montréal (Québec) Canada - H3C 3P8
+
+12. Anil Kokaram
+      Electronic and Electrical Engineering Department, 
+      Trinity College, College Green, Dublin 2, 
+      Ireland 
+
+13. Maude Manouvrier
+     Equipe Bases de Donnees et Genie Logiciel
+     LAMSADE - Bureau P409bis 
+     Universite Paris IX Dauphine       
+     Place du Maréchal De Lattre de Tassigny 
+     75775 PARIS CEDEX 16
+     France
+
+14. Vincent Oria
+      ?????????
+      
+
+15.  Stefan Rüger
+        Department of Computing
+        South Kensington Campus
+        Imperial College London
+        London SW7 2AZ
+        UK
+
+
+16. Yong Rui,
+      Communication, Collaborative and Signal Processing Group 
+      Microsoft Research, 
+      One Microsoft Way, Redmond, WA 98052, 
+      USA  
+      
+
+17. Marta Rukoz 
+    ???????      
+
+
+18. Shin'ichi Satoh 
+      National Institute of Informatics
+      2-1-2 Hitotsubashi, Chiyoda-ku,
+      Tokyo 101-8430, Japan 
+ 
+      
+19. Stan Sclaroff,
+       Boston University,
+       Computer Science Dept.,
+       111 Cummington St.,
+       Boston, MA 02215, 
+       USA	      
+      
+20. Alan Smeaton,
+    School of Computer Applications,
+    Dublin City University, 
+    Glasnevin, Dublin 9, Ireland
+ 
+ 
+21. Arnold Smeulders,
+     Faculty of Science,
+     University of Amsterdam
+     Kruislaan 403,
+     1098 SJ Amsterdam     
+
+
+22. John R. Smith 
+     IBM T. J. Watson Research Center
+     30 Saw Mill River Road
+     Hawthorne, NY 10532
+     USA
+
+
+23. Hari Sundaram
+      Department of Computer Science and Engineering
+      Arizona State University
+      Goldwater Center 206
+      Box 875406
+      Temple, AZ, 85287-5406, 
+      USA
+
+
+24. Qi Tian,
+      Department of Computer Science
+      University of Texas at San Antonio
+      6900 North Loop 1604 West
+      San Antonio, TX 78249
+      USA
+      
+25. Svetha Venkatesh 
+      School of Computing
+      Curtin University of Technology
+      GPO Box U1987,
+      Perth WA 6001
+      Australia
+          
+26. Guangyou Xu,
+       Dept. of Computer
+       Tsinghua University
+       Beijing 100084
+       P.R.CHINA           
+
+27. HongJiang Zhang,
+       Microsoft Research China
+       5/F, Beijing Sigma Center
+       No.49, Zhichun Road, Hai Dian District
+       Beijing China 100080 	      
+
+28. Xiang (Sean) Zhou,
+        Imaging and visualization Department
+	Siemens Corporate Research,
+	755 College Road East,
+	Princeton, NJ 08540
+	USA 
+   
+
+David Forsyth
+     Computer Science Division
+     University of California, Berkeley
+     387 Soda Hall #1776
+     Berkeley, CA 94720-1776
+     USA  
+
+Forouzan Golshani
+      Department of Computer Science and Engineering
+      Arizona State University
+      Goldwater Center 206
+      Box 875406
+      Temple, AZ, 85287-5406, 
+      USA 
+
+Lawrence A. Rowe 
+     Computer Science Division - EECS 
+     University of California, Berkeley 
+     Berkeley, CA 94720-1776 
+     USA 
+

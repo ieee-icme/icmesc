@@ -1,0 +1,46 @@
+----- ICME 2011 CALL FOR TUTORIAL PROPOSALS -----
+
+IEEE International Conference on Multimedia and Expo (ICME) 2011
+================================================================
+July 11-15, 2011 • BARCELONA, Spain
+http://www.icme2011.org
+Contact Email: ieee.icme2011@gmail.com
+
+The ICME 2011 organizing committee invites proposals for tutorials, which are to take place July 11-14, 2011.  In a change from previous years, the tutorials will be open to all registered conference attendees without an additional tutorial charge. We seek proposals across a wide range of topics and levels—ranging from fundamentals to the latest advances in hot topic areas. Topics of interest include, but are not limited to:
+- Speech, audio, image, video, text processing
+- Signal processing for media integration
+- 3D visualization, animation and virtual reality
+- Multi-modal multimedia computing systems and human-machine interaction
+- Multimedia communications and networking
+- Multimedia security and privacy
+- Multimedia databases and digital libraries
+- Multimedia applications and services
+- Media content analysis and search
+- Hardware and software for multimedia systems
+- Multimedia standards and related issues
+- Multimedia quality assessment
+Proposal Format
+Each tutorial proposal must contain the following:
+1.	Title
+2.	Names and Affiliations  of Speakers
+3.	Abstract (one or two paragraphs)
+4.	Intended Audience (one paragraph): Describe the background assumed of tutorial attendees. Tutorials may range from basic for attendees new to the field to advanced topics for experts.
+5.	Length: Half Day (to be scheduled on July 11) or One Hour (to be scheduled on July 12, 13, or 14).
+6.	Description:  A statement (no more than 3 pages) giving clear motivation/justification for the topic to be presented at ICME and a comprehensive outline of the proposed content.  
+7.	Materials: A description (one or two paragraphs)  of materials to be provided to attendees on the conference DVD – course slides, annotated bibliography, code snippets etc. NOTE: the materials themselves do not need to be provided in the proposal.
+8.	Biosketches: A half-page biosketch of each tutorial presenter must also be included. 
+Selection
+
+All tutorial proposals will first receive peer review. Then, from the pool of proposal deemed of the highest quality, the chairs will make the final selection of tutorials to present the greatest variety to conference attendees and to fit the conference schedule.
+Upon Acceptance
+Speakers for all accepted tutorials will be required to sign a commitment to present at the conference within 30 days of notification.
+Conference registration fees will be waived for speakers at accepted tutorials – one speaker for each one hour tutorial, up to three speakers for half day tutorials.  The complimentary registration cannot be used to cover any papers accepted in the main program or workshops (that is, having a tutorial does not eliminate the need to have at least one paid registration for each paper at ICME 2011).Materials for the conference DVD must be delivered by April 1.
+Proposal Submission
+
+Tutorial proposals must be in PDF format and submitted via the ICME 2011 website:
+http://www.icme2011.org (Please select the “Tutorial” link on the left panel for submission).
+
+Any questions should be addressed to the Tutorial Chairs: Enrico Gobbetti (gobbetti@crs4.it) and Holly Rushmeier (holly.rushmeier@yale.edu). 
+
+Tutorial Proposal Due:--------October 15, 2010	   
+Notification of Decision:-----November 1, 2010	 

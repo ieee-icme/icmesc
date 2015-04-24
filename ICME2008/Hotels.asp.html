@@ -1,0 +1,239 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>2008 IEEE International Conference on Multimedia &amp; Expo</title>
+<link href="CommonFiles/icme2008.css" rel="stylesheet" type="text/css" />
+<style type="text/css" media="print">
+<!--
+  #sidebar1 { display: none; }
+ .twoColHybLtHdr #mainContent { margin-left: 1em; }
+-->
+</style>
+
+<!--[if IE]>
+<style type="text/css"> 
+/* place css fixes for all versions of IE in this conditional comment */
+.twoColHybLtHdr #sidebar1 { padding-top: 30px; }
+.twoColHybLtHdr #mainContent { zoom: 1; padding-top: 15px; }
+/* the above proprietary zoom property gives IE the hasLayout it may need to avoid several bugs */
+</style>
+<![endif]--></head>
+
+<body class="twoColHybLtHdr"  onload="initialize()" onunload="GUnload()">
+
+<div id="container">
+  <div id="header"><img src="images/ICME2008_WebHeader.png" alt="2008 IEEE International Conference on Multimedia &amp; Expo, June 23-26, 2008, Hannover Germany" width="959" height="206" /><!-- end #header --></div>
+  <div id="sidebar1">
+    <div id="menubg">
+      <ul>
+        <li><a href="default.asp.html">Home</a></li>
+        <li><a href="Awards.asp.html">Awards</a></li>
+        <li><a href="CallForPapers.asp.html">Call for Papers</a></li>
+        <li><a href="Registration.asp.html">Registration</a></li>
+        <li><a href="Papers.asp.html">Paper Submission</a></li>
+        <li><a href="Keynotes.asp.html">Keynotes</a></li>
+        <li><a href="http://www.icme2008.org/RegularProgram.asp">Technical Program</a></li>
+        <li><a href="Papers/AbstractSearch.asp.html">Paper Search</a></li>
+        <li><a href="Tutorials.asp.html">Tutorials</a></li>
+        <li><a href="SpecialSessions.asp.html">Special Sessions</a></li>
+        <li><a href="SideMeetings.asp.html">Side Meetings</a></li>
+        <li><a href="SocialEvents.asp.html">Social Events</a></li>
+        <li><a href="Information.asp.html">Information</a></li>
+        <li><a href="Hotels.asp.html">Hotels</a></li>
+        <li><a href="Restaurants.asp.html">Restaurants</a></li>
+        <li><a href="Hannover.asp.html">Hannover</a></li>
+        <li><a href="Sponsors.asp.html">Sponsors</a></li>
+        <li><a href="OrganizingCommittee.asp.html">Organizing Committee</a></li>
+      </ul>
+      <div id="imgdiv">
+        <img src="images/ICME2008_Logo.png" alt="ICME 2008 Logo" />
+      </div>
+    </div>
+    <p style="text-align: center;">
+        <a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml10-blue" alt="Valid XHTML 1.0 Transitional" height="31" width="88" style="border: none;" /></a>
+    </p>
+		<p style="text-align: center;">
+    	<a href="http://jigsaw.w3.org/css-validator/validator?uri=www.icme2008.org">
+        <img style="border:0;width:88px;height:31px" src="http://www.w3.org/Icons/valid-css-blue" alt="Valid CSS!" />
+     </a>
+    </p>
+    <!-- end #sidebar1 --></div>
+  <div id="mainContent">
+
+
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAmOWtp2OGTgU3igY6ZTb1rRTJk6zXv2t_j9T9FRhDKwiv_-QTlBRQoiSlgZIkK-vkfsfRum-Ypai3Eg"
+            type="text/javascript"></script>
+    <script type="text/javascript">
+    function initialize() {
+      if (GBrowserIsCompatible()) {
+        var map = new GMap2(document.getElementById("map_canvas"));
+        //map.setCenter(new GLatLng(52.376,9.7651), 15);
+	map.setCenter(new GLatLng(52.38,9.758), 15);
+	map.addControl(new GLargeMapControl());
+	map.addControl(new GMapTypeControl);
+
+	var icon_hcc = new GIcon();
+	icon_hcc.iconSize = new GSize(40, 34);
+	icon_hcc.image = "HCC_icon.png";
+	icon_hcc.iconAnchor = new GPoint(20, 20);
+	icon_hcc.infoWindowAnchor = new GPoint(20, 0);
+
+	var point_hcc = new GLatLng(52.37597906150684,9.769248962402344);
+	var marker_hcc = new GMarker(point_hcc, icon_hcc);
+	map.addOverlay(marker_hcc);
+	html_marker='<a href="http://www.icme2008.org/%5C%22http://www.hcc.de/en/%5C%22" target=\"_blank\">Hannover Congress Centrum</a><br><br><img src="http://www.icme2008.org/%5C%22images/HCC_small.jpg%5C%22">';
+	GEvent.addListener(marker_hcc, "click", function() {
+	marker_hcc.openInfoWindowHtml(html_marker);
+	});
+
+
+	var iconR1 = new GIcon();
+	iconR1.iconSize = new GSize(36, 26);
+	iconR1.image = "hotel_icon1.png";
+	iconR1.iconAnchor = new GPoint(18, 13);
+	iconR1.infoWindowAnchor = new GPoint(10, 0);
+	//var pointR1 = new GLatLng(52.37513414075905, 9.771137237548828);
+  var pointR1 = new GLatLng(52.3759, 9.77);
+	var markerR1 = new GMarker(pointR1, iconR1);
+	map.addOverlay(markerR1);
+	GEvent.addListener(markerR1, "click", function() {
+	markerR1.openInfoWindowHtml("<a href="http://www.icme2008.org/%5C%22http://www.congress-hotel-hannover.de/%5C%22" target=\"_blank\">Congress Hotel am Stadtpark</a> ****<br />Clausewitzstr. 6");
+	});
+
+	var iconR2 = new GIcon();
+	iconR2.iconSize = new GSize(36, 26);
+	iconR2.image = "hotel_icon2.png";
+	iconR2.iconAnchor = new GPoint(18,13);
+	iconR2.infoWindowAnchor = new GPoint(10, 0);
+	var pointR2 = new GLatLng(52.376335, 9.749704);
+	var markerR2 = new GMarker(pointR2, iconR2);
+	map.addOverlay(markerR2);
+	GEvent.addListener(markerR2, "click", function() {
+	markerR2.openInfoWindowHtml("<a href="http://www.icme2008.org/%5C%22http://www.concordehotel-am-leineschloss.de/h_berlin/index.html%5C%22" target=\"_blank\">Concorde Hotel Berlin</a> ***<br />K&ouml;nigstr. 12");
+	});
+
+	var iconR3 = new GIcon();
+	iconR3.iconSize = new GSize(36, 26);
+	iconR3.image = "hotel_icon3.png";
+	iconR3.iconAnchor = new GPoint(18, 13);
+	iconR3.infoWindowAnchor = new GPoint(10, 0);
+	var pointR3 = new GLatLng(52.37667, 9.746905);
+	var markerR3 = new GMarker(pointR3, iconR3);
+	map.addOverlay(markerR3);
+	map.addOverlay(markerR3);
+	GEvent.addListener(markerR3, "click", function() {
+	markerR3.openInfoWindowHtml("<a href="http://www.icme2008.org/%5C%22http://www.ichotelsgroup.com/h/d/cp/394/de/hd/hajhb%5C%22" target=\"_blank\">Crowne Plaza Hotel Schweizerhof</a> ****+<br />Hin&uuml;berstr. 6");
+	});
+
+	var iconR4 = new GIcon();
+	iconR4.iconSize = new GSize(36, 26);
+	iconR4.image = "hotel_icon4.png";
+	iconR4.iconAnchor = new GPoint(18, 13);
+	iconR4.infoWindowAnchor = new GPoint(10, 0);
+	var pointR4 = new GLatLng(52.374232, 9.740499);
+	var markerR4 = new GMarker(pointR4, iconR4);
+	map.addOverlay(markerR4);
+	GEvent.addListener(markerR4, "click", function() {
+	markerR4.openInfoWindowHtml("<a href="http://www.icme2008.org/%5C%22http://www.kastens-hotel-luisenhof.de%5C%22" target=\"_blank\">Kastens Hotel Luisenhof</a> ****<br />Luisenstr. 1");
+	});
+
+	var iconR5 = new GIcon();
+	iconR5.iconSize = new GSize(36, 26);
+	iconR5.image = "hotel_icon5.png";
+	iconR5.iconAnchor = new GPoint(18, 13);
+	iconR5.infoWindowAnchor = new GPoint(10, 0);
+	var pointR5 = new GLatLng(52.376432, 9.73946);
+	var markerR5 = new GMarker(pointR5, iconR5);
+	map.addOverlay(markerR5);
+	GEvent.addListener(markerR5, "click", function() {
+	markerR5.openInfoWindowHtml("<a href="http://www.icme2008.org/%5C%22http://www.centralhotel.de%5C%22" target=\"_blank\">Central Hotel Kaiserhof</a> ****<br />Ernst-August-Platz 4");
+	});
+
+	var iconR6 = new GIcon();
+	iconR6.iconSize = new GSize(36, 26);
+	iconR6.image = "hotel_icon6.png";
+	iconR6.iconAnchor = new GPoint(18, 13);
+	iconR6.infoWindowAnchor = new GPoint(10, 0);
+	var pointR6 = new GLatLng(52.378076, 9.744671);
+	var markerR6 = new GMarker(pointR6, iconR6);
+	map.addOverlay(markerR6);
+	GEvent.addListener(markerR6, "click", function() {
+	markerR6.openInfoWindowHtml("<a href="http://www.icme2008.org/%5C%22http://www.hotel-plaza-hannover.de/%5C%22" target=\"_blank\">Andor Hotel Plaza</a> ***+<br />Fernroder Str. 9");
+	});
+
+	var iconR7 = new GIcon();
+	iconR7.iconSize = new GSize(36, 26);
+	iconR7.image = "hotel_icon7.png";
+	iconR7.iconAnchor = new GPoint(18, 13);
+	iconR7.infoWindowAnchor = new GPoint(10, 0);
+	var pointR7 = new GLatLng(52.379227, 9.740241);
+	var markerR7 = new GMarker(pointR7, iconR7);
+	map.addOverlay(markerR7);
+	GEvent.addListener(markerR7, "click", function() {
+	markerR7.openInfoWindowHtml("<a href="http://www.icme2008.org/%5C%22http://www.accorhotels.com/accorhotels/fichehotel/gb/sui/3755/fiche_hotel.shtml%5C%22" target=\"_blank\">Suitehotel Hannover</a> ***<br />Rundestr. 9");
+	});
+
+
+	}
+ }
+</script>
+
+<h1>Hotels</h1>
+
+<p><a href="https://secure.webres.net/webres/portal4/default.asp?PTID=360&amp;LY4=J&amp;LANG=GB">Hotel Reservation Form (click)</a></p>
+<p><a href="ICMEhotelreservation-form.pdf">Hotel Reservation Form PDF (click)</a></p>
+
+<br>
+
+<table cellspacing ="0" cellpadding="5"  border="1" rules="all">
+<tr><td><b>Map No.</b></td><td><b>Name</b></td><td><b>Reservation No.</b></td><td><b>Class</b></td><td><b>Single</b></td><td><b>Double</b></td><td><b>Distance to the HCC / transfer time</b></td></tr>
+
+<tr><td rowspan="3">1</td><td rowspan="3"><a href="http://www.congress-hotel-hannover.de/" target="_blank">Congress Hotel am Stadtpark</a> ****</td><td>1</td><td>economy</td><td>61,00</td><td></td><td rowspan="3">0,02 km / close to HCC (within walking distance)</td></tr>
+<tr><td>2</td><td>classic</td><td>75,00</td><td>89,00</td></tr>
+<tr><td>3</td><td>double as single use</td><td>89,00</td><td></td></tr>
+
+<tr><td>2</td><td><a href="http://www.concordehotel-am-leineschloss.de/h_berlin/index.html" target="_blank">Concorde Hotel Berlin</a> ***</td><td>4</td><td>standard</td><td>65,00</td><td>85,00</td><td>1,23 km/near main station - bus 128/134 (8 min)</td></tr>
+
+<tr><td>3</td><td><a href="http://www.ichotelsgroup.com/h/d/cp/394/de/hd/hajhb" target="_blank">Crowne Plaza Hotel Schweizerhof</a> ****+</td><td>5</td><td>standard</td><td>150,00</td><td>180,00</td><td>1,69 km/near main station - bus 128/134 (8 min)</td></tr>
+<tr><td>4</td><td><a href="http://www.kastens-hotel-luisenhof.de" target="_blank">Kastens Hotel Luisenhof</a> ****</td><td>6</td><td>standard</td><td>137,00</td><td>157,00</td><td>2,20 km/near main station - bus 128/134 (10 min)</td></tr>
+
+<tr><td rowspan="4">5</td><td rowspan="4"><a href="http://www.centralhotel.de" target="_blank">Central Hotel Kaiserhof</a> ****</td><td>7</td><td>small</td><td>70,00</td><td></td><td rowspan="4">2,25 km/near main station - bus 128/134 (10 min)</td></tr>
+<tr><td>7</td><td>standard big</td><td></td><td>97,00</td></tr>
+<tr><td>8</td><td>double as single use</td><td>85,00</td><td></td></tr>
+<tr><td>8</td><td>comfort small</td><td></td><td>93,00</td></tr>
+
+<tr><td rowspan="2">6</td><td rowspan="2"><a href="http://www.hotel-plaza-hannover.de/" target="_blank">Andor Hotel Plaza</a> ***+</td><td>9</td><td>standard</td><td>78,00</td><td>105,00</td><td rowspan="2">2,40 km/near main station - bus 128/134 (10 min)</td></tr>
+<tr><td>10</td><td>business</td><td>83,00</td><td></td></tr>
+
+<tr><td>7</td><td><a href="http://www.accorhotels.com/accorhotels/fichehotel/gb/sui/3755/fiche_hotel.shtml" target="_blank">Suitehotel Hannover</a> ***</td><td>11</td><td>standard</td><td>83,00</td><td>95,00</td><td>2,50 km/near main station - bus 128/134 (10 min)</td></tr>
+</table>
+Closing date for the submission of hotel accommodation orders is the 1st May 2008. Applications received after this date will
+be handled on a request basis and bookings will be made subject to contingent availability. The room rates mentioned above arin in Euro per night and include breakfast buffet and all local taxes. If the hotel required is fully booked we will book the best alternative.<br>
+<br>
+
+<br>
+<table width="100%" align="center">
+<tr>
+<td>
+<div id="map_canvas" style="width: 100%; height: 700px">
+</div>
+</td>
+</tr>
+</table>
+
+<p>Microsoft Internet Explorer users have to set the Internet security to medium (Tools->Internet Options->Security->Internet->Medium).</p>
+
+
+	<br class="clearfloat" />
+	<!-- end #mainContent --></div>
+	<!-- This clearing element should immediately follow the #mainContent div in order to force the #container div to contain all child floats -->
+	<br class="clearfloat" />
+	<div id="footer">
+    <p>&copy;2009 <a href="http://www.cmsworldwide.com/">Conference Management Services, Inc.</a> -||- email: <a href="mailto:webmaster@icme2008.org">webmaster@icme2008.org</a> -||- Last updated Thursday, April 17, 2008</p>
+	<br class="clearfloat" />
+  <!-- end #footer --></div>
+<!-- end #container --></div>
+</body>
+</html>

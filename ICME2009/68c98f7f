@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="2009 IEEE International Conference on Multimedia &amp; Expo (ICME 2009)" />
+<meta name="keywords" content="ICME, IEEE Conference, Multimedia, Signal processing, Virtual reality, 3-D imaging, human-machine interface, Multimedia networking, Multimedia security, social media, Multimedia applications" />
+<title>2009 IEEE International Conference on Multimedia &amp; Expo (ICME 2009)</title>
+<style type="text/css">
+	@import "style.css";
+</style>
+<script type="text/javascript">
+      
+/***********************************************
+* Ultimate Fade-In Slideshow (v1.51): © Dynamic Drive (http://www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit http://www.dynamicdrive.com/ for this script and 100s more.
+***********************************************/
+ 
+var fadeimages=new Array()
+//SET IMAGE PATHS. Extend or contract array as needed
+fadeimages[0]=["images/h_right_1.jpg", "", ""] //plain image syntax
+fadeimages[1]=["images/h_right_3.jpg", "", ""] 
+fadeimages[2]=["images/h_right_4.jpg", "", ""] 
+fadeimages[3]=["images/h_right_5.jpg", "", ""] 
+fadeimages[4]=["images/h_right_6.jpg", "", ""] 
+fadeimages[5]=["images/h_right_7.jpg", "", ""] 
+
+//fadeimages[2]=["photo3.jpg", "http://www.javascriptkit.com", "_new"] //image with link and target syntax
+
+/*
+var fadeimages2=new Array() //2nd array set example. Remove or add more sets as needed.
+//SET IMAGE PATHS. Extend or contract array as needed
+fadeimages2[0]=["photo1.jpg", "", ""] //plain image syntax
+fadeimages2[1]=["photo2.jpg", "http://www.cssdrive.com", ""] //image with link syntax
+fadeimages2[2]=["photo3.jpg", "http://www.javascriptkit.com", "_new"] //image with link and target syntax
+*/
+
+var fadebgcolor="white"
+
+////NO need to edit beyond here/////////////
+ 
+var fadearray=new Array() //array to cache fadeshow instances
+var fadeclear=new Array() //array to cache corresponding clearinterval pointers
+ 
+var dom=(document.getElementById) //modern dom browsers
+var iebrowser=document.all
+ 
+function fadeshow(theimages, fadewidth, fadeheight, borderwidth, delay, pause, displayorder){
+this.pausecheck=pause
+this.mouseovercheck=0
+this.delay=delay
+this.degree=10 //initial opacity degree (10%)
+this.curimageindex=0
+this.nextimageindex=1
+fadearray[fadearray.length]=this
+this.slideshowid=fadearray.length-1
+this.canvasbase="canvas"+this.slideshowid
+this.curcanvas=this.canvasbase+"_0"
+if (typeof displayorder!="undefined")
+theimages.sort(function() {return 0.5 - Math.random();}) //thanks to Mike (aka Mwinter) :)
+this.theimages=theimages
+this.imageborder=parseInt(borderwidth)
+this.postimages=new Array() //preload images
+for (p=0;p<theimages.length;p++){
+this.postimages[p]=new Image()
+this.postimages[p].src=theimages[p][0]
+}
+ 
+var fadewidth=fadewidth+this.imageborder*2
+var fadeheight=fadeheight+this.imageborder*2
+ 
+if (iebrowser&&dom||dom) //if IE5+ or modern browsers (ie: Firefox)
+document.write('<div id="master'+this.slideshowid+'" style="position:relative;width:'+fadewidth+'px;height:'+fadeheight+'px;overflow:hidden;"><div id="'+this.canvasbase+'_0" style="position:absolute;width:'+fadewidth+'px;height:'+fadeheight+'px;top:0;left:0;filter:progid:DXImageTransform.Microsoft.alpha(opacity=10);opacity:0.1;-moz-opacity:0.1;-khtml-opacity:0.1;background-color:'+fadebgcolor+'"></div><div id="'+this.canvasbase+'_1" style="position:absolute;width:'+fadewidth+'px;height:'+fadeheight+'px;top:0;left:0;filter:progid:DXImageTransform.Microsoft.alpha(opacity=10);opacity:0.1;-moz-opacity:0.1;-khtml-opacity:0.1;background-color:'+fadebgcolor+'"></div></div>')
+else
+document.write('<div><img name="defaultslide'+this.slideshowid+'" src="'+this.postimages[0].src+'"></div>')
+ 
+if (iebrowser&&dom||dom) //if IE5+ or modern browsers such as Firefox
+this.startit()
+else{
+this.curimageindex++
+setInterval("fadearray["+this.slideshowid+"].rotateimage()", this.delay)
+}
+}
+
+function fadepic(obj){
+if (obj.degree<100){
+obj.degree+=10
+if (obj.tempobj.filters&&obj.tempobj.filters[0]){
+if (typeof obj.tempobj.filters[0].opacity=="number") //if IE6+
+obj.tempobj.filters[0].opacity=obj.degree
+else //else if IE5.5-
+obj.tempobj.style.filter="alpha(opacity="+obj.degree+")"
+}
+else if (obj.tempobj.style.MozOpacity)
+obj.tempobj.style.MozOpacity=obj.degree/101
+else if (obj.tempobj.style.KhtmlOpacity)
+obj.tempobj.style.KhtmlOpacity=obj.degree/100
+else if (obj.tempobj.style.opacity&&!obj.tempobj.filters)
+obj.tempobj.style.opacity=obj.degree/101
+}
+else{
+clearInterval(fadeclear[obj.slideshowid])
+obj.nextcanvas=(obj.curcanvas==obj.canvasbase+"_0")? obj.canvasbase+"_0" : obj.canvasbase+"_1"
+obj.tempobj=iebrowser? iebrowser[obj.nextcanvas] : document.getElementById(obj.nextcanvas)
+obj.populateslide(obj.tempobj, obj.nextimageindex)
+obj.nextimageindex=(obj.nextimageindex<obj.postimages.length-1)? obj.nextimageindex+1 : 0
+setTimeout("fadearray["+obj.slideshowid+"].rotateimage()", obj.delay)
+}
+}
+ 
+fadeshow.prototype.populateslide=function(picobj, picindex){
+var slideHTML=""
+if (this.theimages[picindex][1]!="") //if associated link exists for image
+slideHTML='<a href="'+this.theimages[picindex][1]+'" target="'+this.theimages[picindex][2]+'">'
+slideHTML+='<img src="'+this.postimages[picindex].src+'" border="'+this.imageborder+'px">'
+if (this.theimages[picindex][1]!="") //if associated link exists for image
+slideHTML+='</a>'
+picobj.innerHTML=slideHTML
+}
+ 
+ 
+fadeshow.prototype.rotateimage=function(){
+if (this.pausecheck==1) //if pause onMouseover enabled, cache object
+var cacheobj=this
+if (this.mouseovercheck==1)
+setTimeout(function(){cacheobj.rotateimage()}, 100)
+else if (iebrowser&&dom||dom){
+this.resetit()
+var crossobj=this.tempobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+crossobj.style.zIndex++
+fadeclear[this.slideshowid]=setInterval("fadepic(fadearray["+this.slideshowid+"])",50)
+this.curcanvas=(this.curcanvas==this.canvasbase+"_0")? this.canvasbase+"_1" : this.canvasbase+"_0"
+}
+else{
+var ns4imgobj=document.images['defaultslide'+this.slideshowid]
+ns4imgobj.src=this.postimages[this.curimageindex].src
+}
+this.curimageindex=(this.curimageindex<this.postimages.length-1)? this.curimageindex+1 : 0
+}
+ 
+fadeshow.prototype.resetit=function(){
+this.degree=10
+var crossobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+if (crossobj.filters&&crossobj.filters[0]){
+if (typeof crossobj.filters[0].opacity=="number") //if IE6+
+crossobj.filters(0).opacity=this.degree
+else //else if IE5.5-
+crossobj.style.filter="alpha(opacity="+this.degree+")"
+}
+else if (crossobj.style.MozOpacity)
+crossobj.style.MozOpacity=this.degree/101
+else if (crossobj.style.KhtmlOpacity)
+crossobj.style.KhtmlOpacity=this.degree/100
+else if (crossobj.style.opacity&&!crossobj.filters)
+crossobj.style.opacity=this.degree/101
+}
+ 
+ 
+fadeshow.prototype.startit=function(){
+var crossobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+this.populateslide(crossobj, this.curimageindex)
+if (this.pausecheck==1){ //IF SLIDESHOW SHOULD PAUSE ONMOUSEOVER
+var cacheobj=this
+var crossobjcontainer=iebrowser? iebrowser["master"+this.slideshowid] : document.getElementById("master"+this.slideshowid)
+crossobjcontainer.onmouseover=function(){cacheobj.mouseovercheck=1}
+crossobjcontainer.onmouseout=function(){cacheobj.mouseovercheck=0}
+}
+this.rotateimage()
+}
+
+</script>
+</head>
+
+<body>
+	<div id="page">
+    	<div id="pageheader">
+        	<div id="header"><h1>ICME2009CANCUN</h1></div>
+            <div id="left">
+            	<h2>2009 IEEE<br />
+                        International<br />
+                        Conference on<br />
+                        Multimedia and Expo<br />
+                        <br />
+                        June 28 - July 3, 2009<br />
+                        Hilton Cancun, Cancun, Mexico</h2>
+            </div>
+            <div id="right"><img src="images/h_right_1.jpg" width="555" height="120" alt="cancun photo"/>
+                <!--script type="text/javascript">
+				//new fadeshow(IMAGES_ARRAY_NAME, slideshow_width, slideshow_height, borderwidth, delay, pause (0=no, 1=yes), optionalRandomOrder)
+				//new fadeshow(fadeimages, 140, 225, 0, 3000, 1, "R")
+				new fadeshow(fadeimages, 555, 120, 0, 3000, 1);
+				</script-->
+            </div>
+    	</div>
+        
+        <div class="clr"></div>
+            
+        <div id="sidebarContainer">
+        	<div id="sidehead"></div>
+        	<div id="sidebar">
+              <!-- sidebar list here-->
+              <h1><a href="index.html">Home</a></h1>
+        	  <h1><a href="call_for_paper.html">Call for papers</a></h1>
+        	  <h2><a href="https://www.cmsworkshops.com/ICME2009/Papers.asp">online submission</a>
+        	      <!--a href="submission.html">online submission</a-->
+      	    </h2>
+        	  <h2><a href="paperkit.html">paper kit</a></h2>
+        	  <h2><a href="importantdate.html">Important dates</a></h2>
+        	  <h1>Programs
+        	      <!--a href="programs.html">Programs</a-->
+      	    </h1>
+        	  <!--<h2><a href="call_for_workshops.html">Call for workshops</a></h2>-->
+        	  <h2><a href="specialsessions.html">Special sessions</a></h2>
+        	  <h2><a href="tutorials.html">Tutorials</a></h2>
+        	  <h2><a href="call_for_demo.html">Call for demos</a></h2>
+        	  <h2><a href="workshops.html">Workshops</a></h2>        	  
+        	  <h2><a href="panels.html">Panels</a></h2>        	          	  
+        	  <h2><a href="keynote.html">Keynote</a></h2>
+                  <h2><a href="socialevent.html">Social Events</a></h2>
+        	  <h1><a href="https://www.cmsworkshops.com/ICME2009/Registration.asp" target="_blank">Registration</a>
+       	        <!--a href="register.html">Registration</a-->
+      	    </h1>
+        	  <h1><a href="city.html">Venue</a></h1>
+                  <h2><a href="hotel.html">Hotel Reservation</a></h2>
+        	  <h2><a href="city.html">City information</a></h2>
+        	  <h2><a href="travel_visa.html">Travel &amp; Visa</a></h2>
+        	  <h1><a href="committee.html">Organizing Committee</a></h1>
+        	  <h1><a href="program_committee.html">Technical Program Committee</a></h1>			  
+        	  <h1><a href="sponsors.html">Sponsors</a></h1>
+        	  <!--h1><a href="#">Contact us</a></h1-->
+              <div class="spacer"></div>
+        	  <!-- sidebar list end-->
+            </div>
+       	  <div id="sidefoot"></div>
+			<div id="sponsor">
+            	<img src="images/IEEE_Logo.png" />
+                <img src="images/SP_Logo.png" />
+                <img src="images/CAS_Logo.png" />
+                <img src="images/CS_Logo.png" />
+                <img src="images/CompSoc_Logo.png" />
+                <img src="images/huawei_logo.jpg" />
+                <img src="images/IBM_logo.jpg" />
+                <img src="images/HP_logo.jpg" />                
+            </div>
+        </div>
+        
+      <div id="content">
+	  
+	  
+                <h1>Cancun, Mexico</h1>
+        <div class="imgx">
+       	  <img src="http://upload.wikimedia.org/wikipedia/en/9/98/Cancunview2004.JPG" alt="Cancun city" width="300" height="225"/>
+            <br />
+            <div class="imgdesc">image by <a href="http://en.wikipedia.org/wiki/Image:Cancunview2004.JPG">Wikipedia.org</a></div>
+        </div>
+        <p>There are about 140 hotels in Cancún with more than 24,000 rooms and 380 restaurants. Four million visitors arrive each year in an average of 190 flights daily. The Hotel Zone of Cancun is shaped like a 7 with bridges on each end connecting to the mainland. Hotels on the vertical or long side of the 7 tend to have rougher beaches and beach erosion can be a problem. Resorts on the horizontal or short end of the seven tend to have more gentle surf because the waves here are blocked by the island of Isla Mujeres which lies just off shore. The Hotel Zone offers a broad range of accommodations, ranging from relatively inexpensive motel-style facilities in the older section closest to the mainland, to high-priced luxury hotels in the later sections.</p>
+
+        <p>Many of the hotels are time-share condominiums with kitchen facilities. Some are all inclusive hotels which offer unlimited breakfast, lunch, dinner and snacks, beverages, both alcoholic and non-alcoholic, hotel activities, entertainment, non-motorized water sports, and 40% discounts on tours to the Mayan ruins. Tips and taxes are included in the price of the hotel rooms. There are also upscale private residences and lavish condominiums for rent that cater to the rich. Restaurants, bars and shops in the hotel zone tend to be rather expensive compared with the downtown area and other Mexican resorts. Travelers will find many well-known theme restaurants and clubs here. Although the Hotel Zone is frequently described as &quot;posh&quot; or &quot;exclusive&quot; the main Cancún tourism market is middle- and upper-middle-class, according to government statistics, which also report that more than 37% of Cancún visitors are Mexican.</p>
+        <h1>Mayan Archaeological Sites</h1>
+        <div class="imgx"> <img src="http://upload.wikimedia.org/wikipedia/commons/f/f7/CancunRuins2002.jpg" alt="El Rey ruins in Cancún" width="300" height="225"/> 		    <br />
+            <div class="imgdesc">image by <a href="http://en.wikipedia.org/wiki/Image:CancunRuins2002.jpg">Wikipedia.org</a></div>
+        </div>
+        
+        <p>There are some (relatively) small Mayan vestiges of the pre-Columbian Maya civilization in Cancún. Ruinas El Rey are located in the Hotel Zone. El Meco, a more substantial site, is found on the mainland just outside the city limits on the road to Punta Sam.</p>
+        <p>Very close, at the Mayan Riviera and the Grand Costa Maya, there are impressive sites such as Cobá and Muyil (Riviera), and Kohunlich, Kinichná, Dzibanché, Oxtankah, Tulum, and Chacchoben, in the south of the state.</p>
+        <p>In the neighbor state of Yucatán is located impressive Chichen Itza, The UNESCO World Heritage granted this Mayan archaeological zone World Heritage Site status in 1988 and it was recently voted through Internet as one of the New Seven Wonders of the World.</p>
+        <p><small><em>*All the information is copyed from <a href="http://en.wikipedia.org/wiki/Cancún">Wikipedia.org</a></em></small></p>
+        <h1>Map</h1>
+      <iframe width="500" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com.tw/maps?f=q&amp;hl=en&amp;geocode=&amp;q=cancun,+mexico&amp;ie=UTF8&amp;s=AARTsJrx93TaZlWMJTjiLJ0TBNKhWFdSYQ&amp;ll=24.44715,-88.901367&amp;spn=13.974258,21.972656&amp;z=5&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com.tw/maps?f=q&amp;hl=en&amp;geocode=&amp;q=cancun,+mexico&amp;ie=UTF8&amp;ll=24.44715,-88.901367&amp;spn=13.974258,21.972656&amp;z=5&amp;source=embed">View Larger Map</a></small></div>
+        
+      <div class="clr"></div>
+        
+        <div id="footer">
+		© Copyright 2008-2009 IEEE ICME
+		<div>
+			<!-- Site Meter -->
+			<script type="text/javascript" src="http://s50.sitemeter.com/js/counter.js?site=s50icme09">
+			</script>
+			<noscript>
+				<a href="http://s50.sitemeter.com/stats.asp?site=s50icme09" target="_top">
+					<img src="http://s50.sitemeter.com/meter.asp?site=s50icme09" alt="Site Meter" border="0"/></a>
+			</noscript>
+			<!-- Copyright (c)2006 Site Meter -->
+		</div>
+        </div>
+        
+	</div>
+</body>
+</html>

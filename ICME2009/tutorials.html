@@ -1,0 +1,399 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="2009 IEEE International Conference on Multimedia &amp; Expo (ICME 2009)" />
+<meta name="keywords" content="ICME, IEEE Conference, Multimedia, Signal processing, Virtual reality, 3-D imaging, human-machine interface, Multimedia networking, Multimedia security, social media, Multimedia applications" />
+<title>2009 IEEE International Conference on Multimedia &amp; Expo (ICME 2009)</title>
+<style type="text/css">
+	@import "style.css";
+.style2 {font-size: 12px}
+</style>
+<script type="text/javascript">
+      
+/***********************************************
+* Ultimate Fade-In Slideshow (v1.51): © Dynamic Drive (http://www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit http://www.dynamicdrive.com/ for this script and 100s more.
+***********************************************/
+ 
+var fadeimages=new Array()
+//SET IMAGE PATHS. Extend or contract array as needed
+fadeimages[0]=["images/h_right_1.jpg", "", ""] //plain image syntax
+fadeimages[1]=["images/h_right_3.jpg", "", ""] 
+fadeimages[2]=["images/h_right_4.jpg", "", ""] 
+fadeimages[3]=["images/h_right_5.jpg", "", ""] 
+fadeimages[4]=["images/h_right_6.jpg", "", ""] 
+fadeimages[5]=["images/h_right_7.jpg", "", ""] 
+
+//fadeimages[2]=["photo3.jpg", "http://www.javascriptkit.com", "_new"] //image with link and target syntax
+
+/*
+var fadeimages2=new Array() //2nd array set example. Remove or add more sets as needed.
+//SET IMAGE PATHS. Extend or contract array as needed
+fadeimages2[0]=["photo1.jpg", "", ""] //plain image syntax
+fadeimages2[1]=["photo2.jpg", "http://www.cssdrive.com", ""] //image with link syntax
+fadeimages2[2]=["photo3.jpg", "http://www.javascriptkit.com", "_new"] //image with link and target syntax
+*/
+
+var fadebgcolor="white"
+
+////NO need to edit beyond here/////////////
+ 
+var fadearray=new Array() //array to cache fadeshow instances
+var fadeclear=new Array() //array to cache corresponding clearinterval pointers
+ 
+var dom=(document.getElementById) //modern dom browsers
+var iebrowser=document.all
+ 
+function fadeshow(theimages, fadewidth, fadeheight, borderwidth, delay, pause, displayorder){
+this.pausecheck=pause
+this.mouseovercheck=0
+this.delay=delay
+this.degree=10 //initial opacity degree (10%)
+this.curimageindex=0
+this.nextimageindex=1
+fadearray[fadearray.length]=this
+this.slideshowid=fadearray.length-1
+this.canvasbase="canvas"+this.slideshowid
+this.curcanvas=this.canvasbase+"_0"
+if (typeof displayorder!="undefined")
+theimages.sort(function() {return 0.5 - Math.random();}) //thanks to Mike (aka Mwinter) :)
+this.theimages=theimages
+this.imageborder=parseInt(borderwidth)
+this.postimages=new Array() //preload images
+for (p=0;p<theimages.length;p++){
+this.postimages[p]=new Image()
+this.postimages[p].src=theimages[p][0]
+}
+ 
+var fadewidth=fadewidth+this.imageborder*2
+var fadeheight=fadeheight+this.imageborder*2
+ 
+if (iebrowser&&dom||dom) //if IE5+ or modern browsers (ie: Firefox)
+document.write('<div id="master'+this.slideshowid+'" style="position:relative;width:'+fadewidth+'px;height:'+fadeheight+'px;overflow:hidden;"><div id="'+this.canvasbase+'_0" style="position:absolute;width:'+fadewidth+'px;height:'+fadeheight+'px;top:0;left:0;filter:progid:DXImageTransform.Microsoft.alpha(opacity=10);opacity:0.1;-moz-opacity:0.1;-khtml-opacity:0.1;background-color:'+fadebgcolor+'"></div><div id="'+this.canvasbase+'_1" style="position:absolute;width:'+fadewidth+'px;height:'+fadeheight+'px;top:0;left:0;filter:progid:DXImageTransform.Microsoft.alpha(opacity=10);opacity:0.1;-moz-opacity:0.1;-khtml-opacity:0.1;background-color:'+fadebgcolor+'"></div></div>')
+else
+document.write('<div><img name="defaultslide'+this.slideshowid+'" src="'+this.postimages[0].src+'"></div>')
+ 
+if (iebrowser&&dom||dom) //if IE5+ or modern browsers such as Firefox
+this.startit()
+else{
+this.curimageindex++
+setInterval("fadearray["+this.slideshowid+"].rotateimage()", this.delay)
+}
+}
+
+function fadepic(obj){
+if (obj.degree<100){
+obj.degree+=10
+if (obj.tempobj.filters&&obj.tempobj.filters[0]){
+if (typeof obj.tempobj.filters[0].opacity=="number") //if IE6+
+obj.tempobj.filters[0].opacity=obj.degree
+else //else if IE5.5-
+obj.tempobj.style.filter="alpha(opacity="+obj.degree+")"
+}
+else if (obj.tempobj.style.MozOpacity)
+obj.tempobj.style.MozOpacity=obj.degree/101
+else if (obj.tempobj.style.KhtmlOpacity)
+obj.tempobj.style.KhtmlOpacity=obj.degree/100
+else if (obj.tempobj.style.opacity&&!obj.tempobj.filters)
+obj.tempobj.style.opacity=obj.degree/101
+}
+else{
+clearInterval(fadeclear[obj.slideshowid])
+obj.nextcanvas=(obj.curcanvas==obj.canvasbase+"_0")? obj.canvasbase+"_0" : obj.canvasbase+"_1"
+obj.tempobj=iebrowser? iebrowser[obj.nextcanvas] : document.getElementById(obj.nextcanvas)
+obj.populateslide(obj.tempobj, obj.nextimageindex)
+obj.nextimageindex=(obj.nextimageindex<obj.postimages.length-1)? obj.nextimageindex+1 : 0
+setTimeout("fadearray["+obj.slideshowid+"].rotateimage()", obj.delay)
+}
+}
+ 
+fadeshow.prototype.populateslide=function(picobj, picindex){
+var slideHTML=""
+if (this.theimages[picindex][1]!="") //if associated link exists for image
+slideHTML='<a href="'+this.theimages[picindex][1]+'" target="'+this.theimages[picindex][2]+'">'
+slideHTML+='<img src="'+this.postimages[picindex].src+'" border="'+this.imageborder+'px">'
+if (this.theimages[picindex][1]!="") //if associated link exists for image
+slideHTML+='</a>'
+picobj.innerHTML=slideHTML
+}
+ 
+ 
+fadeshow.prototype.rotateimage=function(){
+if (this.pausecheck==1) //if pause onMouseover enabled, cache object
+var cacheobj=this
+if (this.mouseovercheck==1)
+setTimeout(function(){cacheobj.rotateimage()}, 100)
+else if (iebrowser&&dom||dom){
+this.resetit()
+var crossobj=this.tempobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+crossobj.style.zIndex++
+fadeclear[this.slideshowid]=setInterval("fadepic(fadearray["+this.slideshowid+"])",50)
+this.curcanvas=(this.curcanvas==this.canvasbase+"_0")? this.canvasbase+"_1" : this.canvasbase+"_0"
+}
+else{
+var ns4imgobj=document.images['defaultslide'+this.slideshowid]
+ns4imgobj.src=this.postimages[this.curimageindex].src
+}
+this.curimageindex=(this.curimageindex<this.postimages.length-1)? this.curimageindex+1 : 0
+}
+ 
+fadeshow.prototype.resetit=function(){
+this.degree=10
+var crossobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+if (crossobj.filters&&crossobj.filters[0]){
+if (typeof crossobj.filters[0].opacity=="number") //if IE6+
+crossobj.filters(0).opacity=this.degree
+else //else if IE5.5-
+crossobj.style.filter="alpha(opacity="+this.degree+")"
+}
+else if (crossobj.style.MozOpacity)
+crossobj.style.MozOpacity=this.degree/101
+else if (crossobj.style.KhtmlOpacity)
+crossobj.style.KhtmlOpacity=this.degree/100
+else if (crossobj.style.opacity&&!crossobj.filters)
+crossobj.style.opacity=this.degree/101
+}
+ 
+ 
+fadeshow.prototype.startit=function(){
+var crossobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+this.populateslide(crossobj, this.curimageindex)
+if (this.pausecheck==1){ //IF SLIDESHOW SHOULD PAUSE ONMOUSEOVER
+var cacheobj=this
+var crossobjcontainer=iebrowser? iebrowser["master"+this.slideshowid] : document.getElementById("master"+this.slideshowid)
+crossobjcontainer.onmouseover=function(){cacheobj.mouseovercheck=1}
+crossobjcontainer.onmouseout=function(){cacheobj.mouseovercheck=0}
+}
+this.rotateimage()
+}
+
+</script>
+</head>
+
+<body>
+	<div id="page">
+    	<div id="pageheader">
+        	<div id="header"><h1>ICME2009CANCUN</h1></div>
+            <div id="left">
+            	<h2>2009 IEEE<br />
+                        International<br />
+                        Conference on<br />
+                        Multimedia and Expo<br />
+                        <br />
+                        June 28 - July 3, 2009<br /></h2>
+                        <h2 id="overline">Hilton Cancun, Cancun, Mexico</h2>
+                        <h2 id="newlocation">New York City</h2>
+            </div>
+            <div id="right"><img src="images/h_right_1.jpg" width="555" height="120" alt="cancun photo"/>
+                <!--script type="text/javascript">
+				//new fadeshow(IMAGES_ARRAY_NAME, slideshow_width, slideshow_height, borderwidth, delay, pause (0=no, 1=yes), optionalRandomOrder)
+				//new fadeshow(fadeimages, 140, 225, 0, 3000, 1, "R")
+				new fadeshow(fadeimages, 555, 120, 0, 3000, 1);
+				</script-->
+            </div>
+    	</div>
+        
+        <div class="clr"></div>
+            
+        <div id="sidebarContainer">
+        	<div id="sidehead"></div>
+        	<div id="sidebar">
+              <!-- sidebar list here-->
+              <h1><a href="index.html">Home</a></h1>
+        	  <h1><a href="call_for_paper.html">Call for papers</a></h1>
+        	  <h2><a href="https://www.cmsworkshops.com/ICME2009/Papers.asp">online submission</a></h2>
+        	  <h2><a href="paperkit.html">paper kit</a></h2>
+        	  <h2><a href="importantdate.html">Important dates</a></h2>
+        	  <h1>Programs
+        	      <!--a href="programs.html">Programs</a-->
+      	    </h1>
+        	  <!--<h2><a href="call_for_workshops.html">Call for workshops</a></h2>-->
+        	  <h2><a href="specialsessions.html">Special sessions</a></h2>
+        	  <h2><a href="tutorials.html">Tutorials</a></h2>
+        	  <h2><a href="call_for_demo.html">Call for demos</a></h2>
+        	  <h2><a href="workshops.html">Workshops</a></h2>    
+        	  <h2><a href="panels.html">Panels</a></h2>        	          	  
+        	  <h2><a href="keynote.html">Keynote</a></h2>
+                  <h2><a href="socialevent.html">Social Events</a></h2>
+        	  <h1><a href="technicalprograms.html">Technical Programs</a></h1>        	                    
+        	  <h1><a href="https://www.cmsworkshops.com/ICME2009/Registration.asp" target="_blank">Registration</a></h1>                  
+        	  <h1><a href="city.html">Venue</a></h1>
+                  <h2><a href="hotel.html">Hotel Reservation</a></h2>
+        	  <h2><a href="city.html">City information</a></h2>
+        	  <h2><a href="travel_visa.html">Travel &amp; Visa</a></h2>
+        	  <h1><a href="committee.html">Organizing Committee</a></h1>
+        	  <h1><a href="program_committee.html">Technical Program Committee</a></h1>        	  
+        	  <h1><a href="sponsors.html">Sponsors</a></h1>
+        	  <!--h1><a href="#">Contact us</a></h1-->
+              <div class="spacer"></div>
+        	  <!-- sidebar list end-->
+            </div>
+       	  <div id="sidefoot"></div>
+			<div id="sponsor">
+            	<img src="images/IEEE_Logo.png" />
+                <img src="images/SP_Logo.png" />
+                <img src="images/CAS_Logo.png" />
+                <img src="images/CS_Logo.png" />
+                <img src="images/huawei_logo.jpg" />
+                <img src="images/IBM_logo.jpg" /><a href="http://domino.watson.ibm.com/comm/research.nsf/pages/r.multimedia.workshop2009cfp.html">IBM Emerging Leaders in Multimedia Student Workshop</a>
+                <img src="images/HP_logo.jpg" />                
+            </div>
+        </div>
+        
+        <div id="content">
+        <!-- content here-->
+
+          <h1>Tutorials (Monday, June 29, 2009) </h1>
+
+          <h3>Full-day Tutorials</h3>
+            <ul>
+              <li><a href="#full_1">Tutorial 1: Multimedia Aspects in Health Care</a></li>
+              <li><a href="#full_2">Tutorial 2: Sound Capture and Processing for Multimedia Systems</a></li>              
+            </ul>
+          <h3>Half-day Tutorials</h3>
+            <ul>
+              <li><a href="#half_1">Tutorial 1: Modelling Visibility Thresholds in Human-Centric Multimedia Systems</a> <span class="style2">(morning) </span></li>
+              <li><a href="#half_5">Tutorial 5: Distributed Video Coding for Low Cost Multimedia Communications and Systems</a><span class="style2"> (morning) </span></li>
+              <li><a href="#half_6">Tutorial 6: Near-Duplicate Image/Video Detection: From Indexing to Mining</a><span class="style2"> (afternoon) </span></li>              
+            </ul>
+            
+          <h1>Full-day Tutorials</h1>
+            <h3><a name=full_1>Tutorial 1: Multimedia Aspects in Health Care (Presenters: B. Prabhakaran)</a></h3>
+            <br/>
+            <p class="indent">Recently, Body Sensor Networks (BSNs) are being deployed for monitoring and managing medical conditions as well as human performance in sports. These BSNs include various sensors such as accelerometers, gyroscopes, EMG (Electro myograms), EKG (Electro-cardiograms), and other sensors depending on the needs of the medical conditions. Data from these sensors are typically Time Series data and the data from multiple sensors form multiple, multidimensional time series data. Analyzing data from such multiple medical sensors pose several challenges: different sensors have different characteristics, different people generate different patterns through these sensors, and even for the same person the data can vary widely depending on time and environment.</p>
+            
+            <p class="indent">This tutorial describes the technologies that go behind BSNs both in terms of the hardware infrastructure as well as the basic software. First, we outline the BSN hardware features and the related requirements. We then discuss the energy and communication choices for BSNs. Next, we discuss approaches for classification, data mining, visualization, and securing these data. We also show several demonstrations of body sensor networks as well as the software that aid in analyzing the data.</p>
+            
+            <br/>
+
+            <h4>B. Prabhakaran, University of Texas at Dallas</h4>
+            <p class="indent"><u>Presenter’s biography</u>: Dr. B. Prabhakaran is an Associate Professor with the faculty of Computer Science Department, University of Texas at Dallas. He has been working in the area of multimedia systems : animation & multimedia databases, authoring & presentation, resource management, and scalable web-based multimedia presentation servers. Dr. Prabhakaran received the prestigious National Science Foundation (NSF) CAREER Award in 2003 for his proposal on Animation Databases. He is also the Principal Investigator for US Army Research Office (ARO) grant on 3D data storage, retrieval, and delivery. He has published several research papers in various refereed conferences and journals in this area.</p>
+            
+            <p class="indent">He has served as an Associate Chair of the ACM Multimedia Conferences in 2006 (Santa Barbara), 2003 (Berkeley, CA), 2000 (Los Angeles, CA) and in 1999 (Orlando, FL) He has served as guest-editor (special issue on Multimedia Authoring and Presentation) for ACM Multimedia Systems journal. He is also serving on the editorial board of Multimedia Tools and Applications journal, Springer Publishers. He has also served as program committee member on several multimedia conferences and workshops. He has presented tutorials in ACM Multimedia and other multimedia conferences.</p>
+            
+            <p class="indent">D. Prabhakaran has served as a visiting research faculty with the Department of Computer Science, University of Maryland, College Park. He also served as a faculty in the Department of Computer Science, National University of Singapore as well as in the Indian Institute of Technology, Madras, India.</p>
+            
+            
+            <h3><a name=full_2>Tutorial 2: Sound Capture and Processing for Multimedia Systems (Presenters: I. Tashev)</a></h3> 
+            <br/>
+            <p class="indent">The sound is integral part of the multimedia systems. It accompanies video streaming and TV broadcasting, in certain cases the sound itself is the major information stream (radio broadcasting, podcasting).  Analyzing the sound content varies from simple event detection, to speech recognition and sophisticated language analysis, to joint processing of the sound and the video channels. In many cases the sound capturing is not done properly, which results in poor sound quality, affecting the results from sound analysis. 
+            <p class="indent">The tutorial will present techniques and algorithms for capturing sound and its enhancement for the needs or multimedia systems. It will start with basics of the audio processing, sound capturing and suppression and will end with state of the art noise suppression and reduction algorithms for single and multiple channels. The tutorial will be illustrated with charts and tables containing results from processing real audio signals. Several demos will illustrate the tutorial content. Besides providing of good sound quality some of the presented techniques are important cues for multimodal processing, such as sound source localization.</p>
+            <p class="indent">The presenter, Dr. Ivan Tashev, has Diploma Engineer degree in Electronics and PhD in Computer Science from Technical University of Sofia, Bulgaria, 1984 and 1989 respectively. He was assistant professor for nine years in the Department of Electronics of the same university. Dr. Tashev joined Microsoft in 1998, currently he is member of Speech Technology Group in Microsoft Research. He created various algorithms for sound capture, noise suppression and microphone array processing, including the integrated in Windows Vista microphone array support, sound capture and processing for headsets and mobile devices. Dr. Tashev has more than 50 published papers and filed for 18 US patents. He is senior member of IEEE, member of Technical Committees of IEEE IWAENC and IEEE WASPAA, reviewer for most of the journals and conferences in signal processing area. More details can be found in his web page: <a href="http://research.microsoft.com/en-us/people/ivantash/" target="_blank">http://research.microsoft.com/en-us/people/ivantash/</a>.</p>
+            <br/>
+            <h4>Ivan Tashev, Microsoft Research            </h4>
+            <p class="indent"><u>Presenter’s biography</u>: Dr. Tashev graduated Technical University of Sofia, Bulgaria, with Diploma Engineer degree in Electronics in 1984 and toke his PhD degree in Computer Science in the same university in 1989. He was assistant professor in the Department of Electronics in Technical University of Sofia, Bulgaria, for nine years. Co-creator of the course “Signals and data processing” for the fourth year students in Department of Electronics in the same university. Read the lectures of this course for seven years. Author of a book with same name, published by the Technical University of Sofia. Dr. Tashev joined Microsoft in 1998, currently he is member of Speech Technology Group in Microsoft Research. He created various algorithms for sound capture, noise suppression and microphone array processing. They include the integrated in Windows Vista microphone array support, sound capture and processing for headsets and mobile devices. Recently he is heavily involved in a project called Commute UX – in-car speech enabled dialog system and faces the challenges of sound capturing in the car and less distractive, speech enabled user interfaces. Some of the technologies from this project eventually will find their way to Microsoft Automotive platform – the base of FIAT Blue&Me and Ford SYNC. Dr. Tashev has more than 50 published papers and filed 18 US patents. Dr. Tashev is senior member of IEEE, member of Signal Processing society. He is member of Technical Committees of IEEE IWAENC and IEEE WASPAA, reviewer for most of the journals and conferences in signal processing area, member of the Pacific Northwest Committee of Audio Engineering Society.</p>
+            
+            
+          <h1>Half-day Tutorials</h1>  
+            <h3><a name=half_1>Tutorial 1: Modelling Visibility Thresholds in Human-Centric Multimedia Systems (Presenters: W. Lin)</a></h3>
+            <br/>
+            <h4>Weisi Lin, Nanyang Technological University            </h4>
+            <p class="indent"><u>Presenter’s biography</u>: Since 2003, Weisi Lin has devoted to perception-based modeling in different domains, perceptual image quality evaluation and visual processing. With the topics closely related to the proposed tutorial, he holds nine patents, published more than 70 technical publications in international refereed journals and conferences, and made 10 contributions to international standardization. He has been invited to write a survey paper on the subject for Proceedings of the IEEE. He has also been the project leader of 7 projects (mostly for industries) in perceptual visual processing, and maintained active, long-term working relationship with the companies which are keen in perception-based technology, such as NTT DoCoMo, SingHealth, Pixelmetrix and Rohde & Schwarz. He is the co-chair of the special sessions on perceptual processing in IEEE ICME06 and IEEE IMAP07. He gave invited talks in VPQM06 and VCVP08, a keynote speech in IEEE ICCCN07, and tutorials in IEEE ISCAS08 and PCM07, with different topics on visual perceptual processing.</p>
+              
+            <h3>&nbsp;</h3>
+            <h3><a name=half_5>Tutorial 5: Distributed Video Coding for Low Cost Multimedia Communications and Systems (Presenters: W. Fernando)</a></h3>
+            <br/>            
+            <h4>Anil Fernando, University of Surrey            </h4>
+            <p class="indent"><u>Presenter’s biography</u>: Dr. W.A.C. Fernando (SMIEEE) leads the Video Codec group in University of Surrey, UK. He has been working in video coding since 1998 and has published more than 155 international refereed journal and proceeding papers in this area. Furthermore, he has published more than 28 international refereed journal and conference papers in DVC. He is also attached to the VISNET-II (as the leading partner) European project which covers lots of DVC activities as the leading institute. He has also lots of research collaborations in DVC within Europe and North America and Asia.</p>
+              
+              <p class="indent">He is a member of the editorial board of the international journal of multimedia tools and applications. He has also been nominated as the guest editor for the special issue on joint source and channel coding for multimedia communications of the international journal of multimedia. Furthermore, he has been working as a referee for IEEE Transactions on Circuits and Systems for Video Technology, IEEE Transactions on Communications, Mobile Computing, Communications Letters, IEE proceedings of communications, IEE proceedings of Vision and Computing, IEE Electronic Letters, Journal of Communications Networking, Electronics and Telecommunications Research journal, SPIE journals, etc., and many conference proceedings (VTC, ICC, ISCAS, ICIP, SPIE, ITC, etc.,).</p>
+<!--
+            <p>
+              <ol>
+                <li>Introduction</li>
+                  <ul>
+                    <li>VoIP and video conferencing business</li>
+                  </ul>              
+                <li>Anatomy of VoIP and video conference systems</li>
+                  <ul>
+                    <li>Infrastructure based VoIP and video conferencing: Microsoft Unified Communications</li>
+                    <li>Peer-to-peer based VoIP and video conferencing: Skype</li>
+                  </ul>                    
+                <li>Audio/video components</li>
+                  <ul>
+                    <li>Audio codec</li>
+                    <li>Video codec</li>
+                    <li>Acoustic echo cancelation (AEC)</li>
+                  </ul>                  
+                <li>Network components </li>
+                  <ul>
+                    <li>Primer of the Internet </li>
+                    <li>Available bandwidth estimation</li>
+                    <li>Forward error correction (FEC)</li>
+                    <li>De-jitter buffer</li>
+                    <li>Packet loss concealment</li>
+                  </ul>                  
+                <li>Summary</li>
+              </ol>
+            </p>            
+            -->
+            <br/>			  
+            
+            <h3><a name=half_6>Tutorial 6: Near-Duplicate Image/Video Detection: From Indexing to Mining (Presenters: C- W. Ngo)</a></h3>
+            <br/>
+            <p class="indent">As bandwidth accessible to average users is increasing, image and video have become the fastest growing data type in Internet. Especially with the popularity of social media, there has been exponential growth in images/videos available on the Web. Among these huge volumes of images/videos, there exist large numbers of near-duplicates and copies. Near-duplicates (ND) carry both blessing and redundant signals. For example, ND provides rich visual clue for indexing and summarizing broadcast videos from different channels. On the other hand, the excessive amount of ND makes browsing web videos streamed over Internet an extremely time-consuming task. ND detection has thus appeared as a timely problem, being often regarded as a powerful tool for various emerging multimedia applications. The ND detection problem is considered challenging because a variety of capturing, digitalization and editing conditions can lead to groups of supposingly similar images or video clips, but appear differently due to a serial of geometry and photometric transformations.</p>
+
+            <p class="indent">This tutorial is to present the audience a broad overview of ND detection, including the fundamental concept, algorithm, challenge and opportunity of this problem. The first part of tutorial will discuss the most typical algorithms of ND detection for feature extraction, indexing, matching and filtering. Attention will be paid for the use of local interest point (or keypoint) for this problem. Specifically, different ways of utilizing keypoints for detection: as a dictionary, a visual language, a sparse set of points with temporal-spatial regularity, will be described. The second part of the tutorial will present two applications of ND detection for multimedia and web video mining. In the first application, novel algorithms, which treat near-duplicates as must-link constraints, for mining video cluster and topic structure will be described. In the second application, a real-time solution, by fully leveraging the content and context information available on Web, for web-scale mining of near-duplicate Internet videos will be presented.</p>
+            <!--
+            <p>
+              <ol>
+                <li>Overview of Near-Duplicate Retrieval and Detection</li>
+                <li>Feature Extraction</li>
+                  <ul>
+                    <li>Grid-based global feature</li>
+                    <li>Local interest point</li>
+                    <li>Visual dictionary</li>
+                    <li>Multi-scale and multi-resolution</li>            
+                    <li>Motion trajectory</li>                                
+                  </ul>                
+                <li>Matching and Similarity Measurement</li>
+                  <ul>
+                    <li>Fault-tolerant based point-to-point matching</li>
+                    <li>Visual keyword based bin-to-bin matching</li>
+                    <li>Ontology-based cross-bin matching</li>
+                    <li>Point-to-trajectory matching</li>                                      
+                  </ul>                    
+                <li>Indexing Technique</li>
+                  <ul>
+                    <li>Locality Sensitive Hashing (LSH)</li>
+                    <li>LIP-IS indexing</li>
+                    <li>Random histogram with embedding</li>
+                  </ul>                  
+                <li>Filtering and Verification Technique</li>
+                  <ul>
+                    <li>Multi-level filtering with global and local signatures</li>
+                    <li>Fast segment matching and alignment</li>
+                    <li>Verification: RANSAC, PE (Pattern Entropy)</li>
+                  </ul>                  
+                <li>Application for Multimedia Mining</li>
+                  <ul>
+                    <li>Mining News Story Clusters</li>
+                    <li>Novelty and Redundancy Detection</li>
+                    <li>Mining Video Topic Structure</li>
+                  </ul>                   
+                <li>Application for Web-Scale Video Mining</li>                
+                  <ul>
+                    <li>Novelty re-ranking for web video search</li>
+                    <li>Real-time elimination of near-duplicate with content and context</li>
+                  </ul>                   
+              </ol>
+            </p>
+            -->
+
+            <br/>
+            <h4>Chong-Wah Ngo, City University of Hong Kong            </h4>
+            <p class="indent"><u>Presenter’s biography</u>: ChongWah Ngo received his Ph.D in Computer Science from the Hong Kong University of Science & Technology (HKUST). He received his MSc and BSc, both in Computer Engineering, from Nanyang Technological University of Singapore. Before joining City University of Hong Kong, he was a postdoctoral scholar in Beckman Institute of University of Illinois in Urbana‐Champaign (UIUC). He was also a visiting researcher of Microsoft Research Asia. His recent research interests include large‐scale multimedia information retrieval, video computing, and multimedia mining. He has been serving the technical program committees of various major multimedia-related conferences including ACM Multimedia (MM), International Conf. on Image and Video Retrieval (CIVR) and International Conf. on Multimedia and Expo (ICME). In addition, he is in the editorial board of Journal of Multimedia Data Engineering and Management, and Journal of Advances in Multimedia. He is the founding leader of video retrieval group (VIREO) at City University of Hong Kong.</p>
+            
+      </div>
+        
+       	<div class="clr"></div> 
+        
+  		<div id="footer">
+        	© Copyright 2008-2009 IEEE ICME
+        </div>
+        
+	</div>
+</body>
+</html>

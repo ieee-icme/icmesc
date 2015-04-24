@@ -1,0 +1,65 @@
+/* Style Sheet for Paper kit */
+#paperkitfile p {
+	margin-left:15px;
+	margin-right:15px;
+	}
+#paperkitfile p.Level2 {
+	margin-left:55px;
+	margin-right:55px;
+	text-indent:-40px;
+	}
+#paperkitfile p.Level3 {
+	margin-left:55px;
+	margin-right:55px;
+	}
+#paperkitfile h1 {
+	font-size:24px;
+	}
+#paperkitfile h2 {
+	font-size:18px;
+	}
+#paperkitfile h3 {
+	font-size:16px;
+	font-weight:bold;
+	}
+#paperkitfile h4 {
+	font-size:15px;
+	font-weight:bold;
+	}
+#paperkitfile td {
+	font-family:sans-serif;
+	font-size:14px;
+	}
+
+#paperkitfile th {
+  text-align: left;
+  border: 3px double black;
+  padding: 0.3em;
+}
+
+#paperkitfile td {
+  border: 1px solid black;
+  padding: 0.3em;
+}
+
+#paperkitfile .important {
+  font-weight: bolder;
+  background-color: #b2b2bf;
+}
+
+#paperkitfile div.sep {
+  margin: 1em 1em;
+  border-top: 1px solid black;
+}
+
+#paperkitfile div.sepbig {
+  margin: 2em 1em;
+  border-top: 3px solid black;
+}
+
+#paperkitfile div.sidebar {
+  margin: 2em 1em;
+  padding: 0.3em;
+  border: 1px dashed gray;
+  background-color: #f0f0f0;
+}

@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="2009 IEEE International Conference on Multimedia &amp; Expo (ICME 2009)" />
+<meta name="keywords" content="ICME, IEEE Conference, Multimedia, Signal processing, Virtual reality, 3-D imaging, human-machine interface, Multimedia networking, Multimedia security, social media, Multimedia applications" />
+<title>2009 IEEE International Conference on Multimedia &amp; Expo (ICME 2009)</title>
+<style type="text/css">
+	@import "style.css";
+</style>
+<script type="text/javascript">
+      
+/***********************************************
+* Ultimate Fade-In Slideshow (v1.51): © Dynamic Drive (http://www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit http://www.dynamicdrive.com/ for this script and 100s more.
+***********************************************/
+ 
+var fadeimages=new Array()
+//SET IMAGE PATHS. Extend or contract array as needed
+fadeimages[0]=["images/h_right_1.jpg", "", ""] //plain image syntax
+fadeimages[1]=["images/h_right_3.jpg", "", ""] 
+fadeimages[2]=["images/h_right_4.jpg", "", ""] 
+fadeimages[3]=["images/h_right_5.jpg", "", ""] 
+fadeimages[4]=["images/h_right_6.jpg", "", ""] 
+fadeimages[5]=["images/h_right_7.jpg", "", ""] 
+
+//fadeimages[2]=["photo3.jpg", "http://www.javascriptkit.com", "_new"] //image with link and target syntax
+
+/*
+var fadeimages2=new Array() //2nd array set example. Remove or add more sets as needed.
+//SET IMAGE PATHS. Extend or contract array as needed
+fadeimages2[0]=["photo1.jpg", "", ""] //plain image syntax
+fadeimages2[1]=["photo2.jpg", "http://www.cssdrive.com", ""] //image with link syntax
+fadeimages2[2]=["photo3.jpg", "http://www.javascriptkit.com", "_new"] //image with link and target syntax
+*/
+
+var fadebgcolor="white"
+
+////NO need to edit beyond here/////////////
+ 
+var fadearray=new Array() //array to cache fadeshow instances
+var fadeclear=new Array() //array to cache corresponding clearinterval pointers
+ 
+var dom=(document.getElementById) //modern dom browsers
+var iebrowser=document.all
+ 
+function fadeshow(theimages, fadewidth, fadeheight, borderwidth, delay, pause, displayorder){
+this.pausecheck=pause
+this.mouseovercheck=0
+this.delay=delay
+this.degree=10 //initial opacity degree (10%)
+this.curimageindex=0
+this.nextimageindex=1
+fadearray[fadearray.length]=this
+this.slideshowid=fadearray.length-1
+this.canvasbase="canvas"+this.slideshowid
+this.curcanvas=this.canvasbase+"_0"
+if (typeof displayorder!="undefined")
+theimages.sort(function() {return 0.5 - Math.random();}) //thanks to Mike (aka Mwinter) :)
+this.theimages=theimages
+this.imageborder=parseInt(borderwidth)
+this.postimages=new Array() //preload images
+for (p=0;p<theimages.length;p++){
+this.postimages[p]=new Image()
+this.postimages[p].src=theimages[p][0]
+}
+ 
+var fadewidth=fadewidth+this.imageborder*2
+var fadeheight=fadeheight+this.imageborder*2
+ 
+if (iebrowser&&dom||dom) //if IE5+ or modern browsers (ie: Firefox)
+document.write('<div id="master'+this.slideshowid+'" style="position:relative;width:'+fadewidth+'px;height:'+fadeheight+'px;overflow:hidden;"><div id="'+this.canvasbase+'_0" style="position:absolute;width:'+fadewidth+'px;height:'+fadeheight+'px;top:0;left:0;filter:progid:DXImageTransform.Microsoft.alpha(opacity=10);opacity:0.1;-moz-opacity:0.1;-khtml-opacity:0.1;background-color:'+fadebgcolor+'"></div><div id="'+this.canvasbase+'_1" style="position:absolute;width:'+fadewidth+'px;height:'+fadeheight+'px;top:0;left:0;filter:progid:DXImageTransform.Microsoft.alpha(opacity=10);opacity:0.1;-moz-opacity:0.1;-khtml-opacity:0.1;background-color:'+fadebgcolor+'"></div></div>')
+else
+document.write('<div><img name="defaultslide'+this.slideshowid+'" src="'+this.postimages[0].src+'"></div>')
+ 
+if (iebrowser&&dom||dom) //if IE5+ or modern browsers such as Firefox
+this.startit()
+else{
+this.curimageindex++
+setInterval("fadearray["+this.slideshowid+"].rotateimage()", this.delay)
+}
+}
+
+function fadepic(obj){
+if (obj.degree<100){
+obj.degree+=10
+if (obj.tempobj.filters&&obj.tempobj.filters[0]){
+if (typeof obj.tempobj.filters[0].opacity=="number") //if IE6+
+obj.tempobj.filters[0].opacity=obj.degree
+else //else if IE5.5-
+obj.tempobj.style.filter="alpha(opacity="+obj.degree+")"
+}
+else if (obj.tempobj.style.MozOpacity)
+obj.tempobj.style.MozOpacity=obj.degree/101
+else if (obj.tempobj.style.KhtmlOpacity)
+obj.tempobj.style.KhtmlOpacity=obj.degree/100
+else if (obj.tempobj.style.opacity&&!obj.tempobj.filters)
+obj.tempobj.style.opacity=obj.degree/101
+}
+else{
+clearInterval(fadeclear[obj.slideshowid])
+obj.nextcanvas=(obj.curcanvas==obj.canvasbase+"_0")? obj.canvasbase+"_0" : obj.canvasbase+"_1"
+obj.tempobj=iebrowser? iebrowser[obj.nextcanvas] : document.getElementById(obj.nextcanvas)
+obj.populateslide(obj.tempobj, obj.nextimageindex)
+obj.nextimageindex=(obj.nextimageindex<obj.postimages.length-1)? obj.nextimageindex+1 : 0
+setTimeout("fadearray["+obj.slideshowid+"].rotateimage()", obj.delay)
+}
+}
+ 
+fadeshow.prototype.populateslide=function(picobj, picindex){
+var slideHTML=""
+if (this.theimages[picindex][1]!="") //if associated link exists for image
+slideHTML='<a href="'+this.theimages[picindex][1]+'" target="'+this.theimages[picindex][2]+'">'
+slideHTML+='<img src="'+this.postimages[picindex].src+'" border="'+this.imageborder+'px">'
+if (this.theimages[picindex][1]!="") //if associated link exists for image
+slideHTML+='</a>'
+picobj.innerHTML=slideHTML
+}
+ 
+ 
+fadeshow.prototype.rotateimage=function(){
+if (this.pausecheck==1) //if pause onMouseover enabled, cache object
+var cacheobj=this
+if (this.mouseovercheck==1)
+setTimeout(function(){cacheobj.rotateimage()}, 100)
+else if (iebrowser&&dom||dom){
+this.resetit()
+var crossobj=this.tempobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+crossobj.style.zIndex++
+fadeclear[this.slideshowid]=setInterval("fadepic(fadearray["+this.slideshowid+"])",50)
+this.curcanvas=(this.curcanvas==this.canvasbase+"_0")? this.canvasbase+"_1" : this.canvasbase+"_0"
+}
+else{
+var ns4imgobj=document.images['defaultslide'+this.slideshowid]
+ns4imgobj.src=this.postimages[this.curimageindex].src
+}
+this.curimageindex=(this.curimageindex<this.postimages.length-1)? this.curimageindex+1 : 0
+}
+ 
+fadeshow.prototype.resetit=function(){
+this.degree=10
+var crossobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+if (crossobj.filters&&crossobj.filters[0]){
+if (typeof crossobj.filters[0].opacity=="number") //if IE6+
+crossobj.filters(0).opacity=this.degree
+else //else if IE5.5-
+crossobj.style.filter="alpha(opacity="+this.degree+")"
+}
+else if (crossobj.style.MozOpacity)
+crossobj.style.MozOpacity=this.degree/101
+else if (crossobj.style.KhtmlOpacity)
+crossobj.style.KhtmlOpacity=this.degree/100
+else if (crossobj.style.opacity&&!crossobj.filters)
+crossobj.style.opacity=this.degree/101
+}
+ 
+ 
+fadeshow.prototype.startit=function(){
+var crossobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+this.populateslide(crossobj, this.curimageindex)
+if (this.pausecheck==1){ //IF SLIDESHOW SHOULD PAUSE ONMOUSEOVER
+var cacheobj=this
+var crossobjcontainer=iebrowser? iebrowser["master"+this.slideshowid] : document.getElementById("master"+this.slideshowid)
+crossobjcontainer.onmouseover=function(){cacheobj.mouseovercheck=1}
+crossobjcontainer.onmouseout=function(){cacheobj.mouseovercheck=0}
+}
+this.rotateimage()
+}
+
+</script>
+</head>
+
+<body>
+	<div id="page">
+    	<div id="pageheader">
+        	<div id="header"><h1>ICME2009CANCUN</h1></div>
+            <div id="left">
+            	<h2>2009 IEEE<br />
+                        International<br />
+                        Conference on<br />
+                        Multimedia and Expo<br />
+                        <br />
+                        June 28 - July 3, 2009<br />
+                        Hilton Cancun, Cancun, Mexico</h2>
+            </div>
+            <div id="right"><img src="images/h_right_1.jpg" width="555" height="120" alt="cancun photo"/>
+                <!--script type="text/javascript">
+				//new fadeshow(IMAGES_ARRAY_NAME, slideshow_width, slideshow_height, borderwidth, delay, pause (0=no, 1=yes), optionalRandomOrder)
+				//new fadeshow(fadeimages, 140, 225, 0, 3000, 1, "R")
+				new fadeshow(fadeimages, 555, 120, 0, 3000, 1);
+				</script-->
+            </div>
+    	</div>
+        
+        <div class="clr"></div>
+            
+        <div id="sidebarContainer">
+        	<div id="sidehead"></div>
+        	<div id="sidebar">
+              <!-- sidebar list here-->
+              <h1><a href="index.html">Home</a></h1>
+        	  <h1><a href="call_for_paper.html">Call for papers</a></h1>
+        	  <h2><a href="https://www.cmsworkshops.com/ICME2009/Papers.asp">online submission</a></h2>
+        	  <h2><a href="paperkit.html">paper kit</a></h2>
+        	  <h2><a href="importantdate.html">Important dates</a></h2>
+        	  <h1>Programs
+        	      <!--a href="programs.html">Programs</a-->
+      	    </h1>
+        	  <!--<h2><a href="call_for_workshops.html">Call for workshops</a></h2>-->
+        	  <h2><a href="specialsessions.html">Special sessions</a></h2>
+        	  <h2><a href="tutorials.html">Tutorials</a></h2>
+        	  <h2><a href="call_for_demo.html">Call for demos</a></h2>
+        	  <h2><a href="workshops.html">Workshops</a></h2>    
+        	  <h2><a href="panels.html">Panels</a></h2>        	          	  
+        	  <h2><a href="keynote.html">Keynote</a></h2>
+                  <h2><a href="socialevent.html">Social Events</a></h2>
+        	  <h1><a href="technicalprograms.html">Technical Programs</a></h1>        	                    
+        	  <h1><a href="https://www.cmsworkshops.com/ICME2009/Registration.asp" target="_blank">Registration</a></h1>                  
+        	  <h1><a href="city.html">Venue</a></h1>
+                  <h2><a href="hotel.html">Hotel Reservation</a></h2>
+        	  <h2><a href="city.html">City information</a></h2>
+        	  <h2><a href="travel_visa.html">Travel &amp; Visa</a></h2>
+        	  <h1><a href="committee.html">Organizing Committee</a></h1>
+        	  <h1><a href="program_committee.html">Technical Program Committee</a></h1>        	  
+        	  <h1><a href="sponsors.html">Sponsors</a></h1>
+        	  <!--h1><a href="#">Contact us</a></h1-->
+              <div class="spacer"></div>
+        	  <!-- sidebar list end-->
+            </div>
+       	  <div id="sidefoot"></div>
+			<div id="sponsor">
+            	<img src="images/IEEE_Logo.png" />
+                <img src="images/SP_Logo.png" />
+                <img src="images/CAS_Logo.png" />
+                <img src="images/CS_Logo.png" />
+                <img src="images/CompSoc_Logo.png" />
+                <img src="images/huawei_logo.jpg" />
+                <img src="images/IBM_logo.jpg" />
+                <img src="images/HP_logo.jpg" />                
+            </div>
+        </div>
+        
+        <div id="content">
+        <!-- content here-->
+
+          <h1>Keynotes</h1>
+          <p>More information will be posted here as it becomes available.</p>
+          
+          <h2>John Apostolopoulos, HP Labs</h2>
+          <h5>8:40am - 9:40am, Tuesday, Jun 30 </h5>
+          <div class="imgx">
+               		<img  src="images/john_apostolopoulos_cut_216_240.jpg" alt="John Apostolopoulos" />
+                	<br />
+          </div>
+            <p class="indent">John Apostolopoulos is the Director of the Multimedia Communications and Networking Lab (MCNL) and a Distinguished Technologist at HP Labs.  The goals of MCNL are to create compelling networked media experiences that fundamentally change how people communicate, collaborate, socialize and entertain, and to create the intelligent network infrastructure to enable next-generation applications.  He received his B.S., M.S., and Ph.D. degrees in EECS from MIT. In graduate school, he worked on the U.S. Digital TV standard and received an Emmy Award Certificate for his contributions.  Recently, his work on transcoding in the middle of a network while preserving end-to-end security (secure transcoding) was adopted by the JPEG-2000 Security (JPSEC) standard.  He was named “one of the world’s top 100 young (under 35) innovators in science and technology” (TR100) by MIT Technology Review in 2003, and an IEEE Fellow in 2008.  He currently serves as chair of the IEEE Image, Video, and Multidimensional Signal Processing (IVMSP) technical committee, member of the Multimedia Signal Processing (MMSP) technical committee, and recently was general co-chair of VCIP'06, and technical co-chair for IEEE ICIP'07. He enjoys teaching and conducts joint research at Stanford University, where he is a Consulting Associate Professor of EE, and is a frequent visiting lecturer at MIT EECS.  His primary research interests include improving the quality, reliability, scalability and security of multimedia communications over wired and wireless packet networks.</p>
+			<br />
+			<br />
+			
+			<h2> Image/Video Classification and Search: Addressing Semantic Gap and User Gap</h2>
+            <h2><span class="name">Shih-Fu Chang</span>, Columbia University</h2>
+            <h5>8:40am - 9:40am, Wednesday, July 1 </h5>			
+			<p class="indent">Finding information from large image/video sources poses a challenging yet exciting problem. Two well-known barriers preventing successful solutions to date are the semantic gap and the user gap. The former refers to the difficulty in inferring high-level semantic labels from low-level pixel data. The latter reflects user’s frustration in expressing his/her information needs of visual content using existing systems. In this talk, I will present recent research trends aiming at solving both problems. First, I will survey various approaches (expert driven, linguistics based, and user driven) taken in defining large-scale multimedia concept ontologies, covering thousands of visual concepts from different categories (scene, object, event, people etc). I will then discuss the state of the art and open issues of automatic concept categorization, which if successful, promise to fill the semantic gap. I will emphasize issues of learning from a large pool of data with limited or imperfect labels (e.g., data from Internet).  Second, to address the user gap, I will present efforts in developing intuitive interactive tools for video search.  I will demonstrate a novel  paradigm with unique emphasis on helping users to make sense of  visual data throughout the search process, starting from initial query formulation to real-time navigation of the concept space and result sets simultaneously.</p>
+			
+            <div class="imgx">
+               		<img  src="http://www.ee.columbia.edu/~sfchang/sfc-photo.jpg" alt="Shih-Fu Chang" width="170" height="240" />
+                	<br />
+            </div>
+            <p class="indent"><u>Presenter’s biography</u>: Shih-Fu Chang is Professor and Chairman of Electrical Engineering and Director of <a href="http://www.ee.columbia.edu/dvmm">Digital Video and Multimedia Lab </a> at Columbia University. He received a BS degree in Electrical Engineering from National Taiwan University in 1985 and a PhD degree in EECS from U.C. Berkeley in 1993.</p>
+ 
+            <p class="indent">Chang has pioneered development of techniques and systems for content-based visual retrieval, video content analysis, compressed-domain video manipulation, and adaptive media streaming. In 1996, he and his students developed several of the first search engines for digital images and videos, such as VisualSEEk, VideoQ, and WebSEEk, using fully automated content-based analysis. Works from his group are influential in shaping the foundation of this active field. His other contributions include development of new visual search paradigms, large-scale object recognition models (e.g., Columbia374), international multimedia indexing standards (e.g., MPEG-7), and large multimedia ontologies (e.g., LSCOM). He has expanded his recent research into the emerging area of Internet Media Computing, emphasizing exploration of large amount of online media data, metadata, and use behaviors for expediting progresses in traditional fields like image search and computer vision.</p>
+
+            <p class="indent">Chang has received a number of awards, including IEEE Kiyo Tomiyasu Award (2009), Navy ONR Young Investigator Award, IBM Faculty Award, ACM Recognition of Service Award, NSF CAREER Award, and three Best Paper Awards from IEEE, ACM, and SPIE. Several students supervised by him have also received Best Student Paper Awards. He is a Fellow of IEEE and former Editor-in-Chief of the IEEE Signal Processing Magazine (2006-8). He has had fruitful interaction with industry, via directing Columbia’s ADVENT industry-university research consortium (2000-3), serving on technical advisory boards, and transferring more than ten technologies to companies. </p>            
+
+			<br />
+			<br />
+			
+                      <h2><span class="name">Parallel Computing Revolution in Video Processing,<br />Wen-mei W. Hwu</span>, University of Illinois at Urbana-Champaign</h2>
+                      <h5>8:40am - 9:40am, Thursday, July 2 </h5>
+		              
+          <div class="imgx">
+               		<img  src="http://impact.crhc.illinois.edu/people/pix/hwu-lg.jpg" alt="Wen-mei W. Hwu" width="200" height="250"/>
+                	<br />
+          </div>
+            <p>With the pervasive presence of low-cost, high quality cameras on cell phones and laptops, we are witnessing the beginning of an explosive growth of video applications. In the near future, these applications will allow us to better manage images and videos. In the long run, they will likely revolutionize our interactions with computers, game consoles, mobile devices and each other. Innovations in these applications will require orders of magnitude increase in computing speed than we have today. Recent advances in GPUs such as the NVIDIA GeForce GTX280 have transformed them into massively parallel, generally programmable many-core processors. Today, application developers for these many-core chips are reporting 10X-100X speedup over sequential code on traditional microprocessors. According to the semiconductor industry roadmap, these processors could scale up to over 1,000X speedup over single cores by the end of the year 2016. I will present several exciting efforts in using massively parallel processors to add innovations to the way we analyze, enhance, and synthesize videos for use in end-user applications. I will also address the interaction between algorithm design, programming and the parallel platform features to point to the areas that we will likely have new breakthroughs in the future.</p>
+
+            <p><span class="indent"><u>Presenter’s biography</u>: Wen-mei W. Hwu is a Professor and holds the Sanders-AMD Endowed Chair in the Department of Electrical and Computer Engineering, University of Illinois at Urbana-Champaign. His research interests are in the area of architecture, implementation, and software for high performance computer systems. He is the director of the <a href="http://impact.crhc.illinois.edu/" target="_blank">IMPACT research group</a>. For his contributions in research and teaching, he received the ACM SigArch Maurice Wilkes Award, the ACM Grace Murray Hopper Award, the Tau Beta Pi Daniel C. Drucker Eminent Faculty Award, and ISCA Most Influential Paper Award. He is a fellow of IEEE and ACM. Hwu serves on the Executive Committee of the MARCO/DARPA <a href="http://www.c2s2.org" target="_blank">C2S2</a>  and <a href="http://www.gigascale.org" target="_blank">GSRC</a>  Focus Research Centers. He leads the GSRC Concurrent Systems Theme and directs the CUDA Center of Excellence at UIUC. He also co-directs the new $18M UIUC Intel/Microsoft Universal Parallel Computing Research Center with Marc Snir and serves as one of the principal investigators of the $208M NSF Blue Waters Petascale computer project. Dr. Hwu received his Ph.D. degree in Computer Science from the University of California, Berkeley.</span></p>
+
+      </div>
+        
+       	<div class="clr"></div> 
+        
+  		<div id="footer">
+        	© Copyright 2008-2009 IEEE ICME
+        </div>
+        
+	</div>
+</body>
+</html>

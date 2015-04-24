@@ -1,0 +1,180 @@
+body{
+	background-color: #9AA2AF;
+	width: 1000px;
+	margin: 5px auto;
+}
+
+a {
+	text-decoration: none;
+}
+a:link {
+	color: #D4FFFF;	
+}
+a:visited {
+	color: #D4FFFF;	
+}
+a:hover {
+	color: #79B9CD;	
+}
+
+h2 a {
+	text-decoration: none;
+}
+h2 a:link {
+	color: #11404F;
+}
+h2 a:visited {
+	color: #11404F;	
+}
+h2 a:hover {
+	color: #79B9CD;	
+}
+
+p a {
+	text-decoration: none;
+}
+p a:link {
+	color: #3883A4;	
+}
+p a:visited {
+	color: #3883A4;	
+}
+p a:hover {
+	color: #79B9CD;	
+}
+
+li a {
+	text-decoration: none;
+}
+li a:link {
+	color: #3883A4;	
+}
+li a:visited {
+	color: #3883A4;	
+}
+li a:hover {
+	color: #79B9CD;	
+}
+
+td a {
+	text-decoration: none;
+}
+td a:link {
+	color: #3883A4;	
+}
+td a:visited {
+	color: #3883A4;	
+}
+td a:hover {
+	color: #79B9CD;	
+}
+
+h1{
+	color: #194959;
+	font-size: 24px;
+	margin: 0 0 10px 0;
+}
+
+h2{
+	color: #11404F;
+	font-size: 20px;
+	margin-top: 0;
+}
+
+h3{
+	margin-bottom: 0;
+	margin-left: 10px;
+	color: #0D252F;
+	font-size: 18px;
+}
+
+h4{
+	margin: 15px 0 5px 15px;
+	color: #0D252F;
+	font-size: 16px;
+}
+
+img{
+	border: none;
+}
+
+hr{
+	margin: 3px 0;
+	height: 1px;
+	background-color: #9AA2AF;
+	border: 0;
+}
+
+#top{
+	background-image: url('images/top.png');
+	width: 1000px;
+	height: 160px;
+	background-repeat: no-repeat;
+}
+
+#navigate{
+	float: left;
+	width: 200px;
+	padding-top: 5px;
+	padding-bottom: 10px;
+	background-color: #32456E;
+}
+
+#mainContent{
+	float: left;
+	width: 770px;
+	min-height: 850px;
+	padding: 15px;
+	background-color: #F5F5F5;
+}
+
+#leftContainer{
+	float: left;
+	width: 200px;
+}
+
+#bottomContainer{
+	float: right;
+	width: 800px;
+	background-color: #F5F5F5;
+}
+
+#copyright{
+	float: left;
+	width: 1000px;
+	text-align: center;
+	color: #D4FFFF;
+	background-image: url('images/bottom.png');
+	margin: 5px 0;
+	padding: 5px 0;
+}
+
+.navLink{
+	margin-top: 5px;
+	margin-left: 10px;
+}
+
+.indented{
+	position: relative;
+	margin-left: 20px;
+}
+
+.width300{
+	float: left;
+	margin-left: 50px;
+	width: 300px;
+}
+
+.width400{
+	float: left;
+	margin-left: 50px;
+	width: 400px;
+}
+
+.highlighted{
+	color: #32456E;
+}
+
+.sponsorImage{
+	margin-left: 0px;
+}

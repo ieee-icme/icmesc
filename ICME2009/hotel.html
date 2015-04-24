@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="2009 IEEE International Conference on Multimedia &amp; Expo (ICME 2009)" />
+<meta name="keywords" content="ICME, IEEE Conference, Multimedia, Signal processing, Virtual reality, 3-D imaging, human-machine interface, Multimedia networking, Multimedia security, social media, Multimedia applications" />
+<title>2009 IEEE International Conference on Multimedia &amp; Expo (ICME 2009)</title>
+<style type="text/css">
+	@import "style.css";
+.style1 {	color: #660000;
+	font-weight: bold;
+}
+.style2 {color: #666666}
+</style>
+<script type="text/javascript">
+      
+/***********************************************
+* Ultimate Fade-In Slideshow (v1.51): © Dynamic Drive (http://www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit http://www.dynamicdrive.com/ for this script and 100s more.
+***********************************************/
+ 
+var fadeimages=new Array()
+//SET IMAGE PATHS. Extend or contract array as needed
+fadeimages[0]=["images/h_right_1.jpg", "", ""] //plain image syntax
+fadeimages[1]=["images/h_right_3.jpg", "", ""] 
+fadeimages[2]=["images/h_right_4.jpg", "", ""] 
+fadeimages[3]=["images/h_right_5.jpg", "", ""] 
+fadeimages[4]=["images/h_right_6.jpg", "", ""] 
+fadeimages[5]=["images/h_right_7.jpg", "", ""] 
+
+//fadeimages[2]=["photo3.jpg", "http://www.javascriptkit.com", "_new"] //image with link and target syntax
+
+/*
+var fadeimages2=new Array() //2nd array set example. Remove or add more sets as needed.
+//SET IMAGE PATHS. Extend or contract array as needed
+fadeimages2[0]=["photo1.jpg", "", ""] //plain image syntax
+fadeimages2[1]=["photo2.jpg", "http://www.cssdrive.com", ""] //image with link syntax
+fadeimages2[2]=["photo3.jpg", "http://www.javascriptkit.com", "_new"] //image with link and target syntax
+*/
+
+var fadebgcolor="white"
+
+////NO need to edit beyond here/////////////
+ 
+var fadearray=new Array() //array to cache fadeshow instances
+var fadeclear=new Array() //array to cache corresponding clearinterval pointers
+ 
+var dom=(document.getElementById) //modern dom browsers
+var iebrowser=document.all
+ 
+function fadeshow(theimages, fadewidth, fadeheight, borderwidth, delay, pause, displayorder){
+this.pausecheck=pause
+this.mouseovercheck=0
+this.delay=delay
+this.degree=10 //initial opacity degree (10%)
+this.curimageindex=0
+this.nextimageindex=1
+fadearray[fadearray.length]=this
+this.slideshowid=fadearray.length-1
+this.canvasbase="canvas"+this.slideshowid
+this.curcanvas=this.canvasbase+"_0"
+if (typeof displayorder!="undefined")
+theimages.sort(function() {return 0.5 - Math.random();}) //thanks to Mike (aka Mwinter) :)
+this.theimages=theimages
+this.imageborder=parseInt(borderwidth)
+this.postimages=new Array() //preload images
+for (p=0;p<theimages.length;p++){
+this.postimages[p]=new Image()
+this.postimages[p].src=theimages[p][0]
+}
+ 
+var fadewidth=fadewidth+this.imageborder*2
+var fadeheight=fadeheight+this.imageborder*2
+ 
+if (iebrowser&&dom||dom) //if IE5+ or modern browsers (ie: Firefox)
+document.write('<div id="master'+this.slideshowid+'" style="position:relative;width:'+fadewidth+'px;height:'+fadeheight+'px;overflow:hidden;"><div id="'+this.canvasbase+'_0" style="position:absolute;width:'+fadewidth+'px;height:'+fadeheight+'px;top:0;left:0;filter:progid:DXImageTransform.Microsoft.alpha(opacity=10);opacity:0.1;-moz-opacity:0.1;-khtml-opacity:0.1;background-color:'+fadebgcolor+'"></div><div id="'+this.canvasbase+'_1" style="position:absolute;width:'+fadewidth+'px;height:'+fadeheight+'px;top:0;left:0;filter:progid:DXImageTransform.Microsoft.alpha(opacity=10);opacity:0.1;-moz-opacity:0.1;-khtml-opacity:0.1;background-color:'+fadebgcolor+'"></div></div>')
+else
+document.write('<div><img name="defaultslide'+this.slideshowid+'" src="'+this.postimages[0].src+'"></div>')
+ 
+if (iebrowser&&dom||dom) //if IE5+ or modern browsers such as Firefox
+this.startit()
+else{
+this.curimageindex++
+setInterval("fadearray["+this.slideshowid+"].rotateimage()", this.delay)
+}
+}
+
+function fadepic(obj){
+if (obj.degree<100){
+obj.degree+=10
+if (obj.tempobj.filters&&obj.tempobj.filters[0]){
+if (typeof obj.tempobj.filters[0].opacity=="number") //if IE6+
+obj.tempobj.filters[0].opacity=obj.degree
+else //else if IE5.5-
+obj.tempobj.style.filter="alpha(opacity="+obj.degree+")"
+}
+else if (obj.tempobj.style.MozOpacity)
+obj.tempobj.style.MozOpacity=obj.degree/101
+else if (obj.tempobj.style.KhtmlOpacity)
+obj.tempobj.style.KhtmlOpacity=obj.degree/100
+else if (obj.tempobj.style.opacity&&!obj.tempobj.filters)
+obj.tempobj.style.opacity=obj.degree/101
+}
+else{
+clearInterval(fadeclear[obj.slideshowid])
+obj.nextcanvas=(obj.curcanvas==obj.canvasbase+"_0")? obj.canvasbase+"_0" : obj.canvasbase+"_1"
+obj.tempobj=iebrowser? iebrowser[obj.nextcanvas] : document.getElementById(obj.nextcanvas)
+obj.populateslide(obj.tempobj, obj.nextimageindex)
+obj.nextimageindex=(obj.nextimageindex<obj.postimages.length-1)? obj.nextimageindex+1 : 0
+setTimeout("fadearray["+obj.slideshowid+"].rotateimage()", obj.delay)
+}
+}
+ 
+fadeshow.prototype.populateslide=function(picobj, picindex){
+var slideHTML=""
+if (this.theimages[picindex][1]!="") //if associated link exists for image
+slideHTML='<a href="'+this.theimages[picindex][1]+'" target="'+this.theimages[picindex][2]+'">'
+slideHTML+='<img src="'+this.postimages[picindex].src+'" border="'+this.imageborder+'px">'
+if (this.theimages[picindex][1]!="") //if associated link exists for image
+slideHTML+='</a>'
+picobj.innerHTML=slideHTML
+}
+ 
+ 
+fadeshow.prototype.rotateimage=function(){
+if (this.pausecheck==1) //if pause onMouseover enabled, cache object
+var cacheobj=this
+if (this.mouseovercheck==1)
+setTimeout(function(){cacheobj.rotateimage()}, 100)
+else if (iebrowser&&dom||dom){
+this.resetit()
+var crossobj=this.tempobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+crossobj.style.zIndex++
+fadeclear[this.slideshowid]=setInterval("fadepic(fadearray["+this.slideshowid+"])",50)
+this.curcanvas=(this.curcanvas==this.canvasbase+"_0")? this.canvasbase+"_1" : this.canvasbase+"_0"
+}
+else{
+var ns4imgobj=document.images['defaultslide'+this.slideshowid]
+ns4imgobj.src=this.postimages[this.curimageindex].src
+}
+this.curimageindex=(this.curimageindex<this.postimages.length-1)? this.curimageindex+1 : 0
+}
+ 
+fadeshow.prototype.resetit=function(){
+this.degree=10
+var crossobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+if (crossobj.filters&&crossobj.filters[0]){
+if (typeof crossobj.filters[0].opacity=="number") //if IE6+
+crossobj.filters(0).opacity=this.degree
+else //else if IE5.5-
+crossobj.style.filter="alpha(opacity="+this.degree+")"
+}
+else if (crossobj.style.MozOpacity)
+crossobj.style.MozOpacity=this.degree/101
+else if (crossobj.style.KhtmlOpacity)
+crossobj.style.KhtmlOpacity=this.degree/100
+else if (crossobj.style.opacity&&!crossobj.filters)
+crossobj.style.opacity=this.degree/101
+}
+ 
+ 
+fadeshow.prototype.startit=function(){
+var crossobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+this.populateslide(crossobj, this.curimageindex)
+if (this.pausecheck==1){ //IF SLIDESHOW SHOULD PAUSE ONMOUSEOVER
+var cacheobj=this
+var crossobjcontainer=iebrowser? iebrowser["master"+this.slideshowid] : document.getElementById("master"+this.slideshowid)
+crossobjcontainer.onmouseover=function(){cacheobj.mouseovercheck=1}
+crossobjcontainer.onmouseout=function(){cacheobj.mouseovercheck=0}
+}
+this.rotateimage()
+}
+
+</script>
+</head>
+
+<body>
+	<div id="page">
+    	<div id="pageheader">
+        	<div id="header"><h1>ICME2009CANCUN</h1></div>
+            <div id="left">
+            	<h2>2009 IEEE<br />
+                        International<br />
+                        Conference on<br />
+                        Multimedia and Expo<br />
+                        <br />
+                        June 28 - July 3, 2009<br /></h2>
+                        <h2 id="overline">Hilton Cancun, Cancun, Mexico</h2>
+                        <h2 id="newlocation">New York</h2>
+            </div>
+            <div id="right"><img src="images/h_right_1.jpg" width="555" height="120" alt="cancun photo"/>
+                <!--script type="text/javascript">
+				//new fadeshow(IMAGES_ARRAY_NAME, slideshow_width, slideshow_height, borderwidth, delay, pause (0=no, 1=yes), optionalRandomOrder)
+				//new fadeshow(fadeimages, 140, 225, 0, 3000, 1, "R")
+				new fadeshow(fadeimages, 555, 120, 0, 3000, 1);
+				</script-->
+            </div>
+    	</div>
+        
+        <div class="clr"></div>
+            
+        <div id="sidebarContainer">
+        	<div id="sidehead"></div>
+        	<div id="sidebar">
+              <!-- sidebar list here-->
+              <h1><a href="index.html">Home</a></h1>
+        	  <h1><a href="call_for_paper.html">Call for papers</a></h1>
+        	  <h2><a href="https://www.cmsworkshops.com/ICME2009/Papers.asp">online submission</a></h2>
+        	  <h2><a href="paperkit.html">paper kit</a></h2>
+        	  <h2><a href="importantdate.html">Important dates</a></h2>
+        	  <h1>Programs
+        	      <!--a href="programs.html">Programs</a-->
+      	    </h1>
+        	  <!--<h2><a href="call_for_workshops.html">Call for workshops</a></h2>-->
+        	  <h2><a href="specialsessions.html">Special sessions</a></h2>
+        	  <h2><a href="tutorials.html">Tutorials</a></h2>
+        	  <h2><a href="call_for_demo.html">Call for demos</a></h2>
+        	  <h2><a href="workshops.html">Workshops</a></h2>    
+        	  <h2><a href="panels.html">Panels</a></h2>        	          	  
+        	  <h2><a href="keynote.html">Keynote</a></h2>
+                  <h2><a href="socialevent.html">Social Events</a></h2>
+        	  <h1><a href="technicalprograms.html">Technical Programs</a></h1>        	                    
+        	  <h1><a href="https://www.cmsworkshops.com/ICME2009/Registration.asp" target="_blank">Registration</a></h1>                  
+        	  <h1><a href="city.html">Venue</a></h1>
+                  <h2><a href="hotel.html">Hotel Reservation </a></h2>
+        	      <h2><a href="city.html">City information</a></h2>
+        	  <h2><a href="travel_visa.html">Travel &amp; Visa</a></h2>
+        	  <h1><a href="committee.html">Organizing Committee</a></h1>
+        	  <h1><a href="program_committee.html">Technical Program Committee</a></h1>        	  
+        	  <h1><a href="sponsors.html">Sponsors</a></h1>
+        	  <!--h1><a href="#">Contact us</a></h1-->
+              <div class="spacer"></div>
+        	  <!-- sidebar list end-->
+            </div>
+       	  <div id="sidefoot"></div>
+			<div id="sponsor">
+            	<img src="images/IEEE_Logo.png" />
+                <img src="images/SP_Logo.png" />
+                <img src="images/CAS_Logo.png" />
+                <img src="images/CS_Logo.png" />
+                <img src="images/CompSoc_Logo.png" />
+                <img src="images/huawei_logo.jpg" />
+                <img src="images/IBM_logo.jpg" /><a href="http://domino.watson.ibm.com/comm/research.nsf/pages/r.multimedia.workshop2009cfp.html">IBM Emerging Leaders in Multimedia Student Workshop</a>
+                <img src="images/HP_logo.jpg" />                
+            </div>
+        </div>
+        
+        <div id="content">
+        <!-- content here-->
+
+          <h1><a href="http://www.hilton.com/en/hi/groups/personalized/CUNHRHH-IEE-20090628/index.jhtml" target="_blank">Conference Hotel Reservation</a></h1>
+       	  <h2><span class="style1"><span class="style2">ICME 2009 will be in New York City. See the </span><a href="ICME2009-NewYork.pdf">plan</a>. </span></h2>
+       	  <h2><span class="style1"><a href="http://waldorfastoria.hilton.com/en/wa/groups/personalized/NYCWAWA-IEE-20090624/index.jhtml" target="_blank">&gt;&gt; Reserve your rooms in The Waldorf=Astoria (209 USD/night).</a></span></h2>
+       	  <p>&nbsp;</p>
+       	  
+       	  <h1>Conference Venue - <a href="http://waldorfastoria.hilton.com/en/hi/hotels/information.jhtml?ctyhocn=NYCWAWA&key=HOME" target="_blank">The Waldorf=Astoria Hotel</a></h1>
+                
+                <div class="imgx">
+               		<img  src="images/Waldorf_Astoria.jpg" alt="Waldorf=Astoria hotel" width="240" height="160" />
+                	<br />
+                	<!--<div class="imgdesc">shot by <a href="http://flickr.com/photos/efigueres/2609830877/">Enzo</a></div>-->
+                </div>
+                
+                <p>The Waldorf=Astoria Hotel –the most famous and legendary hotel in New York since 1893. It is managed by Hilton. </p>
+                <p>The Waldorf=Astoria, the renowned New York luxury hotel in midtown Manhattan, offers elegant accommodations and amenities including boutiques, restaurants and banquet facilities. The Waldorf=Astoria is the embodiment of luxury and splendor. An official New York City landmark since 1993, this legendary Art Deco treasure occupies an entire city block on fashionable Park Avenue, and has completed renovations totaling in excess of $300 million. The hotel is walking distance to Radio City Music... <a href="http://waldorfastoria.hilton.com/en/wa/hotels/index.jhtml?moreDesc=true&amp;ctyhocn=NYCWAWA" target="_blank">more</a></p>
+                <p>	• Within 20 minsof walk to:</p>
+                <ul>
+                  <li>Time Square / Broadway Show</li>
+                  <li> Rockefeller Center / Radio City</li>
+                  <li> Fifth Avenue</li>
+                  <li> Central Park</li>
+                  <li> United Nation</li>
+                  <li> July 4th Firework</li>
+                  <li>Empire State Building (the original site of Waldorf)</li>
+                  <li>Modern Museum (MoMa)</li>
+                  <li>Lincoln Center</li>
+                  <li>Carnegie Hall</li>
+                  <li>Madison Square Garden</li>
+                  <li> Macy’s</li>
+                </ul>
+                <p>• 30 minswalk to Metropolitan Museumbr<br/>
+                  • 15 minssubway to the Wall Street, Battery Park, South Street Seaport, Brooklyn Bridge, etc.<br />
+                  • 20 minssubway to the Yankees Stadium, CitiField</p>
+                <p>&nbsp;</p>
+                <h2>Map</h2>
+          <p>Click the map for further information.</p>
+          <div class="imgx">
+                        <a href="http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=Waldorf%3DAstoria+hotel&sll=21.054545,-86.825037&sspn=0.069367,0.143166&ie=UTF8&ll=40.760001,-73.956871&spn=0.112602,0.286331&t=h&z=12&msa=0&msid=108209397844019793920.0004657d7b2a3948a4dc5"><img  src="images/Waldorf_Astoria_map.jpg" alt="Waldorf=Astoria hotel map" width="500" /></a>
+                        <br />
+          </div>
+       	  
+       	  <!--
+       	  <h1>Conference Venue - <a href="http://www1.hilton.com/en_US/hi/hotel/CUNHRHH-Hilton-Cancun-Golf-Spa-Resort/index.do" target="_blank">Hilton Cancun Golf &amp; Spa Resort</a></h1>
+                
+                <div class="imgx">
+               		<img  src="images/Cancun_Hilton_Enzo.jpg" alt="Cancun Hilton" width="240" height="160" />
+                	<br />
+                	<div class="imgdesc">shot by <a href="http://flickr.com/photos/efigueres/2609830877/">Enzo</a></div>
+                </div>
+                
+                <p>The Hilton is one of the finest hotels in Cancun and the only property with its own championship golf course, the 18-hole, Par 72, Hilton Cancun Golf Club. For those seeking tranquility and relaxation, the<br />
+                  Spa at the Hilton Cancun is the place to be.<br />
+                The Hilton Cancun Golf &amp; Spa Resort is located just 15 minutes away from the Cancun International Airport and features 426 guestrooms with breathtaking views of the Caribbean Sea. </p>
+                <p>• Only resort in Cancun with onsite Golf &amp; Spa<br />
+                  • Largest white sand beach in Cancun<br />
+                  • The best location for golf in Cancun with special privileges and benefits to Hilton Guests<br />
+                  • Exclusive and exciting Ancestral treatments at our Wellness Spa<br />
+                  • Incredible settings for a spectacular Cancun Wedding<br />
+                • 30,000 sq ft of versatile and flexible meeting space for your conference in Cancun</p>
+                <p>See more <a href="http://www.hilton.com/en/hi/promotions/CUNHRHH_SplashPage/index.jhtml" target="_blank">photos</a> and <a href="http://tw.youtube.com/watch?v=7M6GS9iBssg" target="_blank">videos</a> about ICME 2009 conference venue, <a href="http://www1.hilton.com/en_US/hi/hotel/CUNHRHH-Hilton-Cancun-Golf-Spa-Resort/index.do" target="_blank">Hilton Cancun Golf &amp; Spa Resort</a>.</p>
+                <p>The hotel also provides special rates for ICME 2009 hotel guests in recreations such as:</p>
+                <p><strong>GOLF:</strong><br />
+                The Hilton is the ONLY resort in Cancun with its own golf course offering your guests preferential tee times and discounted green fees. Save time, money and don’t worry about transportation. IEEE-ICME 2009 Golf Rate: US$119.00 (Non hotel guest rate US$159.00). Saving US$40.00 dollars per tee time <br />-	10% discount on premium club (Titleist &amp; Callaway) and shoe rental <br />-	Complimentary electric cart for two, Fresh facial towels, Valet Service: US$5.00 per person ( up to 8 players) </p>
+                <p><strong>WELLNESS SPA: </strong><br />
+          15% discount at our Wellness Spa including massages, body treatments and facials of 50 minutes and 80 minutes sessions. This discount also applies for the Beauty Salon, including manicure and pedicure among other services. </p>
+                <p>&nbsp;</p>
+                <h2>Map</h2>
+          <p>Click the map for further information.</p>
+          <div class="imgx">
+                        <a href="http://maps.google.com/maps/ms?msa=0&msid=108209397844019793920.0004657d7b2a3948a4dc5"><img  src="images/hiltoncancunmap.jpg" alt="Hilton cancun map" width="500" /></a>
+                        <br />
+          </div>
+          -->
+
+
+       	<div class="clr"></div> 
+        
+  		<div id="footer">
+        	© Copyright 2008-2009 IEEE ICME
+        </div>
+        
+	</div>
+</body>
+</html>

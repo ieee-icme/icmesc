@@ -1,0 +1,1069 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<title>The Role of Signal Processing in the Multimedia Communications
+Revolution</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="time"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="City"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="date"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="State"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="place"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="country-region"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="PlaceName"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="PlaceType"/>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Lawrence Rabiner</o:Author>
+  <o:LastAuthor>IBM_USER</o:LastAuthor>
+  <o:Revision>56</o:Revision>
+  <o:TotalTime>569</o:TotalTime>
+  <o:Created>2006-01-27T04:20:00Z</o:Created>
+  <o:LastSaved>2006-07-04T04:56:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>2211</o:Words>
+  <o:Characters>12605</o:Characters>
+  <o:Company>Rutgers University</o:Company>
+  <o:Lines>105</o:Lines>
+  <o:Paragraphs>29</o:Paragraphs>
+  <o:CharactersWithSpaces>14787</o:CharactersWithSpaces>
+  <o:Version>10.6735</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>90</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:Compatibility>
+   <w:UseFELayout/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-alt:\5B8B\4F53;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;}
+@font-face
+	{font-family:"Bitstream Vera Serif";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-alt:"Times New Roman";
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:auto;
+	mso-font-signature:0 0 0 0 0 0;}
+@font-face
+	{font-family:"Book Antiqua";
+	panose-1:2 4 6 2 5 3 5 3 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:647 0 0 0 159 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:SimSun;
+	mso-fareast-language:EN-US;}
+h1
+	{mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:.5in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-font-kerning:0pt;
+	mso-fareast-language:EN-US;
+	font-weight:normal;
+	mso-bidi-font-weight:bold;
+	font-style:italic;}
+h2
+	{mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:1.0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:11.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-language:EN-US;
+	font-weight:normal;
+	mso-bidi-font-weight:bold;
+	font-style:italic;}
+h3
+	{mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-indent:.5in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:11.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-language:EN-US;
+	font-weight:normal;
+	mso-bidi-font-weight:bold;
+	font-style:italic;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:SimSun;
+	mso-fareast-language:EN-US;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:SimSun;
+	mso-fareast-language:EN-US;}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:SimSun;
+	mso-fareast-language:EN-US;}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:SimSun;
+	mso-fareast-language:EN-US;
+	mso-bidi-font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:.8in .8in .8in .8in;
+	mso-header-margin:.25in;
+	mso-footer-margin:.25in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:-2;
+	mso-list-type:simple;
+	mso-list-template-ids:-1;}
+@list l0:level1
+	{mso-level-start-at:0;
+	mso-level-text:*;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:0in;
+	text-indent:0in;}
+@list l0:level1 lfo2
+	{mso-level-number-format:bullet;
+	mso-level-numbering:continue;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	mso-level-legacy:yes;
+	mso-level-legacy-indent:.25in;
+	mso-level-legacy-space:0in;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=Section1>
+
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'><b style='mso-bidi-font-weight:normal'><span style='font-size:
+10.0pt;font-family:"Book Antiqua";mso-bidi-font-family:Arial;color:#CC6600'><a
+href="#keynote1"><span style='color:#CC6600;mso-bidi-font-weight:bold'>Computer Vision in Medicine and Neuroscience:
+Image Guided Neurosurgery and Computational Neuroanatomy</span></a> </span></b><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Book Antiqua";mso-bidi-font-family:Arial;color:#CC6600;mso-fareast-language:
+ZH-CN'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'><st1:City><st1:place><span style='font-size:10.0pt;font-family:
+  "Book Antiqua";mso-bidi-font-weight:bold'>Eric</span></st1:place></st1:City><span
+style='font-size:10.0pt;font-family:"Book Antiqua";mso-bidi-font-weight:bold'> <span
+class=SpellE>Grimson</span></span><span style='font-size:10.0pt;font-family:
+"Book Antiqua";mso-fareast-language:ZH-CN;mso-bidi-font-weight:bold'>, </span><i
+style='mso-bidi-font-style:normal'><span style='font-size:10.0pt;font-family:
+"Book Antiqua"'>&nbsp;Massachusetts Institute of Technology</span></i><st1:place><i style='mso-bidi-font-style:
+ normal'><span style='font-size:10.0pt;font-family:"Book Antiqua"'>, </span></i><st1:country-region><i
+  style='mso-bidi-font-style:normal'><span style='font-size:10.0pt;font-family:
+  "Book Antiqua"'>USA</span></i></st1:country-region></st1:place><i
+style='mso-bidi-font-style:normal'><span style='font-size:10.0pt;font-family:
+"Book Antiqua";mso-bidi-font-family:Arial'> </span></i><i style='mso-bidi-font-style:
+normal'><span style='font-size:10.0pt;font-family:"Book Antiqua";mso-bidi-font-family:
+Arial;mso-fareast-language:ZH-CN'><o:p></o:p></span></i></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'><span style='font-size:8.0pt;font-family:Arial;mso-fareast-language:
+ZH-CN'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'><b style='mso-bidi-font-weight:normal'><span style='font-size:
+10.0pt;font-family:"Book Antiqua";mso-bidi-font-family:Arial;color:#CC6600'><a
+href="#keynote2"><span style='color:#CC6600;mso-fareast-language:ZH-CN;
+mso-bidi-font-weight:bold'>Implementation Challenges for Advanced Multimedia Compression</span><span
+style='color:#CC6600;mso-bidi-font-weight:bold'> </span></a><span
+style='mso-spacerun:yes'> </span></span></b><b style='mso-bidi-font-weight:
+normal'><span style='font-size:10.0pt;font-family:"Book Antiqua";mso-bidi-font-family:
+Arial;color:#CC6600;mso-fareast-language:ZH-CN'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'><span style='font-size:10.0pt;font-family:"Book Antiqua";
+mso-bidi-font-weight:bold'>Peter <span class=SpellE>Pirsch</span></span><span
+style='font-size:10.0pt;font-family:"Book Antiqua";mso-fareast-language:ZH-CN;
+mso-bidi-font-weight:bold'>, </span><font size="2"><i>
+<span style="font-family: Book Antiqua">Leibniz University of Hannover</span></i></font><st1:place><i
+ style='mso-bidi-font-style:normal'><span style='font-size:10.0pt;font-family:
+ "Book Antiqua"'>, </span></i><i><span style="font-family: Book Antiqua">
+<font size="2">Germany</font></span></i></st1:place></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'><b><span style='font-size:8.0pt;font-family:"Bitstream Vera Serif";
+color:#CC6600;mso-fareast-language:ZH-CN'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'><b style='mso-bidi-font-weight:normal'>
+<span style='font-size:
+10.0pt;font-family:"Book Antiqua";mso-bidi-font-family:Arial;color:#CC6600'>
+<a
+href="#keynote3">
+<span style='color:#CC6600;mso-fareast-language:ZH-CN;
+mso-bidi-font-weight:bold'>Large-Scale Internet Search </span><span
+style='color:#CC6600;mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'> </span></span></a><span
+style='mso-spacerun:yes'> </span></span></b><b style='mso-bidi-font-weight:
+normal'><span style='font-size:10.0pt;font-family:"Book Antiqua";mso-bidi-font-family:
+Arial;color:#CC6600;mso-fareast-language:ZH-CN'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'>
+<span
+style='font-size:10.0pt;font-family:"Book Antiqua";mso-bidi-font-weight:bold'>
+<span class="SpellE">Tao</span> Yang</span><span style='font-size:10.0pt;font-family:"Book Antiqua";
+mso-fareast-language:ZH-CN;mso-bidi-font-weight:bold'>, <i>&nbsp;Ask.com, USA</i></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'><b><span style='font-size:8.0pt;font-family:"Bitstream Vera Serif";
+color:#CC6600;mso-fareast-language:ZH-CN'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'><b style='mso-bidi-font-weight:normal'><span style='font-size:
+10.0pt;font-family:"Book Antiqua";mso-bidi-font-family:Arial;color:#CC6600'><a
+href="#keynote4"><span style='color:#CC6600;mso-fareast-language:ZH-CN;
+mso-bidi-font-weight:bold'>Internet Video: The Next Big Thing</span><span style='color:#CC6600;
+mso-bidi-font-weight:bold'> </span></a><span style='mso-spacerun:yes'> </span></span></b><b
+style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;font-family:
+"Book Antiqua";mso-bidi-font-family:Arial;color:#CC6600;mso-fareast-language:
+ZH-CN'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'>
+<span style='font-size:
+10.0pt;font-family:"Book Antiqua";mso-fareast-language:ZH-CN;mso-bidi-font-weight:
+bold'>Hui Zhang, </span><font size="2"><i>
+<span style="font-family: Book Antiqua">Carnegie Mellon University</span></i></font><i style='mso-bidi-font-style:normal'><span style='font-size:10.0pt;font-family:
+"Book Antiqua"'>, USA</span></i><i style='mso-bidi-font-style:normal'><span
+style='font-size:10.0pt;font-family:"Book Antiqua";mso-bidi-font-family:Arial'>
+</span></i></p>
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'><b style='mso-bidi-font-weight:normal'><span style='font-size:
+10.0pt;font-family:"Book Antiqua";mso-bidi-font-family:Arial;color:#CC6600'>
+<a
+href="#keynote5" style="color: blue; text-decoration: underline; text-underline: single"><span style='color:#CC6600;mso-fareast-language:ZH-CN;
+mso-bidi-font-weight:bold'>Interne Ubiquitous Mobile Computing in Digital Life</span><span style='color:#CC6600;
+mso-bidi-font-weight:bold'> </span></a><span style='mso-spacerun:yes'> </span></span><span style='font-size:10.0pt;font-family:
+"Book Antiqua";mso-bidi-font-family:Arial;color:#CC6600;mso-fareast-language:
+ZH-CN'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'>
+<font size="2"><span style="font-family: Book Antiqua">Ya-Qin Zhang</span></font><span style='font-size:
+10.0pt;font-family:"Book Antiqua";mso-fareast-language:ZH-CN;mso-bidi-font-weight:
+bold'>, <i>Microsoft</i></span><i style='mso-bidi-font-style:normal'><span style='font-size:10.0pt;font-family:
+"Book Antiqua"'>, China</span><span style='font-size:10.0pt;
+font-family:"Book Antiqua";mso-bidi-font-family:Arial;mso-fareast-language:
+ZH-CN'><o:p></o:p></span></i></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'><b><span style='font-size:13.5pt;font-family:"Bitstream Vera Serif";
+color:#CC6600;mso-fareast-language:ZH-CN'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'><a name=keynote1><b><span style='font-size:13.5pt;font-family:
+"Bitstream Vera Serif";color:#CC6600;mso-fareast-language:ZH-CN'>KEYNOTE </span></b></a><span
+style='mso-bookmark:keynote1'><b><span style='font-size:13.5pt;font-family:
+"Bitstream Vera Serif";color:#CC6600'>1</span></b></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'><b style='mso-bidi-font-weight:normal'><span style='font-size:
+11.0pt;mso-bidi-font-size:12.0pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;tab-stops:45.8pt 1.0in 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-family:"Book Antiqua"'>When:</span></b><span
+style='font-family:"Book Antiqua"'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+style='mso-tab-count:1'>     TBD</span></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;tab-stops:45.8pt 1.0in 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-family:"Book Antiqua"'>Where:</span></b><span
+style='font-family:"Book Antiqua"'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+style='mso-tab-count:1'>    TBD</span></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'><span style='font-family:"Book Antiqua";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'><b style='mso-bidi-font-weight:normal'><span style='font-family:
+"Book Antiqua"'>Title:</span></b><span style='font-family:"Book Antiqua";
+mso-bidi-font-weight:bold'><span style='mso-tab-count:2'>              <b>
+Computer Vision in Medicine and Neuroscience: Image Guided Neurosurgery and 
+Computational Neuroanatomy</b></span></span><span
+style='font-family:"Book Antiqua";mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'><span style='font-family:"Book Antiqua";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'><b style='mso-bidi-font-weight:normal'><span style='font-family:
+"Book Antiqua"'>Speaker:</span></b><span style='font-family:"Book Antiqua";
+mso-bidi-font-weight:bold'><span style='mso-tab-count:1'>        </span></span>
+<span style='font-family:"Book Antiqua"'>Eric Grimson</span></p>
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'><span style="font-family: Book Antiqua">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='font-family:"Book Antiqua"'>Massachusetts Institute of 
+Technology</span><st1:place><span
+ style='font-family:"Book Antiqua"'>, </span><st1:country-region><span
+  style='font-family:"Book Antiqua"'>USA</span></st1:country-region></st1:place><span
+style='font-family:"Book Antiqua"'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-right:61.05pt;text-align:center'><b
+style='mso-bidi-font-weight:normal'><span style='font-family:"Book Antiqua"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'><b><span style='font-family:"Book Antiqua"'>Abstract:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:61.05pt;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;text-align:justify;text-justify:
+inter-ideograph'><span style='font-family:"Book Antiqua"'>Algorithmic methods 
+from computer vision and machine learning are dramatically changing the practice 
+of health care and the exploration of fundamental issues in neuroscience. By 
+coupling knowledge of tissue response, atlases of normal anatomy, and 
+statistical models of shape variation, these methods are used to build detailed, 
+patient-specific reconstructions of neuroanatomical structure from MRI imagery. 
+Such structural models can be automatically augmented with information about 
+function (using fMRI), and about connectivity (using DT-MRI) to create detailed 
+models of a patient’s brain. These models are routinely used for surgical 
+planning – how to reach the target tumor with minimal damage to nearby critical 
+structures; and for surgical navigation – guiding the surgeon to the target site 
+rapidly and safely.</span></p>
+<p class=MsoNormal style='margin-top:0in;margin-right:61.05pt;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;text-align:justify;text-justify:
+inter-ideograph'>&nbsp;</p>
+<p class=MsoNormal style='margin-top:0in;margin-right:61.05pt;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;text-align:justify;text-justify:
+inter-ideograph'><font face="Book Antiqua">By combining with statistical models 
+of population variation, these methods can also be used to investigate basic 
+neuroscience questions – how different are the shapes of subcortical structures 
+between normal subjects and patients with a specific disease (such as 
+schizophrenia or Alzheimer’s); how do these shapes change with development in 
+children, or with administration of pharmaceuticals; how do physiological 
+properties differ between populations (such as the local structure of fiber 
+orientation in white matter tracts). These computational methods provide a 
+toolkit for exploring the structure and connectivity of neuroanatomical 
+structures, in normal subjects and in diseased patients.</font></p>
+<p class=MsoBodyTextIndent style='margin-right:61.05pt'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoTitle align=left style='margin-right:61.05pt;text-align:left'>
+<font size="3"><span style="font-family: Book Antiqua">B</span></font><span
+style='font-size:12.0pt;font-family:"Book Antiqua"'>iography:<o:p></o:p></span></p>
+
+<p class=MsoTitle align=left style='margin-right:61.05pt;text-align:left'><span
+style='font-size:12.0pt;font-family:"Book Antiqua";font-weight:normal'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoBodyText style='margin-top:0in;margin-right:61.05pt;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;tab-stops:1.0in'><span
+style='mso-bidi-font-size:12.0pt;font-family:"Book Antiqua"'><b>Eric Grimson</b> 
+is the Bernard Gordon Professor of Medical Engineering in the Department of 
+Electrical Engineering and Computer Science, at the Massachusetts Institute of 
+Technology. He is also the Head of the EECS Department, and is a Lecturer on 
+Radiology at Harvard Medical School. Professor Grimson received his B.Sc. from 
+University of Regina and his Ph.D. from MIT. He has over thirty years experience 
+as a researcher in computer vision and medical image analysis, having published 
+two books, over 170 refereed articles, and six patents in this area. In 
+recognition of these contributions, he was elected a Fellow of the American 
+Association of Artificial Intelligence, and a Fellow of the IEEE. He has also 
+won the Bose Award for Excellence in Teaching at MIT.</span></p>
+<p class=MsoBodyText style='margin-top:0in;margin-right:61.05pt;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;tab-stops:1.0in'>&nbsp;</p>
+<p class=MsoBodyText style='margin-top:0in;margin-right:61.05pt;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;tab-stops:1.0in'>
+<font face="Book Antiqua">Professor Grimson’s research activities in computer 
+vision have included stereovision, shape reconstruction, object recognition, 
+image databases, and activity detection and recognition. For the past twelve 
+years he has also been very active in the field of medical image analysis, 
+especially in image guided surgery, multimodal registration, and segmentation of 
+medical imagery. He has supervised more than 30 doctoral theses in these areas.<br>
+<br>
+Professor Grimson has served as General Chair or Program Chair for numerous 
+international conferences including ICCV, CVPR, and MICCAI, and has participated 
+on numerous government panels for DARPA, NSF, and NIH.<br>
+&nbsp;</font></p>
+<p class=MsoBodyText style='margin-top:0in;margin-right:61.05pt;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;tab-stops:1.0in'>
+<span
+style='mso-bidi-font-size:12.0pt;font-family:"Book Antiqua"'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'><a name=keynote2><b><span style='font-size:13.5pt;font-family:
+"Bitstream Vera Serif";color:#CC6600;mso-fareast-language:ZH-CN'>KEYNOTE 2</span></b></a><span
+style='mso-bookmark:keynote2'></span><span style='mso-fareast-language:ZH-CN'><o:p></o:p></span></p>
+
+<p class=MsoBodyTextIndent style='margin-top:0in;margin-right:61.05pt;
+margin-bottom:0in;margin-left:0in;margin-bottom:.0001pt'><b><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;tab-stops:45.8pt 1.0in 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b><span
+style='font-family:"Book Antiqua"'>When:</span></b><span style='font-family:
+"Book Antiqua"'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style='mso-tab-count:
+1'>     TBD</span></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;tab-stops:45.8pt 1.0in 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b><span
+style='font-family:"Book Antiqua"'>Where:</span></b><span style='font-family:
+"Book Antiqua"'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style='mso-tab-count:
+1'>    TBD</span></span></p>
+
+<p class=MsoBodyTextIndent style='margin-top:0in;margin-right:61.05pt;
+margin-bottom:0in;margin-left:0in;margin-bottom:.0001pt'><span
+style='font-family:"Book Antiqua"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'><b style='mso-bidi-font-weight:normal'><span style='font-family:
+"Book Antiqua"'>Title:</span></b><span style='font-family:"Book Antiqua";
+mso-bidi-font-weight:bold'><span style='mso-tab-count:2'>              <b>
+Implementation Challenges for Advanced Multimedia Compression</b></span></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'><span style='font-family:"Book Antiqua";mso-bidi-font-weight:
+bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'><b style='mso-bidi-font-weight:normal'><span style='font-family:
+"Book Antiqua"'>Speaker:</span></b><span style='font-family:"Book Antiqua";
+mso-bidi-font-weight:bold'><span style='mso-tab-count:1'>        Peter Pirsch</span></span></p>
+
+<h1 style='margin-right:61.05pt'>
+<st1:place>
+<st1:City><span style='font-family:
+  "Book Antiqua"'><span style="font-style: normal">Leibniz University of 
+Hannover, Germany</span></span></st1:City></st1:place><span
+style='font-family:"Book Antiqua"'><o:p></o:p></span></h1>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:61.05pt;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:.5in'><span
+style='font-family:"Book Antiqua";mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Book Antiqua"'>Abstract:</span></b><span
+style='font-family:"Book Antiqua";mso-bidi-font-weight:bold'><span
+style='mso-tab-count:1'>       </span></span><span style='font-family:"Book Antiqua";
+mso-fareast-language:ZH-CN;mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:61.05pt;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt'><span style='font-family:"Book Antiqua";
+mso-bidi-font-weight:bold'>Over the last two decades compression of video and 
+audio data become an essential part in communication, storage and presentation 
+of audiovisual information. Important for the introduction of new audiovisual 
+services is the world wide standardization. For this reason ISO and ITU 
+established standardization bodies. Since almost 15 years several standards 
+(MPEG-i, H.26x) are introduced. Because of the large variety of applications and 
+the need of high compression rates several profiles, levels and a large 
+compression tool set has been introduced. After almost 15 years standardization 
+activities, new compression schemes are still introduced and a sophistication of 
+the compression algorithms could be observed.<br>
+<br>
+A prerequisite for the introduction of new audiovisual services is 
+implementation cost. The advances in semiconductor technology support economic 
+implementation. The performance requirements of video signal compression result 
+in a need of signal processing architectures adapted to signal processing 
+schemes and supporting parallel processing. The large variety of compression 
+algorithms calls for software implementation. As a consequence specific devoted 
+programmable video signal processors have been developed. Implementation 
+challenges result from the request on scalable architectures with multi standard 
+abilities and support of different resolutions from mobile communications over 
+TV up to HDTV. The most recent video platforms are system-on-chip (SoC) 
+implementations consisting of high performance video signal processors, general 
+purpose RISC processors, special accelerators and peripherals. <br>
+<br>
+This paper will present a brief history of the development of video signal 
+processors and the actual status of video platforms. VLSI architectures of 
+state-of-the-art programmable video signal processors are presented. 
+Architectural means such as SIMD (subword parallelism), VLIW, multithreading and 
+specialized instructions will be explained. Design examples such as Texas 
+Instruments DaVinci platform, Toshiba Media embedded Processor (MeP), tensilica 
+high definition processor and the videantis v-MP2 platform are included. The 
+challenges to cope with the enormous range of performance and power combinations 
+and the software implementations on heterogeneous multi core systems is treated. 
+Also the impact of advanced video compression algorithms on the architectural 
+requirements and the future prospects of programmable vs. reconfigurable systems 
+will be discussed.</span></p>
+<p class=MsoNormal style='margin-top:0in;margin-right:61.05pt;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt'>
+<span style='font-family:"Book Antiqua";
+mso-fareast-language:ZH-CN;mso-bidi-font-weight:bold'>
+<o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt'><b>
+<span style="font-family: Book Antiqua">B</span></b><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Book Antiqua"'>iography:</span></b><span
+style='mso-tab-count:1; font-family:Book Antiqua; mso-bidi-font-weight:bold'> </span><span style='font-family:"Book Antiqua";
+mso-fareast-language:ZH-CN;mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;tab-stops:45.8pt 1.0in 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><span
+style='font-family:"Book Antiqua";mso-fareast-language:ZH-CN'><span
+style='mso-tab-count:1'>               </span></span><span style='font-family:
+"Book Antiqua"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style='mso-tab-count:
+1'>   </span></span><span style='font-family:"Book Antiqua";mso-fareast-language:
+ZH-CN'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:61.05pt;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;tab-stops:45.8pt 1.0in 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'>
+<span style="font-family: Book Antiqua"><b>Dr. Peter Pirsch </b>received the Ing. 
+grad. degree from the engineering college in Hannover, Germany, in 1966, and the 
+Dipl.-Ing. and Dr.-Ing. degrees from the University of Hannover, in 1973 and 
+1979, respectively, all in electrical engineering.<br>
+<br>
+From 1966 to 1973 he was employed by Telefunken, Hannover, working in the 
+Television Department. He became a Research Assistant at the Department of 
+Electrical Engineering, University of Hannover, in 1973, a Senior Engineer in 
+1978. During 1979 to 1981 he was on leave, working in the Visual Communications 
+Research Department, Bell Laboratories, Holmdel, NJ. During 1983 to 1986 he was 
+Department Head for Digital Signal Processing at the SEL Research Center, 
+Stuttgart, Germany. Since 1987 he is Professor in the Department of Electrical 
+and Computer Engineering at the University of Hannover. He served as Vice 
+President Research of the University of Hannover from 1998 to 2002. Since 2005 
+he is the dean of the new formed department of electrical engineering and 
+computer science.<br>
+<br>
+His present research includes VLSI architectures and VLSI implementations for 
+image processing applications, rapid prototyping and design automation for DSP 
+applications. He provided major contributions to VLSI architectures of 
+programmable video signal processors for real time implementations of video 
+compression schemes. He is the author or coauthor of more than 200 technical 
+papers. He has edited a book on VLSI Implementations for Image Communications 
+(Elsevier 1993) and is author of the book Architectures for Digital Signal 
+Processing (John Wiley 1998).<br>
+<br>
+Dr. Pirsch is a member of the IEEE, the German Institute of Information 
+Technology Engineers (ITG) and the German Association of Engineers (VDI). He was 
+recipient of several awards: the NTG paper price award (1982), IEEE Fellow 
+(1997), IEEE Circuits and Systems Golden Jubilee Medal (1999). He was member or 
+chair of several technical program committees of international conferences and 
+organizer of special sessions and preconference courses. He has held several 
+administrative and technical positions with the IEEE Circuits and Systems 
+Society and other professional organizations. Dr. Pirsch served as Vice 
+President Publications of the IEEE Circuits and Systems Society from 2003 to 
+2004. He was chairman of the Accreditation Commission for Engineering and 
+Informatics of the German Accreditation Agency ASIIN. Dr. Pirsch is chair of the 
+VDI committee on Engineering Education.<br>
+&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-fareast-language:ZH-CN;mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-fareast-language:ZH-CN;mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'><a name=keynote3><b><span style='font-size:13.5pt;font-family:
+"Bitstream Vera Serif";color:#CC6600;mso-fareast-language:ZH-CN'>KEYNOTE 3</span></b></a><span
+style='mso-bookmark:keynote3'><span style='mso-fareast-language:ZH-CN'><o:p></o:p></span></span></p>
+
+<span style='mso-bookmark:keynote3'></span>
+
+<p class=MsoNormal style='margin-right:61.05pt'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;tab-stops:45.8pt 1.0in 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-family:"Book Antiqua"'>When:</span></b><span
+style='font-family:"Book Antiqua"'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+style='mso-tab-count:1'>     TBD</span> <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;tab-stops:45.8pt 1.0in 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-family:"Book Antiqua"'>Where:</span></b><span
+style='font-family:"Book Antiqua"'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+style='mso-tab-count:1'>    TBD</span></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt'><span style='font-family:"Book Antiqua";
+mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Book Antiqua"'>Title:</span></b><span
+style='font-family:"Book Antiqua";mso-bidi-font-weight:bold'><span
+style='mso-tab-count:1'>  </span> <span style='mso-tab-count:1'>           </span></span> <span style='mso-tab-count:1'>
+<span
+style='mso-bidi-font-weight:bold; font-weight:700'>Large-Scale Internet Search</span></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt'><span style='font-family:"Book Antiqua";
+mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Book Antiqua"'>Speaker:</span></b><span
+style='font-family:"Book Antiqua";mso-bidi-font-weight:bold'> <span
+style='mso-tab-count:1'>       <span class="SpellE">Tao</span></span> Yang</span></p>
+
+<h2 style='margin-right:61.05pt'><font size="3">
+<span style="font-family: Book Antiqua">Ask.com, USA</span></font></h2>
+
+<p class=MsoNormal style='margin-right:61.05pt'><span style='font-family:"Book Antiqua";
+mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Book Antiqua"'>Abstract: </span></b><span
+style='font-family:"Book Antiqua";mso-bidi-font-weight:bold'><span
+style='mso-tab-count:1'>      </span></span><span style='font-family:"Book Antiqua";
+mso-fareast-language:ZH-CN;mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:61.05pt;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt'><span style='font-family:"Book Antiqua";
+mso-bidi-font-weight:bold'>The Internet is having an electrifying effect on the 
+way we live and search engines become a central mechanism to locate right 
+information from a massive amount of text and multi-media documents on the 
+Internet.</span></p>
+<p class=MsoNormal style='margin-top:0in;margin-right:61.05pt;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt'>&nbsp;</p>
+<p class=MsoNormal style='margin-top:0in;margin-right:61.05pt;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt'>
+<span style="font-family: Book Antiqua">Ask.com has been developing a 
+comprehensive suite of search and question-answering technology and 
+differentiated products to help users to find what they are looking for faster. 
+Ask.com's ExpertRank algorithm provides relevant search results by identifying 
+topics and the most authoritative sites on the Web through query-specific 
+clustering and expert analysis. This talk gives an overview of Ask.com's search 
+engine, describes many of challenges faced in seeking relevant answers from 
+billions of documents for tens of millions of users everyday, and presents some 
+of our approaches in topic clustering, ranking, and infrastructure support for 
+high scalability and availability.</span></p>
+<p class=MsoNormal style='margin-top:0in;margin-right:61.05pt;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt'>
+<span style='font-family:"Book Antiqua";
+mso-bidi-font-weight:bold'>
+<o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt'>
+<b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Book Antiqua"'>Biography:</span></b><b
+style='mso-bidi-font-weight:normal'><span style='font-family:"Book Antiqua";
+mso-fareast-language:ZH-CN'><o:p></o:p></span></b></p>
+
+<p class="MsoNormal" style="margin-left: 1.0in; margin-right: 61.05pt; margin-top: 0in; margin-bottom: .0001pt">
+<span style="font-family: Book Antiqua">Tao Yang is Chief Scientist and Senior 
+Vice President at Ask.com. He was chief scientist and vice president of search 
+development at Ask.com in charge of web search division, and the chief scientist 
+and vice president of research and development during Teoma's startup stage. <br>
+<br>
+At Ask.com and Teoma, Yang has been directly responsible for scaling search 
+architectures and algorithms to handle billions of documents in terms of 
+relevancy, freshness, and high throughput with low latency. Yang is a 
+co-inventor of the ExpertRank (formally Teoma) search algorithm.<br>
+<br>
+Yang has also been a full professor of computer science at University of 
+California at Santa Barbara with over 90 technical publications on parallel and 
+distributed systems, Internet search, cluster-based services, and high 
+performance scientific computing. Yang received Ph.D. in computer science from 
+Rutgers University in 1993 and B.S. in computer science from Zhejiang 
+University, China in 1984<br>
+&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-weight:bold'><span
+style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'><a name=keynote4><b><span style='font-size:13.5pt;font-family:
+"Bitstream Vera Serif";color:#CC6600;mso-fareast-language:ZH-CN'>KEYNOTE 4</span></b></a><span
+style='mso-bookmark:keynote4'><span style='mso-fareast-language:ZH-CN'><o:p></o:p></span></span></p>
+
+<span style='mso-bookmark:keynote4'></span>
+
+<p class=MsoNormal style='margin-right:61.05pt'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;tab-stops:45.8pt 1.0in 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-family:"Book Antiqua"'>When:</span></b><span
+style='font-family:"Book Antiqua"'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+style='mso-tab-count:1'>     </span>TBD<span style='mso-bidi-font-weight:bold'><span
+style='mso-tab-count:2'>                   </span><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Book Antiqua"'>Where:</span></b><span
+style='font-family:"Book Antiqua";mso-bidi-font-weight:bold'> <span
+style='mso-tab-count:1'>          </span>TBD</span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt'><span style='font-family:"Book Antiqua";
+mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Book Antiqua"'>Title</span></b><span
+style='font-family:"Book Antiqua";mso-bidi-font-weight:bold'>: <span
+style='mso-tab-count:2'>             <b>Internet Video: The Next Big Thing</b></span></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Book Antiqua"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:61.05pt'><span style='font-family:"Book Antiqua"'><b style='mso-bidi-font-weight:
+normal'>Speaker: <span
+style='mso-tab-count:1'>       </span></b> <span
+style='mso-tab-count:1'><span style='mso-bidi-font-weight:
+normal'>Hui Zhang</span></span></span><span style='mso-bidi-font-weight:
+normal'></p>
+
+</span>
+
+<h3 style='margin-right:61.05pt'><font size="3">
+<span style="font-family: Book Antiqua">Carnegie Mellon University, USA</span></font></h3>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:61.05pt;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:.5in'><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Book Antiqua"'>Abstract:</span></b><span
+style='font-family:"Book Antiqua";mso-bidi-font-weight:bold'> <span
+style='mso-tab-count:1'>      </span></span><span style='font-family:"Book Antiqua";
+mso-fareast-language:ZH-CN;mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'><span style='font-family:"Book Antiqua"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:61.05pt;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;text-align:justify;text-justify:
+inter-ideograph'><span style='font-family:"Book Antiqua"'>After the long 
+anticipation by academia and industry, the age of Internet video has finally 
+arrived. In the very near future, video will become the dominant traffic type 
+over the Internet. Like previous generations of Internet applications such as 
+World Wide Web that make the consumption, production, and distribution of 
+text/image content accessible to any users, Internet video applications will not 
+only allow any user to access any video at any time from any where, but also 
+enable any user to produce and distribute video at any time to any where, all 
+over the best-effort Internet. This vision of ubiquitous Internet video differs 
+significantly from that of the 500 TV channels over a private IP network.</span></p>
+<p class=MsoNormal style='margin-top:0in;margin-right:61.05pt;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;text-align:justify;text-justify:
+inter-ideograph'>&nbsp;</p>
+<p class=MsoNormal style='margin-top:0in;margin-right:61.05pt;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;text-align:justify;text-justify:
+inter-ideograph'><font face="Book Antiqua">A variety of technologies have been 
+developed: Content Distribution Networks and Peer-to-Peer systems have been 
+deployed to enhance the reach and scalability of video distribution; advanced 
+source and channel coding techniques such as multiple description codes and 
+network coding have been devised to address the heterogeneity and best-effort 
+aspects of the Internet. In this talk, I will discuss why Internet video will 
+the next big thing for both industry and academic researchers. I will review the 
+state-of-art of Internet video technologies, discuss the key challenges, and 
+outline the potential applications and research directions. </font></p>
+<p class=MsoNormal style='margin-right:61.05pt'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-fareast-language:ZH-CN;mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt'><b>
+<span style="font-family: Book Antiqua">Biography</span></b><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Book Antiqua";mso-bidi-font-family:Arial'>:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:61.05pt'><span style='font-family:"Book Antiqua";
+mso-bidi-font-family:Arial;mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoBodyText2 style='margin-top:0in;margin-right:61.05pt;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt'><span style='font-size:12.0pt;
+font-family:"Book Antiqua";mso-bidi-font-family:Arial;mso-bidi-font-weight:
+normal'><b>Hui Zhang</b> is a professor in the School of Computer Science at 
+Carnegie Mellon University. He is currently leading the 100x100 Clean Slate 
+Project, the 4D Project, and the End System Multicast Project. He has done 
+research on Internet QoS, multicast, and peer-to-peer video streaming systems. 
+Algorithms and software packages resulted from his research have been widely 
+adopted by industry and academic institutions.<br>
+<br>
+Professor Zhang was the recipient of the National Science Foundation CAREER 
+Award in 1996 and the Alfred Sloan Fellowship in 2000. He held the CMU SCS 
+Finmeccanica Junior Faculty Chair from 1998 to 2002. He was elected to be an ACM 
+Fellow in 2006. He was the Chief Technical Officer of Turin Networks in 
+2000-2003.<br>
+&nbsp;</span></p>
+
+</div>
+
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'><a name=keynote5><b><span style='font-size:13.5pt;font-family:
+"Bitstream Vera Serif";color:#CC6600;mso-fareast-language:ZH-CN'>KEYNOTE 5</span></b></a></p>
+
+<p class=MsoNormal style='margin-right:61.05pt'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;tab-stops:45.8pt 1.0in 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-family:"Book Antiqua"'>When:</span></b><span
+style='font-family:"Book Antiqua"'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+style='mso-tab-count:1'>     </span>TBD<span style='mso-bidi-font-weight:bold'><span
+style='mso-tab-count:2'>                   </span><o:p></o:p></span></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Book Antiqua"'>Where:</span></b><span
+style='font-family:"Book Antiqua";mso-bidi-font-weight:bold'> <span
+style='mso-tab-count:1'>          </span>TBD</span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt'><span style='font-family:"Book Antiqua";
+mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Book Antiqua"'>Title</span></b><span
+style='font-family:"Book Antiqua";mso-bidi-font-weight:bold'>: <span
+style='mso-tab-count:2'>             <b>Ubiquitous Mobile Computing in Digital 
+Life</b></span></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Book Antiqua"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:61.05pt'><span style='font-family:"Book Antiqua"'><b style='mso-bidi-font-weight:
+normal'>Speaker: <span
+style='mso-tab-count:1'>       </span></b>Ya-Qin<span style='mso-bidi-font-weight:
+normal; mso-tab-count:1'> Zhang</span></span><span style='mso-bidi-font-weight:
+normal'></p>
+
+</span>
+
+<h3 style='margin-right:61.05pt'><font size="3">
+<span style="font-family: Book Antiqua">Microsoft, China</span></font></h3>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:61.05pt;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:.5in'><span
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Book Antiqua"'>Abstract:</span></b><span
+style='font-family:"Book Antiqua";mso-bidi-font-weight:bold'> <span
+style='mso-tab-count:1'>      </span></span><span style='font-family:"Book Antiqua";
+mso-fareast-language:ZH-CN;mso-bidi-font-weight:bold'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt;text-align:justify;text-justify:
+inter-ideograph'><span style='font-family:"Book Antiqua"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:61.05pt;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;text-align:justify;text-justify:
+inter-ideograph'><span style="font-family: Book Antiqua">Today, we are already 
+at the epicenter of the digital era. In office, at home, in health care, and at 
+grocery store, various digital devices, software and services are integrated 
+with our everyday life. An important puzzle piece of the overall digital life 
+picture is &quot;mobile computing&quot;. For the first time, a small device is all of the 
+following: mobile, multimedia, connected, powerful and intelligent. Right now, 
+the mobile industry is undergoing a profound transformation in multiple 
+dimensions. New intelligent devices are emerging with powerful CPU, 
+multi-tasking operating systems, and compelling form factors. The continued 
+evolution from 2G/2.5G to 3G and beyond (3GB) will enable converged all-IP 
+networks with high-speed access, multi-radio connectivity, seamless roaming, and 
+new services. In this talk, we will share some of our personal observations on 
+mobile computing. We'll also touch on a few examples of our active research work 
+on mobility and networking, including seamless roaming, context-sensitive 
+reasoning, and mobile interactivity.</span></p>
+<p class=MsoNormal style='margin-right:61.05pt'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-fareast-language:ZH-CN;mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt'><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-right:61.05pt'><b>
+<span style="font-family: Book Antiqua">Biography</span></b><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Book Antiqua";mso-bidi-font-family:Arial'>:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-right:61.05pt'><span style='font-family:"Book Antiqua";
+mso-bidi-font-family:Arial;mso-bidi-font-weight:bold'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoBodyText2 style='margin-top:0in;margin-right:61.05pt;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt'><font size="3">
+<span style="font-family: Book Antiqua"><b>Ya-Qin Zhang </b>serves as corporate 
+vice president, leading Microsoft's overall research and development efforts in 
+China. Together with his team, he will drive the company's next wave of 
+evolution in Asia. In this role, he will also serve as a key advisor to 
+government and academia in the region.<br>
+<br>
+Respected and lauded by his peers as a world-renowned researcher and scientist, 
+Zhang joined Microsoft in January 1999, bringing with him a wealth of technical 
+knowledge in wireless and satellite communications, networking, digital video 
+and multimedia technology. He has more than 50 U.S. patents granted, and has 
+authored more than a dozen books and 300 influential technical papers and 
+journal articles.<br>
+<br>
+Previously, Zhang served as corporate vice president at Microsoft's Mobile and 
+Embedded Devices Division, where he oversaw research and development of Windows 
+Mobile? software for Pocket PCs and Smartphones and Windows? Embedded operating 
+systems, including Windows CE. <br>
+<br>
+Zhang is one of the founding members of the Microsoft Research Asia lab, where 
+he served as managing director and chief scientist. As managing director, he 
+built the lab into a regional Asian research powerhouse that now employs more 
+than 200 researchers. Under Zhang's leadership Microsoft Research Asia became a 
+considerable and constant contributor to Microsoft's core technology. Today, 
+more than 100 innovations have made their way into critical products such as the 
+next generation of the Microsoft Windows desktop operating system, Windows 
+Vista? Zhang also founded the Advanced Technology Center (ATC) in 2003.<br>
+<br>
+Before joining Microsoft, Zhang was director for the Multimedia Technology 
+Laboratory at Sarnoff Corp., where he oversaw the development of several 
+significant digital video encoding and communications technologies. Previously, 
+he worked as a senior technical staff member for GTE Laboratories Inc. and 
+Contel Corp.<br>
+<br>
+Zhang serves on the board of directors for many technology companies and has 
+contributed to multiple international technology standards. In 1997, he became 
+the youngest-ever Fellow for the Institute of Electrical and Electronics 
+Engineers (IEEE) and has served as editor in chief for influential IEEE journals 
+and publications. Zhang also serves on a variety of global technology standards 
+committees, is an adjunct or frequent guest professor at many prestigious 
+universities, and is an adviser to several Chinese and U.S. government agencies, 
+including the National Science Foundation.<br>
+<br>
+He has won many nationwide and regional professional awards, including the 1998 
+Outstanding Young Electrical Engineer from the National Electrical Engineer 
+Honor Society of Eta Kappa Nu, the 1997 Research Engineer of the Year from the 
+Central Jersey Engineering Council and, recently, the Industrial Pioneer Award 
+from the IEEE.<br>
+<br>
+Zhang has a PhD in electrical engineering from George Washington University and 
+master's and bachelor's degrees in electrical engineering from the University of 
+Science and Technology of China.<br>
+<br>
+&nbsp;</span></font></p>
+
+</body>
+
+</html>

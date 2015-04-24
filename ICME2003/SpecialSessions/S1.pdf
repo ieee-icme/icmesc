@@ -1,0 +1,388 @@
+%PDF-1.2 
+%‚„œ”
+ 
+10 0 obj
+<<
+/Length 11 0 R
+>>
+stream
+BT54 707.04  TD0 0 0 rg /F0 14.04  Tf-0  Tc -0.0898  Tw (Special session title) Tj114.48 0  TD -0.0225  Tc -0.0075  Tw (: Networked Video) TjET54 704.16 114.36 1.32 re fBT54 693.6  TD/F0 11.04  Tf-0.0231  Tc 0  Tw (Organizers:) TjET54 691.32 56.16 1.08 re fBT54 681.24  TD-0.0126  Tc 0.0126  Tw (Mihaela van der Schaar ) Tj115.56 0  TD /F1 11.04  Tf-0.0138  Tc -0.0342  Tw (\(Philips Research, email: Mihaela.vanderSchaar@philips.com\) and ) Tj298.56 0  TD /F0 11.04  Tf-0.0286  Tc 0.0286  Tw (Zixiang ) Tj38.76 0  TD -0.0036  Tc 0.0036  Tw (Xiong ) Tj30.96 0  TD /F1 11.04  Tf-0.0266  Tc 0  Tw (\(Texas) Tj-483.84 -12.6  TD -0.017  Tc 0.017  Tw (A&M University, email: zx@ee.tamu.edu\)) Tj0 -25.56  TD /F0 11.04  Tf-0.02  Tc 0  Tw (Abstract) TjET54 640.8 40.92 1.08 re fBT54 630.6  TD/F1 11.04  Tf-0.0151  Tc 1.5751  Tw (Multimedia\226an integrated and interactive presentation of speech, audio, video, graphics, and text\226have become ) Tj1.6982  Tc 0  Tw (a) Tj0 -12.6  TD -0.0158  Tc 0.5327  Tw (major driving force behind today's information technology that merges practices of communication, computing, and) TjT* -0.0162  Tc 3.2322  Tw (information processing into an interdisciplinary field) Tj248.76 0  TD -0.0172  Tc 3.2439  Tw (. However, to achieve a high level of acceptability and) Tj-248.76 -12.72  TD -0.0173  Tc 1.1896  Tw (proliferation of multimedia over heterogeneous IP-based networks like the Internet and wireless networks, several) Tj0 -12.6  TD -0.0164  Tc -0.0076  Tw (key requirements need to be satisfied:) Tj0 -13.32  TD /F2 11.04  Tf-0.0384  Tc 0  Tw (\267) Tj5.04 0  TD /F3 11.04  Tf0  Tc 0.0509  Tw ( ) Tj12.96 0  TD /F4 11.04  Tf-0.0156  Tc 0.0156  Tw (Easy adaptability to bandwidth variations) Tj185.28 0  TD /F1 11.04  Tf0  Tc 0  Tw (,) Tj-203.28 -13.44  TD /F2 11.04  Tf-0.0384  Tc (\267) Tj5.04 0  TD /F3 11.04  Tf0  Tc 0.0509  Tw ( ) Tj12.96 0  TD /F4 11.04  Tf-0.0049  Tc -0.0351  Tw (Robustness to data losses,) Tj-18 -13.44  TD /F2 11.04  Tf-0.0384  Tc 0  Tw (\267) Tj5.04 0  TD /F3 11.04  Tf0  Tc 0.0509  Tw ( ) Tj12.96 0  TD /F4 11.04  Tf-0.0137  Tc 0.5897  Tw (Support for bandwidth and device scalability,) Tj0  Tc 0  Tw ( ) Tj207.48 0  TD /F1 11.04  Tf-0.0179  Tc 0.6419  Tw (since various clients may be connected at different data rates and) Tj-221.88 -12.84  TD -0.0122  Tc -0.0238  Tw (request transmissions that are optimized for their respective connections and capabilities,) Tj-3.6 -13.32  TD /F2 11.04  Tf-0.0384  Tc 0  Tw (\267) Tj5.04 0  TD /F3 11.04  Tf0  Tc 0.0509  Tw ( ) Tj12.96 0  TD /F4 11.04  Tf-0.0132  Tc 0.0132  Tw (Limited power requirements) Tj124.8 0  TD /F1 11.04  Tf-0.0096  Tc -0.0384  Tw ( for portable wireless video devices.) Tj-142.8 -12.72  TD -0.0073  Tc 0.214  Tw (The papers in this special session present a variety of solutions to cope with these challenges, including joint source-) Tj0 -12.6  TD -0.0122  Tc 0.6122  Tw (channel coding technique) Tj113.64 0  TD 0.0127  Tc -0.0127  Tw (s, ) Tj10.44 0  TD -0.0145  Tc 0.5905  Tw (efficient media streaming and synchronization strategies,) Tj0  Tc 0  Tw ( ) Tj257.52 0  TD -0.0175  Tc 0.6975  Tw (streaming solutions using path) Tj-381.6 -12.72  TD -0.012  Tc 0.012  Tw (diversity, ) Tj46.56 0  TD -0.0137  Tc 2.5203  Tw (multimedia traffic modeling and shaping for efficient network utilization, efficient) Tj0  Tc 0  Tw ( ) Tj391.2 0  TD -0.0327  Tc (packetization) Tj58.56 0  TD 0.0061  Tc 2.6339  Tw ( and) Tj-496.32 -12.6  TD -0.0151  Tc -0.002  Tw (scheduling strategies, Power-optimized multimedia coding and transmission solutions.) Tj0 -31.56  TD /F0 11.04  Tf-0.0265  Tc 0  Tw (Program) TjET54 429.24 42.12 1.08 re fBT54 416.16  TD/F1 11.04  Tf0  Tc (1.) Tj8.28 0  TD /F3 11.04  Tf0.0509  Tw ( ) Tj9.72 0  TD /F1 11.04  Tf-0.017  Tc 0.017  Tw (Avideh ) Tj35.16 0  TD -0.0165  Tc 0.0056  Tw (Zakhor \(UC Berkeley\), \223Path Diversity for Multimedia Streaming over Packet Switched Networks\224) Tj-53.16 -12.72  TD 0  Tc 0  Tw (2.) Tj8.28 0  TD /F3 11.04  Tf0.0509  Tw ( ) Tj9.72 0  TD /F1 11.04  Tf0.0028  Tc 1.9172  Tw (Susie Wee, John) Tj0  Tc -0.12  Tw ( ) Tj81.96 0  TD -0.0138  Tc 0.0138  Tw (Apostolopoulos, ) Tj77.28 0  TD -0.0299  Tc 2.0699  Tw (Sumit Roy,) Tj0  Tc 0  Tw ( ) Tj56.88 0  TD -0.0173  Tc 2.0916  Tw (Wai-tian Tan \(Hewlett Packard Labs\), \223Research and Design) Tj-216.12 -12.6  TD -0.018  Tc 0.018  Tw (Challenges for Mobile Streaming Media Content Delivery Networks \(MSM-) Tj337.8 0  TD -0.0097  Tc 0  Tw (CDNs\)\224) Tj-355.8 -12.72  TD 0  Tc (3.) Tj8.28 0  TD /F3 11.04  Tf0.0509  Tw ( ) Tj9.72 0  TD /F1 11.04  Tf-0.0567  Tc 1.9767  Tw (Amy R.) Tj0  Tc 0  Tw ( ) Tj41.28 0  TD -0  Tc 1.9207  Tw (Reibman and) Tj0  Tc 0  Tw ( ) Tj65.16 0  TD -0.0204  Tc -0.0996  Tw (Vinay ) Tj31.56 0  TD -0.0188  Tc 1.9538  Tw (Vaishampayan \(AT&T Labs \226 Research\), \223Quality monitoring for compressed) Tj-138 -12.6  TD -0.016  Tc -0.014  Tw (video subjected to packet loss\224) Tj-18 -12.6  TD 0  Tc 0  Tw (4.) Tj8.28 0  TD /F3 11.04  Tf0.0509  Tw ( ) Tj9.72 0  TD /F1 11.04  Tf-0.0085  Tc 0.0085  Tw (Thomas ) Tj39.12 0  TD -0.02  Tc 0.86  Tw (Stockhammer \(Technical University of) Tj0  Tc 0  Tw ( ) Tj178.08 0  TD -0.0213  Tc 0.8785  Tw (Munchen, Germany\), \223Is Scalable Video Coding beneficial for) Tj-217.2 -12.72  TD -0.0163  Tc -0.0437  Tw (Wireless Video Applications?\224) Tj-18 -12.6  TD 0  Tc 0  Tw (5.) Tj8.28 0  TD /F3 11.04  Tf0.0509  Tw ( ) Tj9.72 0  TD /F1 11.04  Tf0.0036  Tc -0.0036  Tw (Bernd ) Tj30.12 0  TD -0.0064  Tc 0.1264  Tw (Girod, J. ) Tj41.64 0  TD -0.0215  Tc 0.2015  Tw (Chakareski, Y. ) Tj69.12 0  TD -0.0214  Tc 0.2614  Tw (Liang, M. ) Tj47.4 0  TD -0.0198  Tc 0.2598  Tw (Kalman, E. ) Tj53.52 0  TD -0.016  Tc 0.476  Tw (Setton, R. Zhang \(Stanford University\), \223Video streaming) Tj-241.8 -12.72  TD -0.0208  Tc 0.0208  Tw (with diversity\224) Tj-18 -12.6  TD 0  Tc 0  Tw (6.) Tj8.28 0  TD /F3 11.04  Tf0.0509  Tw ( ) Tj9.72 0  TD /F1 11.04  Tf-0.0054  Tc 0.0054  Tw (Haitao ) Tj32.16 0  TD /F1 9.96  Tf-0.0141  Tc 0.0441  Tw (Zheng \() Tj31.2 0  TD /F1 11.04  Tf-0.0143  Tc -0.0124  Tw (Lucent Research\), \223Optimizing Wireless Video Transmission by Cross Layer Design\224) Tj-81.36 -12.72  TD 0  Tc 0  Tw (7.) Tj8.28 0  TD /F3 11.04  Tf0.0509  Tw ( ) Tj9.72 0  TD /F1 11.04  Tf-0.008  Tc -0.112  Tw (Jacco ) Tj27.72 0  TD 0.0124  Tc -0.0124  Tw (Taal, ) Tj25.92 0  TD -0.0412  Tc 0.0412  Tw (Ivaylo ) Tj31.44 0  TD -0.0151  Tc 0.0151  Tw (Haratcherev, ) Tj60 0  TD 0.0218  Tc -0.0218  Tw (Koen ) Tj27.48 0  TD -0.0301  Tc -0.0899  Tw (Langendoen, ) Tj60.48 0  TD -0.0254  Tc 0.0254  Tw (Inald ) Tj26.04 0  TD -0.0148  Tc 0.7108  Tw (Lagendijk \(Delft University of Technology\), \223Quality) Tj-259.08 -12.6  TD -0.0132  Tc -0.0134  Tw (of Service controlled adaptive Video Coding over 802.11 wireless links\224) Tj-18 -12.6  TD /F5 9.96  Tf0.024  Tc 0  Tw (8.) Tj12 0  TD /F3 9.96  Tf0  Tc -0.0089  Tw ( ) Tj6 0  TD /F1 11.04  Tf-0.0029  Tc 0.0029  Tw (Marco ) Tj32.52 0  TD -0.0155  Tc 0.9355  Tw (Fumagalli \(CEFRIEL, Milan, Italy\),) Tj0  Tc 0  Tw ( ) Tj166.08 0  TD -0.0415  Tc -0.1985  Tw (Phoom ) Tj34.92 0  TD -0.0178  Tc 1.0978  Tw (Sagetong, Antonio Ortega \(USC, Los Angeles, CA, USA\),) Tj-233.52 -12.72  TD -0.0171  Tc -0.0086  Tw (\223Estimation of Erased Data in a H.263 Coded Stream by Using Unbalanced Multiple Description Coding\224) Tj-18 -12.6  TD 0  Tc 0  Tw (9.) Tj8.28 0  TD /F3 11.04  Tf0.0509  Tw ( ) Tj9.72 0  TD /F1 11.04  Tf-0.014  Tc 2.054  Tw (Jie Chen \(Brown University\), \223Anti-) Tj169.08 0  TD -0.016  Tc 2.1494  Tw (bursty Packet Loss and Adaptive Noise Filtering Design for Streaming) Tj-169.08 -12.72  TD 0.0061  Tc 0  Tw (Video\224) Tj-18 -12.6  TD 0  Tc (10.) Tj13.8 0  TD /F3 11.04  Tf0.0509  Tw ( ) Tj4.2 0  TD /F1 11.04  Tf-0.0115  Tc 0.0115  Tw (Tsuhan Chen \(Carnegie ) Tj107.28 0  TD -0.0154  Tc 0  Tw (Mellon University\), \223Joint Source-Channel Rate Shaping for Wireless Video\224) Tj-125.28 -12.6  TD 0  Tc 0  Tw (11.) Tj13.8 0  TD /F3 11.04  Tf0.0509  Tw ( ) Tj4.2 0  TD /F1 11.04  Tf0  Tw (Shengjie ) Tj43.92 0  TD -0.0254  Tc 0.0254  Tw (Zhao, ) Tj30.6 0  TD -0.0379  Tc -0.0821  Tw (Zixiang ) Tj39.36 0  TD -0.02  Tc 0.02  Tw (Xiong, ) Tj35.52 0  TD -0.0181  Tc 2.6581  Tw (Xiaodong Wang \(Texas A&M University\), \223Optimal Power Allocation for) Tj-149.4 -12.72  TD -0.0128  Tc -0.0172  Tw (Wireless Video Over CDMA Networks\224) Tj-18 -12.6  TD 0  Tc 0  Tw (12.) Tj13.8 0  TD /F3 11.04  Tf0.0509  Tw ( ) Tj4.2 0  TD /F1 11.04  Tf-0.02  Tc -0.1  Tw (Xiaofeng ) Tj44.04 0  TD -0.0149  Tc 0.3215  Tw (Xu \(Polytechnic University\), Mihaela van der Schaar \(Philips Research\), ) Tj327 0  TD -0.0191  Tc 0.0191  Tw (Santhana ) Tj43.56 0  TD -0.0195  Tc 0.4995  Tw (Krishnamachari, S.) Tj-414.6 -12.72  TD 0.0014  Tc -0.0014  Tw (Choi, ) Tj27.36 0  TD -0.0171  Tc 0.4731  Tw (Yao Wang \(Polytechnic University\), \223Adaptive Error Control for Fine-Granular-Scalability Video Coding) Tj-27.36 -12.6  TD -0.0211  Tc 0.0211  Tw (over IEEE 802.11 Wireless LAN\224) Tj-18 -25.56  TD /F0 11.04  Tf-0.013  Tc 0.013  Tw (Submission deadlines) TjET54 122.64 100.56 1.08 re fBT54 112.56  TD/F4 11.04  Tf-0.006  Tc 0.906  Tw (Initial paper submission:) Tj112.68 0  TD /F1 11.04  Tf-0.0318  Tc 0.9918  Tw ( February ) Tj0.96  Tc 0  Tw (1) Tj52.56 5.04  TD /F1 6.96  Tf-0.0074  Tc (st,) Tj6.48 -5.04  TD /F1 11.04  Tf-0.0209  Tc 0.9895  Tw ( 2003 \(Note that both initial and final papers are subjected to the same page) Tj-171.72 -12.72  TD -0.0099  Tc 0.0099  Tw (limit as regular papers.\)) Tj0 -25.2  TD /F4 11.04  Tf-0.0147  Tc -0.0453  Tw (Final paper submission:) Tj107.64 0  TD /F1 11.04  Tf-0.0192  Tc 0.0192  Tw ( March 31) Tj45.24 5.04  TD /F1 6.96  Tf0.0788  Tc 0  Tw (st) Tj4.68 -5.04  TD /F1 11.04  Tf-0.02  Tc 0.02  Tw (, 2003.) TjETendstream
+endobj
+11 0 obj
+10031
+endobj
+4 0 obj
+<<
+/Type /Page
+/Parent 5 0 R
+/Resources <<
+/Font 20 0 R
+/ProcSet 2 0 R
+>>
+/Contents 10 0 R
+>>
+endobj
+20 0 obj
+<<
+/F0 6 0 R
+/F1 8 0 R
+/F2 12 0 R
+/F3 14 0 R
+/F4 16 0 R
+/F5 18 0 R
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/Name /F0
+/BaseFont /TimesNewRoman,Bold
+/FirstChar 31
+/LastChar 255
+/Widths [ 778 250 333 555 500 500 1000 833 278 333 333 500 570 250 333 250 
+278 500 500 500 500 500 500 500 500 500 500 333 333 570 570 570 
+500 930 722 667 722 722 667 611 778 778 389 500 778 667 944 722 
+778 611 778 722 556 667 722 722 1000 722 722 667 333 278 333 581 
+500 333 500 556 444 556 444 333 500 556 278 333 556 278 833 556 
+500 556 556 444 389 333 556 500 722 500 500 444 394 220 394 520 
+778 500 778 333 500 500 1000 500 500 333 1000 556 333 1000 778 778 
+778 778 333 333 500 500 350 500 1000 333 1000 389 333 722 778 778 
+722 250 333 500 500 500 500 220 500 333 747 300 500 570 333 747 
+500 400 549 300 300 333 576 540 250 333 300 330 500 750 750 750 
+500 722 722 722 722 722 722 1000 722 667 667 667 667 389 389 389 
+389 722 722 778 778 778 778 778 570 778 722 722 722 722 722 611 
+556 500 500 500 500 500 500 722 444 444 444 444 444 278 278 278 
+278 500 556 500 500 500 500 500 549 500 556 556 556 556 500 556 
+500 ]
+/Encoding /WinAnsiEncoding
+/FontDescriptor 7 0 R
+>>
+endobj
+7 0 obj
+<<
+/Type /FontDescriptor
+/FontName /TimesNewRoman,Bold
+/Flags 16418
+/FontBBox [ -250 -222 1200 915 ]
+/MissingWidth 778
+/StemV 136
+/StemH 136
+/ItalicAngle 0
+/CapHeight 915
+/XHeight 640
+/Ascent 915
+/Descent -222
+/Leading 180
+/MaxWidth 1000
+/AvgWidth 427
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/Name /F1
+/BaseFont /TimesNewRoman
+/FirstChar 31
+/LastChar 255
+/Widths [ 778 250 333 408 500 500 833 778 180 333 333 500 564 250 333 250 
+278 500 500 500 500 500 500 500 500 500 500 278 278 564 564 564 
+444 921 722 667 667 722 611 556 722 722 333 389 722 611 889 722 
+722 556 722 667 556 611 722 722 944 722 722 611 333 278 333 469 
+500 333 444 500 444 500 444 333 500 500 278 278 500 278 778 500 
+500 500 500 333 389 278 500 500 722 500 500 444 480 200 480 541 
+778 500 778 333 500 444 1000 500 500 333 1000 556 333 889 778 778 
+778 778 333 333 444 444 350 500 1000 333 980 389 333 722 778 778 
+722 250 333 500 500 500 500 200 500 333 760 276 500 564 333 760 
+500 400 549 300 300 333 576 453 250 333 300 310 500 750 750 750 
+444 722 722 722 722 722 722 889 667 611 611 611 611 333 333 333 
+333 722 722 722 722 722 722 722 564 722 722 722 722 722 722 556 
+500 444 444 444 444 444 444 667 444 444 444 444 444 278 278 278 
+278 500 500 500 500 500 500 500 549 500 500 500 500 500 500 500 
+500 ]
+/Encoding /WinAnsiEncoding
+/FontDescriptor 9 0 R
+>>
+endobj
+9 0 obj
+<<
+/Type /FontDescriptor
+/FontName /TimesNewRoman
+/Flags 34
+/FontBBox [ -250 -239 1200 891 ]
+/MissingWidth 783
+/StemV 73
+/StemH 73
+/ItalicAngle 0
+/CapHeight 891
+/XHeight 623
+/Ascent 891
+/Descent -239
+/Leading 173
+/MaxWidth 1000
+/AvgWidth 402
+>>
+endobj
+12 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/Name /F2
+/BaseFont /Symbol
+/FirstChar 31
+/LastChar 255
+/Widths [ 600 250 333 713 500 549 833 778 439 333 333 500 549 250 549 250 
+278 500 500 500 500 500 500 500 500 500 500 278 278 549 549 549 
+444 549 722 667 722 612 611 763 603 722 333 631 722 686 889 722 
+722 768 741 556 592 611 690 439 768 645 795 611 333 863 333 658 
+500 500 631 549 549 494 439 521 411 603 329 603 549 549 576 521 
+549 549 521 549 603 439 576 713 686 493 686 494 480 200 480 549 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 620 247 549 167 713 500 753 753 753 753 1042 987 603 987 
+603 400 549 411 549 549 713 494 460 549 549 549 549 1000 603 1000 
+658 823 686 795 987 768 768 823 768 768 713 713 713 713 713 713 
+713 768 713 790 790 890 823 549 250 713 603 603 1042 987 603 987 
+603 494 329 790 790 786 713 384 384 384 384 384 384 494 494 494 
+494 600 329 274 686 686 686 384 384 384 384 384 384 494 494 494 
+600 ]
+/FontDescriptor 13 0 R
+>>
+endobj
+13 0 obj
+<<
+/Type /FontDescriptor
+/FontName /Symbol
+/Flags 6
+/FontBBox [ -250 -217 1252 1000 ]
+/MissingWidth 598
+/StemV 109
+/StemH 109
+/ItalicAngle 0
+/CapHeight 1000
+/XHeight 700
+/Ascent 1000
+/Descent -217
+/Leading 217
+/MaxWidth 1043
+/AvgWidth 598
+>>
+endobj
+14 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/Name /F3
+/BaseFont /Arial
+/FirstChar 31
+/LastChar 255
+/Widths [ 750 278 278 355 556 556 889 667 191 333 333 389 584 278 333 278 
+278 556 556 556 556 556 556 556 556 556 556 278 278 584 584 584 
+556 1015 667 667 722 722 667 611 778 722 278 500 667 556 833 722 
+778 667 778 722 667 611 722 667 944 667 667 611 278 278 278 469 
+556 333 556 556 500 556 556 278 556 556 222 222 500 222 833 556 
+556 556 556 333 500 278 556 500 722 500 500 500 334 260 334 584 
+750 556 750 222 556 333 1000 556 556 333 1000 667 333 1000 750 750 
+750 750 222 222 333 333 350 556 1000 333 1000 500 333 944 750 750 
+667 278 333 556 556 556 556 260 556 333 737 370 556 584 333 737 
+552 400 549 333 333 333 576 537 278 333 333 365 556 834 834 834 
+611 667 667 667 667 667 667 1000 722 667 667 667 667 278 278 278 
+278 722 722 778 778 778 778 778 584 778 722 722 722 722 667 667 
+611 556 556 556 556 556 556 889 500 556 556 556 556 278 278 278 
+278 556 556 556 556 556 556 556 549 611 556 556 556 556 500 556 
+500 ]
+/Encoding /WinAnsiEncoding
+/FontDescriptor 15 0 R
+>>
+endobj
+15 0 obj
+<<
+/Type /FontDescriptor
+/FontName /Arial
+/Flags 32
+/FontBBox [ -250 -217 1213 902 ]
+/MissingWidth 750
+/StemV 81
+/StemH 81
+/ItalicAngle 0
+/CapHeight 902
+/XHeight 631
+/Ascent 902
+/Descent -217
+/Leading 153
+/MaxWidth 1011
+/AvgWidth 446
+>>
+endobj
+16 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/Name /F4
+/BaseFont /TimesNewRoman,Italic
+/FirstChar 31
+/LastChar 255
+/Widths [ 778 250 333 420 500 500 833 778 214 333 333 500 675 250 333 250 
+278 500 500 500 500 500 500 500 500 500 500 333 333 675 675 675 
+500 920 611 611 667 722 611 611 722 722 333 444 667 556 833 667 
+722 611 722 611 500 556 722 611 833 611 556 556 389 278 389 422 
+500 333 500 500 444 500 444 278 500 500 278 278 444 278 722 500 
+500 500 500 389 389 278 500 444 667 444 444 389 400 275 400 541 
+778 500 778 333 500 556 889 500 500 333 1000 500 333 944 778 778 
+778 778 333 333 556 556 350 500 889 333 980 389 333 667 778 778 
+556 250 389 500 500 500 500 275 500 333 760 276 500 675 333 760 
+500 400 549 300 300 333 576 523 250 333 300 310 500 750 750 750 
+500 611 611 611 611 611 611 889 667 611 611 611 611 333 333 333 
+333 722 667 722 722 722 722 722 675 722 722 722 722 722 556 611 
+500 500 500 500 500 500 500 667 444 444 444 444 444 278 278 278 
+278 500 500 500 500 500 500 500 549 500 500 500 500 500 444 500 
+444 ]
+/Encoding /WinAnsiEncoding
+/FontDescriptor 17 0 R
+>>
+endobj
+17 0 obj
+<<
+/Type /FontDescriptor
+/FontName /TimesNewRoman,Italic
+/Flags 98
+/FontBBox [ -250 -239 1174 891 ]
+/MissingWidth 783
+/StemV 73
+/StemH 73
+/ItalicAngle -11
+/CapHeight 891
+/XHeight 623
+/Ascent 891
+/Descent -239
+/Leading 173
+/MaxWidth 978
+/AvgWidth 402
+>>
+endobj
+18 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/Name /F5
+/BaseFont /CourierNew
+/FirstChar 31
+/LastChar 255
+/Widths [ 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 600 
+600 ]
+/Encoding /WinAnsiEncoding
+/FontDescriptor 19 0 R
+>>
+endobj
+19 0 obj
+<<
+/Type /FontDescriptor
+/FontName /CourierNew
+/Flags 35
+/FontBBox [ -250 -277 722 783 ]
+/MissingWidth 602
+/StemV 110
+/StemH 110
+/ItalicAngle 0
+/CapHeight 783
+/XHeight 548
+/Ascent 783
+/Descent -277
+/Leading 60
+/MaxWidth 602
+/AvgWidth 602
+>>
+endobj
+2 0 obj
+[ /PDF /Text  ]
+endobj
+5 0 obj
+<<
+/Kids [4 0 R ]
+/Count 1
+/Type /Pages
+/MediaBox [ 0 0 612 792 ]
+>>
+endobj
+1 0 obj
+<<
+/Creator <FEFF004D006900630072006F0073006F0066007400200057006F007200640020002D0020004E006500740077006F0072006B006500640056006900640065006F002E0064006F0063>
+/CreationDate (D:20021114150222)
+/Title <FEFF004E006500740077006F0072006B0056006900640065006F>
+/Producer (Acrobat PDFWriter 4.05 for Windows)
+>>
+endobj
+3 0 obj
+<<
+/Pages 5 0 R
+/Type /Catalog
+/DefaultGray 21 0 R
+/DefaultRGB  22 0 R
+>>
+endobj
+21 0 obj
+[/CalGray
+<<
+/WhitePoint [0.9505 1 1.0891 ]
+/Gamma 0.2468 
+>>
+]
+endobj
+22 0 obj
+[/CalRGB
+<<
+/WhitePoint [0.9505 1 1.0891 ]
+/Gamma [0.2468 0.2468 0.2468 ]
+/Matrix [0.4361 0.2225 0.0139 0.3851 0.7169 0.0971 0.1431 0.0606 0.7141 ]
+>>
+]
+endobj
+xref
+0 23
+0000000000 65535 f
+0000018860 00000 n
+0000018734 00000 n
+0000019187 00000 n
+0000010138 00000 n
+0000018768 00000 n
+0000010354 00000 n
+0000011484 00000 n
+0000011773 00000 n
+0000012893 00000 n
+0000000021 00000 n
+0000010113 00000 n
+0000013172 00000 n
+0000014260 00000 n
+0000014537 00000 n
+0000015655 00000 n
+0000015927 00000 n
+0000017054 00000 n
+0000017342 00000 n
+0000018458 00000 n
+0000010258 00000 n
+0000019284 00000 n
+0000019372 00000 n
+trailer
+<<
+/Size 23
+/Root 3 0 R
+/Info 1 0 R
+/ID [<5646fde3ed8d1040949fdda2f4375d93><5646fde3ed8d1040949fdda2f4375d93>]
+>>
+startxref
+19550
+%%EOF

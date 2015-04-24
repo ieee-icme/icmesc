@@ -1,0 +1,344 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="2009 IEEE International Conference on Multimedia &amp; Expo (ICME 2009)" />
+<meta name="keywords" content="ICME, IEEE Conference, Multimedia, Signal processing, Virtual reality, 3-D imaging, human-machine interface, Multimedia networking, Multimedia security, social media, Multimedia applications" />
+<title>2009 IEEE International Conference on Multimedia &amp; Expo (ICME 2009)</title>
+<style type="text/css">
+	@import "style.css";
+.style1 {
+	color: #660000;
+	font-weight: bold;
+}
+</style>
+
+<script type="text/javascript">
+      
+/***********************************************
+* Ultimate Fade-In Slideshow (v1.51): © Dynamic Drive (http://www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit http://www.dynamicdrive.com/ for this script and 100s more.
+***********************************************/
+ 
+var fadeimages=new Array()
+//SET IMAGE PATHS. Extend or contract array as needed
+fadeimages[0]=["images/h_right_1.jpg", "", ""] //plain image syntax
+fadeimages[1]=["images/h_right_3.jpg", "", ""] 
+fadeimages[2]=["images/h_right_4.jpg", "", ""] 
+fadeimages[3]=["images/h_right_5.jpg", "", ""] 
+fadeimages[4]=["images/h_right_6.jpg", "", ""] 
+fadeimages[5]=["images/h_right_7.jpg", "", ""] 
+
+//fadeimages[2]=["photo3.jpg", "http://www.javascriptkit.com", "_new"] //image with link and target syntax
+
+/*
+var fadeimages2=new Array() //2nd array set example. Remove or add more sets as needed.
+//SET IMAGE PATHS. Extend or contract array as needed
+fadeimages2[0]=["photo1.jpg", "", ""] //plain image syntax
+fadeimages2[1]=["photo2.jpg", "http://www.cssdrive.com", ""] //image with link syntax
+fadeimages2[2]=["photo3.jpg", "http://www.javascriptkit.com", "_new"] //image with link and target syntax
+*/
+
+var fadebgcolor="white"
+
+////NO need to edit beyond here/////////////
+ 
+var fadearray=new Array() //array to cache fadeshow instances
+var fadeclear=new Array() //array to cache corresponding clearinterval pointers
+ 
+var dom=(document.getElementById) //modern dom browsers
+var iebrowser=document.all
+ 
+function fadeshow(theimages, fadewidth, fadeheight, borderwidth, delay, pause, displayorder){
+this.pausecheck=pause
+this.mouseovercheck=0
+this.delay=delay
+this.degree=10 //initial opacity degree (10%)
+this.curimageindex=0
+this.nextimageindex=1
+fadearray[fadearray.length]=this
+this.slideshowid=fadearray.length-1
+this.canvasbase="canvas"+this.slideshowid
+this.curcanvas=this.canvasbase+"_0"
+if (typeof displayorder!="undefined")
+theimages.sort(function() {return 0.5 - Math.random();}) //thanks to Mike (aka Mwinter) :)
+this.theimages=theimages
+this.imageborder=parseInt(borderwidth)
+this.postimages=new Array() //preload images
+for (p=0;p<theimages.length;p++){
+this.postimages[p]=new Image()
+this.postimages[p].src=theimages[p][0]
+}
+ 
+var fadewidth=fadewidth+this.imageborder*2
+var fadeheight=fadeheight+this.imageborder*2
+ 
+if (iebrowser&&dom||dom) //if IE5+ or modern browsers (ie: Firefox)
+document.write('<div id="master'+this.slideshowid+'" style="position:relative;width:'+fadewidth+'px;height:'+fadeheight+'px;overflow:hidden;"><div id="'+this.canvasbase+'_0" style="position:absolute;width:'+fadewidth+'px;height:'+fadeheight+'px;top:0;left:0;filter:progid:DXImageTransform.Microsoft.alpha(opacity=10);opacity:0.1;-moz-opacity:0.1;-khtml-opacity:0.1;background-color:'+fadebgcolor+'"></div><div id="'+this.canvasbase+'_1" style="position:absolute;width:'+fadewidth+'px;height:'+fadeheight+'px;top:0;left:0;filter:progid:DXImageTransform.Microsoft.alpha(opacity=10);opacity:0.1;-moz-opacity:0.1;-khtml-opacity:0.1;background-color:'+fadebgcolor+'"></div></div>')
+else
+document.write('<div><img name="defaultslide'+this.slideshowid+'" src="'+this.postimages[0].src+'"></div>')
+ 
+if (iebrowser&&dom||dom) //if IE5+ or modern browsers such as Firefox
+this.startit()
+else{
+this.curimageindex++
+setInterval("fadearray["+this.slideshowid+"].rotateimage()", this.delay)
+}
+}
+
+function fadepic(obj){
+if (obj.degree<100){
+obj.degree+=10
+if (obj.tempobj.filters&&obj.tempobj.filters[0]){
+if (typeof obj.tempobj.filters[0].opacity=="number") //if IE6+
+obj.tempobj.filters[0].opacity=obj.degree
+else //else if IE5.5-
+obj.tempobj.style.filter="alpha(opacity="+obj.degree+")"
+}
+else if (obj.tempobj.style.MozOpacity)
+obj.tempobj.style.MozOpacity=obj.degree/101
+else if (obj.tempobj.style.KhtmlOpacity)
+obj.tempobj.style.KhtmlOpacity=obj.degree/100
+else if (obj.tempobj.style.opacity&&!obj.tempobj.filters)
+obj.tempobj.style.opacity=obj.degree/101
+}
+else{
+clearInterval(fadeclear[obj.slideshowid])
+obj.nextcanvas=(obj.curcanvas==obj.canvasbase+"_0")? obj.canvasbase+"_0" : obj.canvasbase+"_1"
+obj.tempobj=iebrowser? iebrowser[obj.nextcanvas] : document.getElementById(obj.nextcanvas)
+obj.populateslide(obj.tempobj, obj.nextimageindex)
+obj.nextimageindex=(obj.nextimageindex<obj.postimages.length-1)? obj.nextimageindex+1 : 0
+setTimeout("fadearray["+obj.slideshowid+"].rotateimage()", obj.delay)
+}
+}
+ 
+fadeshow.prototype.populateslide=function(picobj, picindex){
+var slideHTML=""
+if (this.theimages[picindex][1]!="") //if associated link exists for image
+slideHTML='<a href="'+this.theimages[picindex][1]+'" target="'+this.theimages[picindex][2]+'">'
+slideHTML+='<img src="'+this.postimages[picindex].src+'" border="'+this.imageborder+'px">'
+if (this.theimages[picindex][1]!="") //if associated link exists for image
+slideHTML+='</a>'
+picobj.innerHTML=slideHTML
+}
+ 
+ 
+fadeshow.prototype.rotateimage=function(){
+if (this.pausecheck==1) //if pause onMouseover enabled, cache object
+var cacheobj=this
+if (this.mouseovercheck==1)
+setTimeout(function(){cacheobj.rotateimage()}, 100)
+else if (iebrowser&&dom||dom){
+this.resetit()
+var crossobj=this.tempobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+crossobj.style.zIndex++
+fadeclear[this.slideshowid]=setInterval("fadepic(fadearray["+this.slideshowid+"])",50)
+this.curcanvas=(this.curcanvas==this.canvasbase+"_0")? this.canvasbase+"_1" : this.canvasbase+"_0"
+}
+else{
+var ns4imgobj=document.images['defaultslide'+this.slideshowid]
+ns4imgobj.src=this.postimages[this.curimageindex].src
+}
+this.curimageindex=(this.curimageindex<this.postimages.length-1)? this.curimageindex+1 : 0
+}
+ 
+fadeshow.prototype.resetit=function(){
+this.degree=10
+var crossobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+if (crossobj.filters&&crossobj.filters[0]){
+if (typeof crossobj.filters[0].opacity=="number") //if IE6+
+crossobj.filters(0).opacity=this.degree
+else //else if IE5.5-
+crossobj.style.filter="alpha(opacity="+this.degree+")"
+}
+else if (crossobj.style.MozOpacity)
+crossobj.style.MozOpacity=this.degree/101
+else if (crossobj.style.KhtmlOpacity)
+crossobj.style.KhtmlOpacity=this.degree/100
+else if (crossobj.style.opacity&&!crossobj.filters)
+crossobj.style.opacity=this.degree/101
+}
+ 
+ 
+fadeshow.prototype.startit=function(){
+var crossobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+this.populateslide(crossobj, this.curimageindex)
+if (this.pausecheck==1){ //IF SLIDESHOW SHOULD PAUSE ONMOUSEOVER
+var cacheobj=this
+var crossobjcontainer=iebrowser? iebrowser["master"+this.slideshowid] : document.getElementById("master"+this.slideshowid)
+crossobjcontainer.onmouseover=function(){cacheobj.mouseovercheck=1}
+crossobjcontainer.onmouseout=function(){cacheobj.mouseovercheck=0}
+}
+this.rotateimage()
+}
+
+</script>
+</head>
+
+<body>
+	<div id="page">
+    	<div id="pageheader">
+        	<div id="header"><h1>ICME2009CANCUN</h1></div>
+            <div id="left">
+            	<h2>2009 IEEE<br />
+                        International<br />
+                        Conference on<br />
+                        Multimedia and Expo<br />
+                        <br />
+                        June 28 - July 3, 2009<br />
+                        <h2 id="overline">Hilton Cancun, Cancun, Mexico</h2>
+                        <h2 id="newlocation">New York City</h2>            </div>
+            <div id="right"><img src="images/h_right_1.jpg" width="555" height="120" alt="cancun photo"/>
+            	<!--script type="text/javascript">
+				//new fadeshow(IMAGES_ARRAY_NAME, slideshow_width, slideshow_height, borderwidth, delay, pause (0=no, 1=yes), optionalRandomOrder)
+				//new fadeshow(fadeimages, 140, 225, 0, 3000, 1, "R")
+				new fadeshow(fadeimages, 555, 120, 0, 3000, 1);
+				</script-->
+            </div>            
+      </div>
+        
+        <div class="clr"></div>
+            
+        <div id="sidebarContainer">
+        	<div id="sidehead"></div>
+        	<div id="sidebar">
+            <!-- sidebar list here-->
+        	  <h1><a href="index.html">Home</a></h1>
+        	  <h1><a href="call_for_paper.html">Call for papers</a></h1>
+        	  <h2><a href="https://www.cmsworkshops.com/ICME2009/Papers.asp">online submission</a></h2>
+        	  <h2><a href="paperkit.html">paper kit</a></h2>
+        	  <h2><a href="importantdate.html">Important dates</a></h2>
+        	  <h1>Programs<!--a href="programs.html">Programs</a--></h1>
+        	  <!--<h2><a href="call_for_workshops.html">Call for workshops</a></h2>-->
+        	  <h2><a href="specialsessions.html">Special sessions</a></h2>
+        	  <h2><a href="tutorials.html">Tutorials</a></h2>
+              <h2><a href="call_for_demo.html">Call for demos</a></h2>
+        	  <h2><a href="workshops.html">Workshops</a></h2>        	  
+        	  <h2><a href="panels.html">Panels</a></h2>        	          	  
+        	  <h2><a href="keynote.html">Keynote</a></h2>
+        	  <h2 class="disable"><a href="socialevent.html">Social Events</a></h2>
+        	  <h1><a href="technicalprograms.html">Technical Programs</a></h1>        	                    
+        	  <h1><a href="https://www.cmsworkshops.com/ICME2009/Registration.asp" target="_blank">Registration</a></h1>                  
+        	  <h1><a href="city.html">Venue</a></h1>
+        	  <h2><a href="hotel.html">Hotel Reservation </a></h2>
+        	  <h2><a href="city.html">City information</a></h2>
+        	  <h2><a href="travel_visa.html">Travel &amp; Visa</a></h2>
+        	  <h1><a href="committee.html">Organizing Committee</a></h1>
+        	  <h1><a href="program_committee.html">Technical Program Committee</a></h1>
+        	  <h1><a href="sponsors.html">Sponsors</a></h1>
+        	  <!--h1><a href="#">Contact us</a></h1-->
+              <div class="spacer"></div>
+        	<!-- sidebar list end-->
+          </div>
+       	  <div id="sidefoot"></div>
+			<div id="sponsor">
+            	<img src="images/IEEE_Logo.png" />
+                <img src="images/SP_Logo.png" />
+                <img src="images/CAS_Logo.png" />
+                <img src="images/CS_Logo.png" />
+                <img src="images/huawei_logo.jpg" />
+                <img src="images/IBM_logo.jpg" /><a href="http://domino.watson.ibm.com/comm/research.nsf/pages/r.multimedia.workshop2009cfp.html">IBM Emerging Leaders in Multimedia Student Workshop</a>
+                <img src="images/HP_logo.jpg" />                
+            </div>
+        </div>
+        
+        <div id="content">
+        <!-- content here-->
+
+         <h1>Special Announcement </h1>
+         <p>First of all, thank you very much for your participation in ICME 2009. ICME 2009 has been in production for 3 years. The 4 multimedia technical communities work together for this common goal and provide high-quality programs/workshops. We have good quality papers with 22% of oral acceptance rate and 33% of poster acceptance rate. We have been looking for ways to mix regular IEEE SP/CAS/ComSoc short papers with the low-acceptance-rate CS style papers by adding plenary paper presentations. Five additional workshops and nine tutorials will be of great benefit to our participants. All of us are looking forward to this exciting event. But, as you know, we are facing a critical problem. </p>
+         <p>Unfortunately, the A H1N1 flu outbreak in Mexico is a significant challenge. We conducted a poll on May 4th and 5th to our 400 registrants. 294 out of 400 responded to the poll. Among the respondents, 58% said they were facing travel ban to Mexico by their country, company, or both. 56% said they will not or unlikely go to Cancun in June. Because of personal health, many people showed their strong concern on traveling to Cancun in the foreseeable future. </p>
+         <p>We take this signal seriously and put the health concern of our participants as the first priority. </p>
+         <p>Based on IEEE's experience and the survey we conducted, moving dates is not an option. Comparing this situation to the SARS impact on ICASSP 2003, which happened 2 weeks before the conference, we have &quot;just-enough&quot; time to respond. Therefore, cancelation is not an option, either. In a joint meeting on May 11th between the organization committee and the IEEE, a consensus was reached: </p>
+         
+         <p class="style1">ICME 2009 will be in New York City. See the <a href="ICME2009-NewYork.pdf">plan</a>.</p>
+         <p class="style1">The conference venue of ICME 2009 is confirmed in the <a href="hotel.html">Waldorf=Astoria hotel</a>, New York City.
+           <!--<p>We are currently exploring appropriate facilities in New York. We will make further notification after a decision is made. A preliminary conference program and workshop program were posted below. You can look at it to have a basic idea of the date of your presentation.</p>-->
+           
+           <a href="http://waldorfastoria.hilton.com/en/wa/groups/personalized/NYCWAWA-IEE-20090624/index.jhtml" target="_blank">Reserve your rooms in the Waldorf=Astoria.</a>         </p>
+         <p><a href="why_moving_out_cancun.html" target="_blank"><strong>&gt;&gt;The bullets of why moving out of Cancun? </strong></a></p>
+         <h1>Announcement</h1>
+         <ul>
+           <li>ACM  Multimedia  2009 <a href="http://www.nlpr.ia.ac.cn/ACMMM2009-TPC/TPC.htm" target="_blank">TPC Meeting</a> &amp; <a href="http://www.nlpr.ia.ac.cn/ACMMM2009-TPC/workshop.htm" target="_blank">MM Workshop</a> schedules updated. (06/24/2009) </li>
+           <li>The ICME 2009 is confirmed in <a href="http://waldorfastoria.hilton.com/en/hi/hotels/information.jhtml?ctyhocn=NYCWAWA&amp;key=HOME" target="_blank">the Waldorf=Astoria</a> hotel, New York. Please <a href="http://waldorfastoria.hilton.com/en/wa/groups/personalized/NYCWAWA-IEE-20090624/index.jhtml" target="_blank">reserve your rooms</a>. (05/29/2009) </li>
+           <li>The preliminary program for <a href="ICME09 ProgramAtGlance v3.pdf" target="_blank">ICME2009 program-at-glance</a>,<a href="https://www.cmsworkshops.com/ICME2009/RegularProgram.asp"> main conference</a>, and <a href="https://www.cmsworkshops.com/ICME2009/RegularProgram.asp">workshop</a> programs, and <a href="https://www.cmsworkshops.com/ICME2009/Papers/Search.asp">paper search</a> are posted. (05/11/2009) </li>
+           <li><a href="#student_grant">Student travel grant</a>  winners are announced. </li>
+           <li>The conference <a href="https://www.cmsworkshops.com/ICME2009/Registration.asp" target="_blank">registration</a> is open and the tentative <a href="technicalprograms.html">technical program</a> is also available. </li>
+           <li>See <a href="travel_visa.html">Travel &amp; Visa</a> if you need an<strong> invitation letter</strong> for visa application </li>
+          </ul>
+         <h1>General Information</h1>
+         <p>Being a major annual international multimedia conference, 2009 IEEE International Conference on Multimedia &amp; Expo (ICME 2009) serves as a forum for the dissemination of state-of-the-art research, development, and implementations of multimedia systems, technologies and applications. ICME 2009 is co-sponsored by four IEEE societies (the Computer Society, the Signal Processing Society, the Circuits and Systems Society, and the Communications Society). Note that ICME is hosted for the first time in Latin America, and specially welcomes paper submissions from the region.</p>
+                <p>
+                Authors should submit a four-page manuscript in double-column format including authors' names, affiliations, and a short abstract. Only electronic submission will be accepted. Please visit the ICME 2009 website, www.icme09.org for the instructions to submit papers. Topics covered include but are not limited to: 
+          </p>
+
+                        <ul>
+                            <li>Audio, image, video processing</li>
+                            <li>Signal processing for media integration</li>
+                            <li>Virtual reality and 3-D imaging</li>
+                            <li>Multimedia human-machine interface and interaction</li>
+                            <li>Multimedia Communications and networking</li>
+                            <li>Multimedia security and content protection</li>
+                            <li>Multimedia databases</li>
+                            <li>Multimedia computing systems and appliances</li>
+                            <li>Multimedia analysis and social media on the Internet</li>
+                            <li>Hardware and software for multimedia systems</li>
+                            <li>Multimedia standards and related issues</li>
+                            <li>Multimedia applications</li>
+                        </ul>
+                
+                        <p>Download <a href="ICME2009_CFP.pdf" target="_blank">PDF version</a> of this call for paper.</p>
+                        
+                    
+
+                        
+                        <h1>Awards</h1>
+		  <p>A number of Awards generously sponsored by industry and academic institutions will be presented to the Best Papers / Best Student Papers at the conference.</p>
+		  <p>Several student travel awards will be issued to support student travel. Each award will be up to $500.</p>
+		  
+		  <a name="student_grant"></a><h1>Student Travel Awards</h1>
+		  <p>Thanks to the sponsorship from IBM, HP and Huawei, ICME will make several $500 awards to support student travel to attend ICME 2009 in Cancun.</p>
+		  
+		  <p>Any full-time student in good standing is eligible to apply this award. Top priority will be given to students who are the first authors presenting papers at the meeting. Only students traveling more than 100 miles to the meetings are eligible for the awards. Selection of awards will be based on, but not limit to, this order of presentation types: oral presentation of plenary paper, oral presentation of regular paper (including special sessions & workshops), poster presentation of regular paper, and demo presentation.</p>
+		  
+		  <p>The ICME 2009 Organizing Committee is happy to annouce the winners of our student travel award.  Congratulations to all of them! </p>
+		  <ul>
+		    <li>Shuixian Chen, Wuhan University, China </li>
+	        <li>Jim Kleban, University of California at Santa Barbra, U.S. </li>
+		    <li>Derek Pang, Simon Fraser University, Canada </li>
+		    <li>Rahul Malik, University of Illinois at Urbana-Champaign, U.S. </li>
+		    <li>Pei-Kuei Tsung, National Taiwan University, Taiwan</li>
+		    <li>Dau-Cheng Lyu, Chang-Gung University, Taiwa</li>
+		  </ul>
+		  <h1>Conference Venue - <a href="http://waldorfastoria.hilton.com/en/hi/hotels/information.jhtml?ctyhocn=NYCWAWA&amp;key=HOME" target="_blank">The Waldorf=Astoria Hotel</a></h1>
+                
+                <div class="imgx">
+               		<img  src="images/Waldorf_Astoria.jpg" alt="Waldorf=Astoria hotel" width="240" height="160" />
+                	<br />
+                	<!--<div class="imgdesc">shot by <a href="http://flickr.com/photos/efigueres/2609830877/">Enzo</a></div>-->
+                </div>
+                
+                <p>The Waldorf=Astoria, the renowned New York luxury hotel in midtown Manhattan, offers elegant accommodations and amenities including boutiques, restaurants and banquet facilities. The Waldorf=Astoria is the embodiment of luxury and splendor. An official New York City landmark since 1993, this legendary Art Deco treasure occupies an entire city block on fashionable Park Avenue, and has completed renovations totaling in excess of $300 million. The hotel is walking distance to Radio City Music... <a href="http://waldorfastoria.hilton.com/en/wa/hotels/index.jhtml?moreDesc=true&amp;ctyhocn=NYCWAWA" target="_blank">more</a></p>
+                <!-- content end-->
+      </div>
+        
+        <div class="clr"></div>
+        
+        <div id="footer">
+		© Copyright 2008-2009 IEEE ICME
+		<div>
+		<!-- Site Meter -->
+		<script type="text/javascript" src="http://s50.sitemeter.com/js/counter.js?site=s50icme09">
+		</script>
+		<noscript>
+		<a href="http://s50.sitemeter.com/stats.asp?site=s50icme09" target="_top">
+		<img src="http://s50.sitemeter.com/meter.asp?site=s50icme09" alt="Site Meter" border="0"/></a>
+		</noscript>
+		<!-- Copyright (c)2006 Site Meter -->
+		</div>
+        </div>
+        
+	</div>
+</body>
+</html>

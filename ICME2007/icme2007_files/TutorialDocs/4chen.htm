@@ -1,0 +1,369 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>Tutorial Title:   Connected Multimedia---Application, Algorithms, and
+Architecture</title>
+
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:PMingLiU;
+	panose-1:2 2 3 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"\@PMingLiU";
+	panose-1:2 2 3 0 0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.Achievement, li.Achievement, div.Achievement
+	{margin-top:0in;
+	margin-right:-1.45pt;
+	margin-bottom:3.0pt;
+	margin-left:.25in;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-.25in;
+	line-height:11.0pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+p.JobTitle, li.JobTitle, div.JobTitle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:2.0pt;
+	margin-left:0in;
+	line-height:11.0pt;
+	font-size:10.0pt;
+	font-family:Arial;
+	letter-spacing:-.5pt;
+	font-weight:bold;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US>
+
+<div class=Section1>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><b>Tutorial
+Title:   </b>Multimedia Signal Processing on Personal Computers</p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><b>Subject
+Area:   </b>Implementation and performance evaluation of multimedia
+applications on personal computers, parallelizing and optimization techniques. </p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><b>Tutorial
+Abstract:   </b></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'>For
+the best performance of multimedia applications on personal computers, we must
+carefully consider the interplay between microprocessors and algorithms/applications.
+The performance of personal computers has improved significantly during the
+past two decades. Significant portion of the improvement comes from data-level
+parallelism (e.g., MMX/SSE instructions) and thread-level parallelism (e.g., the
+latest Intel Core Duo processor). Moving forward, we expect a trend of
+increasing not only the capability of single-instruction-multiple-data instructions
+but also the number of processing cores in a single personal computer. Conventional
+optimization of digital signal processing algorithms in terms of numbers of
+operations may not be suitable for modern personal computers. To capture the increasing
+computational performance provided by the future architectures, we must
+carefully design or choose the algorithm for a specific task. This tutorial
+covers algorithm design and algorithmic-level optimization for modern processors.
+</p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><b>Tutorial
+Outline:   </b></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span dir=LTR>Overview &amp; motivation</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>a.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span dir=LTR>Sequential vs parallel processing</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>b.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span dir=LTR>Goal of the tutorial---from architectural style to
+algorithm design</span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span dir=LTR>Performance enhancement features in personal computer for
+media applications</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>a.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span dir=LTR>Data-level parallelism, e.g., MMX/SSE Technologies</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>b.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span dir=LTR>Thread-level parallelism, e.g., Hyper-Threading Technology
+and Dual Core</span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span dir=LTR>SIMD optimization techniques</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>a.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span dir=LTR>Match the algorithms to SIMD instruction capability---put
+data into the right format for parallel execution (using H.264 integer transform
+as an example)</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>b.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span dir=LTR>Execute multiple identical operations in one instruction
+(using H.264 luminance sub-pel interpolation as an example)</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>c.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span dir=LTR>Transform conditional executions into logic operations
+(using MPEG-4 repetitive pixel padding as an example)</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>d.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span dir=LTR>Reduce shuffling and maximizing group of operations into
+one instruction (using MPEG-4 SA-DCT as an example)</span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span dir=LTR>Multi-threading algorithm design</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>a.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span dir=LTR>Partition application into multiple threads, which have
+same program, but on different pieces of data (using H.264 encoder as an
+example)</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>b.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span dir=LTR>Dynamically balance loads for better parallelism (using
+MPEG-2 video decoder as an example)</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>c.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span dir=LTR>Take advantage of sharing cache to increase effectiveness
+(using SVM-based face detection as an example)</span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span dir=LTR>Conclusions</span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>a.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span dir=LTR>Match algorithms to SIMD instruction capabilities </span></p>
+
+<p class=MsoNormal style='margin-left:.75in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>b.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span dir=LTR>Design algorithm with minimal/simple data dependencies for
+data-level and functional-level parallelism </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><b>Duration:</b>
+3 hours</p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><b>Potential
+audience:    </b></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'>This
+tutorial is intended to provide a basic overview of implementing multimedia applications
+(specifically video codec) on modern personal computers. </p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><b>Speaker's
+Biography:   </b></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'>Yen-Kuang
+Chen received his Ph.D. from Princeton University in Electrical Engineering. 
+He is a Principal Researcher in Corporate Technology Group, Intel Corporation. His
+research interests include developing innovative multimedia and Internet
+applications, studying the performance bottleneck in current computers, and
+designing next generation microprocessor/platform. He has 10+ US patents, 25+ pending patent applications, and 50+ technical publications. He is one of
+the key contributors to Supplemental Streaming SIMD Extension 3 (SSSE3). As an
+expert in video compression (e.g., MPEG-2, MPEG-4, H.263, &amp; H.264) and
+computer architecture for emerging applications (e.g., SIMD and
+multi-threading), he is an invited speaker to 2005 Emerging Information
+Technology Conference, 2005 New Technology Business Opportunities Forum, 2004
+Sino-American Technology &amp; Engineering Conference, and 2003 Workshop on
+Media and Signal Processors for Embedded Systems and SoCs. He is an associate
+editor of the Journal of VLSI Signal Processing Systems (including special
+issues on “System-on-a-Chip for Multimedia Systems” and on “Design and
+Programming of Signal Processors for Multimedia Communication”) and of IEEE
+Transactions on Circuit and System I. He has served a program committee member
+of 20+ international conferences and workshops on multimedia, video
+communication, image processing, VLSI circuits and systems, parallel
+processing, and software optimization. He is an invited participant to 2002
+Frontiers of Engineering Symposium (National Academy of Engineering) and to
+2003 German-American Frontiers of Engineering Symposium (Alexander von Humboldt
+Foundation). He is an IEEE Senior Member and an ACM Senior Member.</p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph'><b>Related
+Publications:</b></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span dir=LTR>“Digital Signal Processing on MMX Technology,” Y.-K. Chen,
+N. Yu, and B. Shah, in Programmable Digital Signal Processors: Architecture,
+Programming and Design, Y. H. Hu, Ed., (Marcel Dekker: NY), pp. 295-331, 2002. </span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span dir=LTR>“Implementation of H.264 Encoder and Decoder on Personal
+Computers,” Y.-K. Chen, E. Q. Li, X. Zhou, and S. L. Ge, Journal of Visual
+Communications and Image Representations, vol. 17, no. 2 , pp 509-532, Apr.
+2006.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span dir=LTR>&quot;A Compiler for Exploiting Nested-Parallelism in
+OpenMP Programs,&quot; X. Tian, J. Hoeflinger, G. Haab, Y.-K. Chen, M. Girkar,
+S. Shah, Parallel Computing Journal, vol. 31, no. 10-12, pp. 960-983, Oct.
+2005.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span dir=LTR>“Media Applications on Hyper-Threading Technology,” Y.-K.
+Chen, M. Holliman, E. Debes, S. Zheltov, A. Knyazev, S. Bratanov, R. Belenov,
+I. Santos, Intel Technology Journal, pp. 47-57, Feb. 2002.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span dir=LTR>“Computer Vision on Multi-Core Processors: Articulated
+Body Tracking,” T. Chen, D. Budnikov, C. Hughes, and Y.-K. Chen, to appear in
+Int’l Conf. on Multimedia and Expo, July 2007.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span dir=LTR>&quot;Adaptive Parallel Graph Mining for CMP
+Architectures,&quot; G. Buehrer, S. Parthasarathy, and Y.-K. Chen, in Int’l
+Conf. on Data Mining, pp. 97-106, Dec. 2006.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span dir=LTR>&quot;Efficient Frequent Pattern Mining on Shared Memory
+Systems: Implications for Chip Multiprocessor Architectures,&quot; G. Buehrer,
+S. Parthasarathy, A. Ghoting, Y.-K. Chen, D. Kim, and A. Nguyen, in Memory
+Systems Performance and Correctness Workshop, Oct. 2006.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>8.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span dir=LTR> “Towards Efficient Multi-Level Threading of H.264 Encoder
+on Intel Hyper-Threading Architectures,” Y.-K. Chen, X. Tian, S. Ge, M. Girkar,
+in Proc. of Int’l Parallel and Distributed Processing Symp., Apr. 2004.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>9.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span dir=LTR>“Implementation of H.264 Encoder on General-Purpose
+Processors with Hyper-Threading Technology,” E. Q. Li and Y.-K. Chen, in Proc.
+of SPIE Visual Communications and Image Processing, vol. 5308, pp. 384—395,
+Jan. 2004.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>10.<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span><span dir=LTR>“Efficient Multithreading Implementation of H.264 Encoder
+on Intel Hyper-Threading Architectures,” S. Ge, X. Tian, and Y.-K. Chen, in
+Pacific-Rim Conf. on Multimedia, Dec 2003. </span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>11.<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span><span dir=LTR>“Exploring the Use of Hyper-Threading Technology for
+Multimedia Applications with Intel OpenMP Compiler,” X. Tian, Y.-K. Chen, M.
+Girkar, S. Ge, R. Lienhart, and S. Shah, in Int’l Parallel and Distributed
+Processing Symp., pp. 36-43, Apr. 2003. </span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>12.<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span><span dir=LTR>“Exploring the Use of Hyper-Threading Technology for
+Multimedia Apps,” X. Tian, M. Girkar, Y.-K. Chen, A. Bik, and E. Su, OSnews
+Magazine, Mar. 12, 2003.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>13.<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span><span dir=LTR>“MPEG Decoding Workload Characterization,” M. Holliman, E.
+Q. Li, and Y.-K. Chen, in Workshop on Computer Architecture Evaluation using
+Commercial Workloads, pp. 23-34, Feb. 2003. </span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>14.<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span><span dir=LTR>“Implementation of H.264 Decoder on General-Purpose
+Processors with Media Instructions,” X. Zhou, E. Q. Li, and Y.-K. Chen, in
+Proc. of SPIE Conf. on Image and Video Communications and Processing, vol.
+5022, pp. 224-235, Jan. 2003.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>15.<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span><span dir=LTR>&quot;Evaluating Performance of Multimedia Application on
+Simultaneous Multi-Threading,&quot; Y.-K. Chen, E. Debes, R. Lienhart, M.
+Holliman, and M. Yeung, in Proc. of Int'l Conf. on Parallel and Distributed
+Systems, pp. 529-534, Dec. 2002.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>16.<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span><span dir=LTR>&quot;The Impact of SMT/SMP Designs on Multimedia Software
+Engineering---A Workload Analysis Study,” Y.-K. Chen, R. Lienhart, E. Debes, M.
+Holliman, and M. Yeung, in Proc. of Int’l Symp. on Multimedia Software Engineering,
+Dec. 2002.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>17.<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span><span dir=LTR>&quot;Video Applications on Hyper-Threading
+Technology,&quot; Y.-K. Chen, M. Holliman, and E. Debes, in Int'l Conf. on
+Multimedia and Expo, vol. 2, pp. 193 -196, Aug. 2002. </span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-align:justify;text-justify:
+inter-ideograph;text-indent:-.25in'>18.<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span><span dir=LTR> “Real-Time Detection of Video Watermark on Intel
+Architecture,” Y.-K. Chen, M. Holliman, R. Liu, W. Macy, and M. M. Yeung, in
+Proc. of Image and Video Communications and Processing, vol. 3971, pp.
+198--208, Jan. 2000.</span></p>
+
+</div>
+
+</body>
+
+</html>

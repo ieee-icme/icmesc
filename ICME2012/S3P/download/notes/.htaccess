@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "School Lecture Notes"
+AuthUserFile "/home/icic2715/.htpasswds/public_html/S3P/download/notes/passwd"
+require valid-user

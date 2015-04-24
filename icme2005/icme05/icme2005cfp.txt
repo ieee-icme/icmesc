@@ -1,0 +1,150 @@
+ICME 2005 Call for Papers
+
+IEEE International Conference on Multimedia & Expo (ICME), scheduled for 
+July 6-8, 2005 in Amsterdam, The Netherlands, is a major annual international 
+conference organized with the objective of bringing together researchers, 
+developers and practitioners from academia and industry working in all 
+areas in multimedia. ICME serves as a forum for the dissemination 
+of state-of-the-art research, development, and implementations 
+of multimedia systems, technologies and applications. ICME 
+is co-sponsored by four IEEE societies (the Computer Society, 
+the Signal Processing Society, the Circuits and Systems Society, 
+and the IEEE Communications Society).
+
+Authors should submit a four-page manuscript in the IEEE double-column format 
+including authors' names, affiliations, and a short abstract. Only electronic 
+submission will be accepted. Visit the ICME 2005 website, www.icme2005.com, 
+to submit papers. Topics covered include but are not limited to the 
+following:
+
+Multimedia content management
+
+    * Multimedia content analysis, indexing and retrieval
+    * Multimedia content modeling
+    * Multimedia content description
+    * Multimedia standards and related issues
+    * Media mining
+    * Personal multimedia 
+
+Multimedia signal processing
+
+    * Signal processing for media analysis and integration
+    * Media synchronization
+    * Media filtering and enhancement
+    * Virtual reality and 3-D imaging 
+
+Multimedia communications
+
+    * Multimedia streaming, networking and distribution
+    * Multimedia authentication, content protection and digital rights management
+    * Multimedia QoS
+    * Multimedia human-machine interface and interaction
+    * Context-aware multimedia 
+
+Multimedia systems
+
+    * Multimedia computing systems and appliances
+    * Hardware and software for multimedia systems
+    * Multimedia database and server design 
+
+Multimedia applications
+
+    * Multimedia for ambient intelligence
+    * Multimedia in business and e-learning
+    * Multimedia and security 
+
+Tutorial and Special Session Proposals
+
+Proposals for Special Sessions and Tutorials are strongly encouraged. 
+For guidelines to prepare special session proposals, 
+please see the Special Sessions page. Special Session submissions 
+should be directed to Franciska de Jong (fdejong@cs.utwente.nl) by 
+February 1, 2005.
+
+Tutorials are scheduled the day preceding the conference. Brief proposals 
+should be submitted by January 15, 2005, to Theo Gevers 
+(gevers@science.uva.nl), and must include the title, outline, 
+contact information for the presenter(s), and a description of the tutorial 
+and material to be distributed to participants.
+
+Exhibition Proposals
+
+Exhibition participants should be industrial or research organizations. 
+Proposals of Exhibitions and Demonstrations should be submitted to 
+Dr. Jurgen den Hartog (jurgen@tpd.tno.nl) and to Dr. Jan Nesvadba
+(jan.nesvadba@philips.com) by January 15, 2005.
+
+******************
+
+Important dates
+Regular Paper Submission: December 6, 2004
+Tutorial Proposal Due: January 15, 2005
+Special Session Proposal Due: February 1, 2005
+Exhibition Proposal Due: January 15, 2005
+Notification of acceptance: March 1, 2005
+Camera-Ready Paper Due: April 1, 2005
+
+******************
+
+General Chairs
+Arnold Smeulders (Program)
+University of Amsterdam
+Jan Biemond (Communication)
+Delft University of Technology
+Martin Kersten (Organization)
+University of Amsterdam
+Peter Werkhoven (Exhibit)
+University of Amsterdam
+
+Executive Officer
+Marcel Worring
+University of Amsterdam
+
+Program Committee
+Alan Smeaton
+Dublin City University
+John R. Smith
+IBM Watson Research Center
+Horace Ip
+City University Hong Kong
+
+Program Secretary
+Alan Hanjalic
+Delft University of Technology
+
+Advisory Committee
+Sankar Basu
+NIH
+Rama Chellappa
+University of Maryland
+Alberto del Bimbo
+University of Florence
+Der Tsai Lee
+Academecia Sinica
+
+Tutorials Chair
+Theo Gevers
+University of Amsterdam
+
+Special Sessions Chair
+Franciska de Jong
+University of Twente
+
+Finance Chair
+Dick Broekhuis
+Center for Mathematics and Informatics (CWI)
+
+Publicity Chair
+Nicu Sebe
+University of Amsterdam
+
+Local Chair
+Nelli Schipper
+TNO
+
+Exibits Co-Chairs
+Jurgen den Hartog
+TNO
+Jan Nesvadba
+Philips Research
+

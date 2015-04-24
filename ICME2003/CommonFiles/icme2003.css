@@ -1,0 +1,193 @@
+body
+	{
+	font-family: sans-serif;
+	font-size: 12pt;
+	color: black;
+	background-color: white;
+	text-align: justify;
+	}
+
+a.nojustify
+    {
+	text-align: left;
+    }
+
+a.locationlink
+    {
+	font-size: 10pt;
+	}
+
+td.locationcell
+    {
+	text-align: right;
+    }
+
+.location
+    {
+	font-size: 10pt;
+	}
+
+img.header
+	{
+	padding: 0px;
+	vertical-align: bottom;
+	}
+
+//table.page
+//	 {
+//	 width: 780px;
+//	 }
+	 
+h1
+	 {
+	 font-size: 20pt;
+	 font-weight: bold;
+	 color: rgb(91,110,125);
+	 background-color: white;
+	 text-align: left;
+	 font-family: "BankGothic Md BT", sans-serif;
+	 }
+
+h2
+	 {
+	 font-size: 14pt;
+	 font-weight: bold;
+	 color: black;
+	 background-color: white;
+	 font-family: "BankGothic Md BT", sans-serif;
+	 }
+
+p.FinePrint {
+    font-size: smaller;
+}
+
+td.RegTable {
+    text-align: left;
+}
+
+sup {
+    font-size: smallest;
+}
+
+td.Personalnfo {
+    font-size: smaller;
+}
+\\td	{
+\\	color: black;
+\\	background-color: rgb(232,236,238)
+\\	border-style: none;
+\\	border-width: 0px;
+\\	font-family: sans-serif;
+\\	font-size: 12pt;
+\\	}
+	
+blockquote
+    {
+	padding: 0px;
+	margin-left: 20px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border-width: 0px;
+	}
+td.nav
+	{
+	color: black;
+	background-color: rgb(232,236,238);
+	font-family: sans-serif;
+	vertical-align: top;
+	width: 141px;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-weight: normal;
+	} 
+	 
+td.main
+	{
+	font-family: sans-serif;
+	color: black;
+	background-color: white;
+	vertical-align: top;
+	padding: 10px;
+	text-align: justify;
+	width: 629px;
+	border: 0px;
+	} 
+	 
+td.header
+	{
+	} 
+	 
+.copyrightnotice
+	{
+	font-family: sans-serif;
+	text-align: center;
+	font-size: 8pt;
+	color: black;
+	background-color: white;
+	}
+	
+a.nav:link
+	{
+	color: rgb(91,110,125);
+	background-color: rgb(232,236,238);
+	text-decoration: none;
+	font-size: small;
+	font-weight: bold;
+	text-align: left;
+	}
+a.nav:visited
+	{
+	color: rgb(91,110,125);
+	background-color: rgb(232,236,238);
+	text-decoration: none;
+	font-size: small;
+	font-weight: bold;
+	text-align: left;
+	}
+a.nav:hover
+	{
+	color: black;
+	background-color: rgb(232,236,238);
+	text-decoration: none;
+	font-size: small;
+	font-weight: bold;
+	text-align: left;
+	}
+a.nav:active
+	{
+	color: black;
+	background-color: rgb(232,236,238);
+	text-decoration: none;
+	font-size: small;
+	font-weight: bold;
+	text-align: left;
+	}
+	 
+a:link
+	{
+//	color: rgb(121,147,167);
+	color: rgb(91,110,125);
+	background-color: white;
+	text-decoration: none;
+	}
+a:visited
+	{
+	color: rgb(61,107,127);
+	background-color: white;
+	text-decoration: none;
+	}
+a:hover
+	{
+	color: black;
+	background-color: rgb(232,236,238);
+	text-decoration: none;
+	}
+a:active
+	{
+	color: black;
+	background-color: rgb(232,236,238);
+	text-decoration: none;
+	}	

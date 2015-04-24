@@ -1,0 +1,423 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="ProgId" content="FrontPage.Editor.Document">
+   <meta name="Generator" content="Microsoft FrontPage 4.0">
+   <meta name="Originator" content="Microsoft Word 9">
+   <meta name="GENERATOR" content="Mozilla/4.79 [en] (Windows NT 5.0; U) [Netscape]">
+   <title>Session Title: Multi-Camera Systems &amp; Surveillance Video Processing</title>
+<link rel=File-List href="./CFP-Multicamera%20systems_files/filelist.xml">
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>fatih porikli</o:Author>
+  <o:LastAuthor>fatih porikli</o:LastAuthor>
+  <o:Revision>8</o:Revision>
+  <o:TotalTime>67</o:TotalTime>
+  <o:Created>2002-11-13T18:03:00Z</o:Created>
+  <o:LastSaved>2002-11-14T18:24:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>399</o:Words>
+  <o:Characters>2278</o:Characters>
+  <o:Company>MERL</o:Company>
+  <o:Lines>18</o:Lines>
+  <o:Paragraphs>4</o:Paragraphs>
+  <o:CharactersWithSpaces>2797</o:CharactersWithSpaces>
+  <o:Version>9.3821</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1 -369098753 63 0 4129023 0;}
+@font-face
+	{font-family:"\@Arial Unicode MS";
+	mso-font-charset:128;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-1 -369098753 63 0 4129023 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-font-kerning:0pt;
+	font-weight:bold;}
+h2
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;}
+h3
+	{mso-style-next:Normal;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:11.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	color:red;
+	font-weight:bold;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:#7993A7;
+	mso-text-animation:none;
+	background:white;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{margin-right:0in;
+	mso-margin-top-alt:auto;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Arial Unicode MS";}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:1448039878;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1438205926 67698693 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:.75in;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1028">
+  <o:colormenu v:ext="edit" strokecolor="#f90"/>
+ </o:shapedefaults></xml><![endif]-->
+<!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+<body link="#7993A7" vlink="#800080" lang="EN-US" style="tab-interval:.5in">
+
+<div class=Section1>
+<hr>
+<h3>
+&nbsp;</h3>
+
+<h3>
+<span style='font-size:12.0pt'>Multi-Camera Surveillance Systems – ICME
+2003<o:p></o:p></span></h3>
+
+<div class="MsoNormal"><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+font-family:Arial'><![if !supportEmptyParas]><![endif]><o:p></o:p></span></div>
+
+
+<p class="MsoNormal"><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+font-family:Arial'>Surveillance
+is quickly becoming one of the most important network video applications
+by consistently meeting with the recent market predictions. Multimedia
+surveillance solutions consist of multiple acquisition devices and involve
+more computer vision, image processing, and communication expertise with
+the increasing computational power, network bandwidth, and storage capacities.<o:p></o:p></span>
+
+<p class="MsoNormal"><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+font-family:Arial'><![if !supportEmptyParas]><![endif]><o:p></o:p></span>
+
+<p class="MsoNormal"><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+font-family:Arial'>In
+order to bring forward the recent developments in this area, we organized
+the Multi-Camera Surveillance Systems special session. The session would
+emphasize novel techniques as well as systems consisting of multiple acquisition
+devices such as video cameras, microphone arrays, motion sensors, etc.
+Our aim is to provide an overview of the state-of-the-art and research
+directions in the fields of<o:p></o:p></span>
+
+<p class="MsoNormal" style="margin-left:.75in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .75in"><![if !supportLists]><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:Wingdings;mso-bidi-font-family:Arial'>&sect;<span 
+style='font:7.0pt "Times New Roman"'></span></span><![endif]><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+font-family:Arial'>Object
+detection, tracking, and analysis by multiple cameras,<o:p></o:p></span>
+
+<p class="MsoBodyTextIndent" style="margin-left:.75in;text-indent:-.25in;
+mso-list:l0 level1 lfo2;tab-stops:list .75in"><![if !supportLists]><span 
+style='font-family:Wingdings'>&sect;<span style='font:7.0pt "Times New Roman"'></span></span><![endif]>Distributed
+allocation of video processing resources in intelligent video surveillance
+networks,
+
+<p class="MsoNormal" style="margin-left:.75in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .75in"><![if !supportLists]><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:Wingdings;mso-bidi-font-family:Arial'>&sect;<span 
+style='font:7.0pt "Times New Roman"'></span></span><![endif]><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+font-family:Arial'>Centralized
+and distributed event analysis for surveillance applications,<o:p></o:p></span>
+
+<p class="MsoNormal" style="margin-left:.75in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .75in"><![if !supportLists]><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:Wingdings;mso-bidi-font-family:Arial'>&sect;<span 
+style='font:7.0pt "Times New Roman"'></span></span><![endif]><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+font-family:Arial'>Audio/video
+data fusion for multi-sensor systems,<o:p></o:p></span>
+
+<p class="MsoNormal" style="margin-left:.75in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .75in"><![if !supportLists]><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:Wingdings;mso-bidi-font-family:Arial'>&sect;<span 
+style='font:7.0pt "Times New Roman"'></span></span><![endif]><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+font-family:Arial'>Video
+indexing and retrieval for surveillance systems,<o:p></o:p></span>
+
+<p class="MsoNormal" style="margin-left:.75in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .75in"><![if !supportLists]><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:Wingdings;mso-bidi-font-family:Arial'>&sect;<span 
+style='font:7.0pt "Times New Roman"'></span></span><![endif]><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+font-family:Arial'>Video
+processing techniques integrated for vehicle traffic and commercial applications,<o:p></o:p></span>
+
+<p class="MsoNormal" style="margin-left:.75in;text-indent:-.25in;mso-list:l0 level1 lfo2;
+tab-stops:list .75in"><![if !supportLists]><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:Wingdings;mso-bidi-font-family:Arial'>&sect;<span 
+style='font:7.0pt "Times New Roman"'></span></span><![endif]><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+font-family:Arial'>Large-scale
+video surveillance systems.<o:p></o:p></span>
+
+<p class="MsoNormal"><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+font-family:Arial'>The
+session would emphasize novel techniques as well as systems consisting
+of multiple acquisition devices.<o:p></o:p></span>
+
+<p class="MsoNormal"><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+font-family:Arial'><![if !supportEmptyParas]><![endif]><o:p></o:p></span>
+
+<p class="MsoNormal"><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+font-family:Arial;color:red'><b>Organizers</b></span><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:Arial'></span><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+font-family:Arial'><img SRC="multicamerax2.jpg" BORDER=0 height=150 width=200 align=RIGHT></span><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:Arial'><o:p></o:p></span>
+
+<p class="MsoNormal" style="text-indent:.5in"><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:Arial'>Dr.
+Fatih Porikli, Mitsubishi Electric Research Laboratories, email:&nbsp;<span style='color:navy'><span style='mso-bidi-font-family:"Times New Roman";
+color:navy'><a href="mailto:fatih@merl.com">fatih@merl.com</a></span></span></span><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:Arial'><o:p></o:p></span>
+
+<p class="MsoNormal" style="text-indent:.5in"><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:Arial'>Prof.
+Carlo Regazzoni, Univ. Genoa, email:&nbsp;<span style='color:navy'><span 
+style='color:navy'><a href="mailto:carlo@dibe.unige.it">carlo@dibe.unige.it</a></span></span><o:p></o:p></span>
+
+<p class="MsoNormal" style="text-indent:.5in"><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:Arial'><![if !supportEmptyParas]><![endif]><o:p></o:p></span>
+<h3>
+Important Dates</h3>
+
+<div class="MsoNormal" style="text-indent:.5in;mso-layout-grid-align:none;
+text-autospace:none"><span style='font-size:11.0pt;mso-bidi-font-size:10.0pt;
+font-family:Arial'>Initial
+paper submission:&nbsp;<span style='mso-tab-count:1'></span><span 
+style="mso-spacerun: yes"></span><span style='mso-tab-count:1'></span>2/1/2003</span><span style='font-size:11.0pt;mso-bidi-font-size:10.0pt;
+font-family:Arial'><o:p></o:p></span></div>
+
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span 
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:Arial'><span 
+style="mso-spacerun: yes"></span><span style='mso-tab-count:1'></span>Notification
+of acceptance:&nbsp;<span style='mso-tab-count:2'></span>3/1/2003</span><span 
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:Arial'><o:p></o:p></span>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span 
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:Arial'><span 
+style="mso-spacerun: yes"></span><span style='mso-tab-count:1'></span>Final
+paper submission:&nbsp;<span style='mso-tab-count:2'></span>3/31/2003<o:p></o:p></span>
+
+<p class="MsoNormal"><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+font-family:Arial'><![if !supportEmptyParas]><![endif]><o:p></o:p></span>
+<h3>
+Paper Submission</h3>
+
+<div class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span 
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:Arial'>This
+session will contain both invited and contributed papers.&nbsp;<o:p></o:p></span></div>
+
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span 
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:Arial'><![if !supportEmptyParas]><![endif]><o:p></o:p></span>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span 
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:Arial'>For
+contributed papers, the&nbsp;</span><span style='font-size:11.0pt;mso-bidi-font-size:
+12.0pt;font-family:Arial'>electronic
+submission of the papers should be done through the conference web site
+by the deadlines given above. Please follow the link below for more information
+about the paper format, submission, and review guidelines:<o:p></o:p></span>
+
+<p class="MsoNormal" style="text-indent:.5in"><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:Arial;color:navy'><span style='mso-bidi-font-family:
+"Times New Roman";color:navy'><a href="http://www.icme2003.org/Papers.asp">http://www.icme2003.org/Papers.asp</a></span><o:p></o:p></span>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span 
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:Arial'><![if !supportEmptyParas]><![endif]><o:p></o:p></span>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span 
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:Arial'>Some
+of the invited papers are:<o:p></o:p></span>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span 
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:Arial'><![if !supportEmptyParas]><![endif]><o:p></o:p></span>
+
+<p class="MsoNormal" style="margin-left:.5in"><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:Arial'>"<i>From
+Multi-sensor Surveillance Towards Smart Interactive Spaces</i>"<o:p></o:p></span>
+
+<p class="MsoNormal" style="margin-left:.5in"><span style='font-size:11.0pt;
+mso-bidi-font-size:10.0pt;font-family:Arial;color:teal'>Carlo
+Regazzoni&nbsp;</span><span 
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:Arial'>and<span 
+style='color:teal'>
+Luca Marchesotti<o:p></o:p></span></span>
+
+<p class="MsoNormal" style="margin-left:.5in"><span style='font-size:11.0pt;
+mso-bidi-font-size:10.0pt;font-family:Arial;color:olive'>University
+of Genoa</span><span 
+style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:Arial;color:olive'><o:p></o:p></span>
+
+<p class="MsoNormal" style="margin-left:.5in"><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:Arial'><![if !supportEmptyParas]><![endif]><o:p></o:p></span>
+
+<p class="MsoNormal" style="margin-left:.5in"><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:Arial'>“<i>A
+Reconfigurable and Scalable Multi-Camera Visual Surveillance System</i>”<o:p></o:p></span>
+
+<p class="MsoNormal" style="margin-left:.5in"><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:Arial;color:teal'>Ahmed
+Elgammal, Sernam Lim,&nbsp;</span><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:
+Arial'>and<span style='color:teal'>
+Larry Davis,<o:p></o:p></span></span>
+
+<p class="MsoNormal" style="margin-left:.5in"><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:Arial;color:olive'>University
+of Maryland</span><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:Arial;color:olive'><o:p></o:p></span>
+
+<p class="MsoNormal" style="margin-left:.5in"><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:Arial'><![if !supportEmptyParas]><![endif]><o:p></o:p></span>
+
+<p class="MsoNormal" style="margin-left:.5in"><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:Arial'>"<i>KNIGHT:
+Real-time Video Surveillance &amp; Monitoring System</i>”<o:p></o:p></span>
+
+<p class="MsoNormal" style="margin-left:.5in"><span style='font-size:11.0pt;
+mso-bidi-font-size:10.0pt;font-family:Arial;color:teal'>Omar
+Javed&nbsp;</span><span 
+style='font-size:11.0pt;mso-bidi-font-size:10.0pt;font-family:Arial'>and<span 
+style='color:teal'>
+Mubarak Shah&nbsp;<o:p></o:p></span></span>
+
+<p class="MsoNormal" style="margin-left:.5in"><span style='font-size:11.0pt;
+mso-bidi-font-size:10.0pt;font-family:Arial;color:olive'>University
+of Central Florida</span><span style='font-size:11.0pt;mso-bidi-font-size:12.0pt;
+font-family:Arial;color:olive'><o:p></o:p></span>
+
+<p class="MsoNormal" style="margin-left:.5in"><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:Arial'><![if !supportEmptyParas]><![endif]><o:p></o:p></span>
+
+<p class="MsoNormal" style="margin-left:.5in"><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:Arial'>"<i>A
+Multi-View Approach for Segmentation and Tracking People in a Cluttered
+Scene</i>"<o:p></o:p></span>
+
+<p class="MsoNormal" style="margin-left:.5in"><span style='font-size:11.0pt;
+mso-bidi-font-size:10.0pt;font-family:Arial;color:teal'>Anurag
+Mittal&nbsp;<o:p></o:p></span>
+
+<p class="MsoNormal" style="margin-left:.5in"><span style='font-size:11.0pt;
+mso-bidi-font-size:10.0pt;font-family:Arial;color:olive'>Siemens
+Corporate Research</span><span style='font-size:11.0pt;mso-bidi-font-size:10.0pt;
+font-family:Arial'><o:p></o:p></span>
+
+<p class="MsoNormal" style="text-indent:.5in"><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:Arial;color:navy'><![if !supportEmptyParas]><![endif]><o:p></o:p></span>
+<br>
+<hr>
+
+<p class="MsoNormal" style="text-indent:.5in"><span style='font-size:11.0pt;
+mso-bidi-font-size:12.0pt;font-family:Arial;color:navy'><![if !supportEmptyParas]><![endif]><o:p></o:p></span></div>
+</hline>
+</body>
+</html>

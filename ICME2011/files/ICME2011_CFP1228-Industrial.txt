@@ -1,0 +1,64 @@
+
+
+ICME 2011 "INDUSTRIAL PROGRAM" 
+----- Call for Industrial/Application Short Papers -----
+
+IEEE International Conference on Multimedia and Expo (ICME) 2011
+================================================================
+July 11-15, 2011 • BARCELONA, Spain
+http://www.icme2011.org
+
+IEEE International Conference on Multimedia & Expo (ICME) has been the flagship multimedia conference sponsored by four IEEE societies (Communications, Computer, Circuits and Systems; and Signal Processing) since 2000. The goal of the Industrial Program is to promote applied research and applications, as well as promote collaborations between industrial and academia members of the multimedia community.
+
+Authors are invited to submit a short paper (two-column format, 3-4 pages) according to the guidelines available on the conference website at http://www.icme2011.org.  Reviewing will be double blind. Only electronic submissions will be accepted. Topics of interest include, but are not limited to:
+
+- 3D Audio Processing , 3D Multimedia Streaming , 3D Video Processing 
+- Quality of Experience (QoE) Models, QoE Models for 3D Systems 
+- Display Technology for Multimedia 
+- Audio and Video Coding Standards, Audio/Image/Video Segmentation for Interactive Services 
+- High Efficiency Video Coding 
+- Enhanced Voice Services
+- Error Concealment, Error Resilience 
+- Mobile Visual Search Algorithms and Implementations
+- Augmented Reality Algorithms and Applications
+- Low-Power Circuits for Multimedia 
+- Multimedia Networking, Multimedia Streaming, Multimedia Traffic Management 
+- Multimodal User Interfaces, Multiview Video Capturing and Rendering 
+- Compressed Domain Processing, Compression and Coding, Computer Graphics and Animation 
+- Media Conversion and Transcoding, Media Summaries and Storyboards 
+- Mobile Multimedia, Wireless Multimedia Communications  
+- Consumer Electronics and Entertainment, Digital Rights Management (DRM) 
+- Multimedia Database Management, Multimedia Middleware 
+- Algorithms and Algorithmic Transformations, Architectures and Design Techniques 
+- Authoring, Editing, and Collaboration Tools, Biometrics, CAD Tools and Synthesis for Multimedia Systems 
+- Event Detection, Feature Extraction and Representation, Object/Activity Recognition 
+- Indexing, Searching, Retrieving, Query, and Archiving Databases, Integration of Synthetic and Natural Audio/Video 
+- Hardware/Software Co-Design and Instruction-Level Architecture Issues 
+- Intelligent and Life-Like Agents 
+- Education, Medicine and Health Care 
+- Multimedia Authentication and Forensics 
+- Network Security, Network Support for Multimedia 
+- Olfactory and Gustatory Media (digital scent and taste) 
+- Operating System Support for Multimedia  
+- Performance Benchmark and Analysis, Performance Metrics and Benchmarking 
+- Secure Multimedia Processing and Applications, Security and Privacy Analysis WWW, Internet, Social Media, Web 2.0 and Web 3.0 
+
+ICME 2011 showcases high quality oral and poster presentations and demo sessions. Best industrial/ application paper, poster and demo awards will be selected and recognized in the conference. Accepted papers have to be registered and presented; otherwise they will not be included in the IEEE Xplore Library. 
+
+Please submit your short paper in standard IEEE format by going to the site: http://www.icme2011.org (Select Industrial Program link on the left panel for submission).
+
+Schedule: 
+----- Industrial/Application Short Paper Due: -- February 20, 2011
+----- Paper Acceptance notification: ----------- April 10, 2011
+----- Camera-ready Paper Due: ------------------ April 20, 2011
+ 
+For additional information, please contact our “Industrial Program” Committee: 
+
+Khaled El-Maleh, Qualcomm, USA (kelmaleh@qualcomm.com)
+Oscar Garcia, Ramon Llull University-La Salle, Spain (oscarg@salle.url.edu)
+Tom Malzbender, HP Labs, USA (tom.malzbender@hp.com)
+Lluis Vicent, Ramon Llull University-La Salle, Spain (vicent@salle.url.edu)
+David Miralles, Ramon Llull University-La Salle, Spain (davidme@salle.url.edu)
+Cha Zhang, Microsoft, USA (chazhang@microsoft.com)
+
+Advisor: Anup Basu, University of Alberta, Canada (basu@ualberta.ca)

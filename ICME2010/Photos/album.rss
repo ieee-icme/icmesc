@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0"
+     xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:jalbum="http://jalbum.net/jalbumrss">
+
+    <channel>
+        <title>ICME 2010</title>
+   	<link>.</link>
+        <generator>Jalbum 8.9</generator>
+   		<description></description>
+        
+    	<jalbum:link rel="sub" href="Day 0 - Tutorials/album.rss" />   	
+    	
+    	<jalbum:link rel="sub" href="Day 0 - Welcome Reception/album.rss" />   	
+    	
+    	<jalbum:link rel="sub" href="Day 1 - Keynote Speech/album.rss" />   	
+    	
+    	<jalbum:link rel="sub" href="Day 1 - Opening Ceremony/album.rss" />   	
+    	
+    	<jalbum:link rel="sub" href="Day 1 - Sessions/album.rss" />   	
+    	
+    	<jalbum:link rel="sub" href="Day 1 - Banquet at Conrad/album.rss" />   	
+    	
+    	<jalbum:link rel="sub" href="Day 2 - Keynote and Best Paper/album.rss" />   	
+    	
+    	<jalbum:link rel="sub" href="Day 2 - Sessions/album.rss" />   	
+    	
+    	<jalbum:link rel="sub" href="Day 3 - Keynote and Best Paper/album.rss" />   	
+    	
+    	<jalbum:link rel="sub" href="Day 3 - Sessions/album.rss" />   	
+    	
+    	<jalbum:link rel="sub" href="Day 4 - Workshops/album.rss" />   	
+    	
+        
+    </channel>
+</rss>

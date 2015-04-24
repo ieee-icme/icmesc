@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0"
+     xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:jalbum="http://jalbum.net/jalbumrss">
+
+    <channel>
+        <title>Day 3 - Sessions</title>
+   	<link>..</link>
+        <generator>Jalbum 8.9</generator>
+   		<description></description>
+        
+        
+        <item>
+            <title>ICME (94)</title>
+            <link>ICME (94).jpg#</link>
+            <pubDate>Tue, 03 Aug 2010 16:18:50 +0800</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/ICME (94).jpg" width="90" height="90"/>
+            <media:content type="image/jpeg" url="ICME (94).jpg" width="800" height="533"/>
+            
+            <jalbum:exif originalDate="10-7-22 下午12:58" cameraMake="Canon" cameraModel="Canon EOS 550D"/>
+            <guid isPermaLink="false">ICME (94).jpg</guid>
+        </item>
+        
+        <item>
+            <title>ICME (95)</title>
+            <link>ICME (95).jpg#</link>
+            <pubDate>Tue, 03 Aug 2010 16:18:50 +0800</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/ICME (95).jpg" width="90" height="90"/>
+            <media:content type="image/jpeg" url="ICME (95).jpg" width="800" height="533"/>
+            
+            <jalbum:exif originalDate="10-7-22 下午12:59" cameraMake="Canon" cameraModel="Canon EOS 550D"/>
+            <guid isPermaLink="false">ICME (95).jpg</guid>
+        </item>
+        
+        <item>
+            <title>ICME (96)</title>
+            <link>ICME (96).jpg#</link>
+            <pubDate>Tue, 03 Aug 2010 16:18:50 +0800</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/ICME (96).jpg" width="90" height="90"/>
+            <media:content type="image/jpeg" url="ICME (96).jpg" width="800" height="533"/>
+            
+            <jalbum:exif originalDate="10-7-22 下午1:42" cameraMake="Canon" cameraModel="Canon EOS 550D"/>
+            <guid isPermaLink="false">ICME (96).jpg</guid>
+        </item>
+        
+        <item>
+            <title>ICME (97)</title>
+            <link>ICME (97).jpg#</link>
+            <pubDate>Tue, 03 Aug 2010 16:18:50 +0800</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/ICME (97).jpg" width="90" height="90"/>
+            <media:content type="image/jpeg" url="ICME (97).jpg" width="800" height="533"/>
+            
+            <jalbum:exif originalDate="10-7-22 下午4:07" cameraMake="Canon" cameraModel="Canon EOS 550D"/>
+            <guid isPermaLink="false">ICME (97).jpg</guid>
+        </item>
+        
+    </channel>
+</rss>

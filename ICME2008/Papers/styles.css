@@ -1,0 +1,159 @@
+div.PaperItem {
+  border: 1px solid gray;
+  margin: 1em 0.5em;
+  padding: 0.5em;
+}
+
+div.PaperItem .Instruction {
+}
+
+div.PaperItem textarea {
+  display: block;
+}
+
+div.PaperItem .Title {
+  position: relative;
+  top: -1.2em;
+  background: white;
+  padding: 0 5px;
+}
+
+div#ErrorList {
+  border: 1px solid red;
+  margin: 1em 0.5em;
+  padding: 0.5em;
+  font-weight: bolder;
+  color: red;
+}
+
+div#ErrorList .Title {
+  position: relative;
+  top: -1.2em;
+  background: white;
+  padding: 0 5px;
+}
+
+ul#AuthorList {
+  font-size: smaller;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 0.4em;
+}
+
+ul#AuthorList li {
+  border-bottom: 1px solid gray;
+  padding: 2px 0;
+}
+
+ul#AuthorList li.plain {
+  border-style: none;
+}
+
+ul#AuthorListLegend {
+  font-size: smaller;
+  list-style: none;
+  margin: 1.2em 0 0 0;
+  padding: 0 0 0 1em;
+  border: 1px solid blue;
+}
+
+ul#AuthorListLegend li {
+}
+
+.LittleButton {
+  background-color: white;
+  border: 1px solid gray;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.LittleButton:hover {
+  background-color: #EEEEEE;
+  border-color: red;
+}
+
+table#AuthorEdit {
+  
+}
+
+div.hr {
+  border: 1px solid black;
+  border-width: 1px 0 0 0;
+}
+
+.req {
+  color: red;
+}
+
+/* box-wrap is only needed if you want to set a background color for the columns, put a border round the content block or fix the content width */
+.box-wrap
+	{
+	color : #000000;
+	background: #cccccc;
+	border: 1px solid #000000;
+	}
+.box-header
+	{
+	color: #000000;
+	background: #996699;
+	margin: 0px;
+	padding: 0.5em;
+	border: none;
+	}
+.box-footer
+	{
+	background: #999966;
+	padding: 0.5em;
+	clear: both;
+	border: none
+	}
+/* ====================================================================
+COLUMNS LAYOUT
+-------------------------------------------------------------------- */
+.columns-float
+	{
+	float: left;
+	width: 100%;
+	}
+.column-one
+	{
+	float: left;
+	width: 19em;
+	}
+/*/*/
+.column-two { margin-left: 19em; }
+/* */
+.column-one-content, .column-two-content {
+	padding: 6px;
+	border: none;
+	color: #000000;
+}
+/*
+.column-one-content { background: #ff6666; }
+.column-two-content { background: #66ff66; }
+*/
+/* GUTTERS BETWEEN COLUMNS */
+/*
+.column-two-content
+	{
+	margin-left: 10px;
+	margin-right: 10px;
+	}
+*/
+/* VERTICAL PADDING ABOVE COLUMNS */
+.box-header
+	{ margin-bottom: 5px; }
+.column_padding_after
+	{
+	height:5px;
+	font-size: 1px;
+	line-height: 0px;
+	clear: both;
+	}
+/* CSS HACK:  position:relative needed by IE6 otherwise the header and col 2 don't show up on initial rendering - they're there but you have to minimise the window or switch to another app and back to see the full effect. But IE5(pc) doesn't like it. And nor does NN4.
+NB. the use of pos:rel has to go way beyond skin-deep - any nested element that needs a background colour appears to require to be be relatively positioned */ 
+/*/*/
+.box-wrap, .columns-float, .column-one, .column-two, .column-three, h2
+	{ p\osition: relative; }
+/* */
+
