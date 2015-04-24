@@ -8,7 +8,7 @@
 			<a class=\"navitab\" href=\"author_info.php\">Author Information</a><span class=\"hide\"> | </span>
 			<a class=\"navitab\" href=\"steering_committee.php\">Steering Committee</a><span class=\"hide\"> | </span>
 			<a class=\"navitab\" href=\"history.php\">History</a><span class=\"hide\"> | </span>
-			<a class=\"navitab\" href=\"ICME_CFP_2018.pdf\">Call For Proposal</a><span class=\"hide\"> | </span>
+			<a class=\"navitab\" href=\"ICME_CFP_2019.pdf\">Call For Proposal</a><span class=\"hide\"> | </span>
 		";
 	}
 

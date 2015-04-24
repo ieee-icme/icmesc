@@ -69,17 +69,22 @@
 		<td valign=top> <!-- since --> </td>
 		<td valign=top> <!-- until --> </td>
 	</tr>
-	
+	<tr>
+		<td valign=top><b> <a href="mailto:spli@microsoft.com">Shipeng Li</a></b> </td>
+		<td valign=top>Microsoft Research Asia, China<br /><br /> </td>
+		<td valign=top> <font face="Verdana" size="1"><i>1/1/2015</i></font>  </td>
+		<td valign=top> <font face="Verdana" size="1"><i>12/31/2016</i></font> </td>
+	</tr>
 	<tr>
 		<td valign=top><b> <a href="mailto:nling@scu.edu">Nam Ling</a></b> </td>
 		<td valign=top>Santa Clara University, USA<br /><br /> </td>
-		<td valign=top> <!-- since --> </td>
+		<td valign=top> <font face="Verdana" size="1"><i>1/1/2014</i></font> </td>
 		<td valign=top> <font face="Verdana" size="1"><i>12/31/2015</i></font> </td>
 	</tr>
 	<tr>
 		<td valign=top><b><a href="mailto:Jian.Zhang@uts.edu.au">Jian Zhang</a></b> </td>
 		<td valign=top> University of Technology, Sydney, Australia<br /><br /> </td>
-		<td valign=top> <!-- since --> </td>
+		<td valign=top> <font face="Verdana" size="1"><i>1/1/2013</i></font> </td>
 		<td valign=top> <font face="Verdana" size="1"><i>12/31/2014</i></font> </td>
 	</tr>
 		<tr valign=top>
@@ -89,15 +94,21 @@
 		<td valign=top> <!-- until --> </td>
 	</tr>
 	<tr>
+		<td valign=top><b><a href="mailto:peris@it.teithe.gr">Periklis Chatzimisios</a></b> </td>
+		<td valign=top> Alexander Technological Educational Institute of Thessaloniki, Greece<br /><br /> </td>
+		<td valign=top> <font face="Verdana" size="1"><i>1/1/2015</i></font> </td>
+		<td valign=top> <font face="Verdana" size="1"><i>12/31/2016</i></font>  </td>
+	</tr>
+	<tr>
 		<td valign=top><b><a href="mailto:smao@ieee.org">Shiwen Mao</a></b> </td>
 		<td valign=top> Auburn University, USA<br /><br /> </td>
-		<td valign=top> <!-- since --> </td>
+		<td valign=top> <font face="Verdana" size="1"><i>1/1/2014</i></font> </td>
 		<td valign=top> <font face="Verdana" size="1"><i>12/31/2015</i></font>  </td>
 	</tr>
 	<tr>
 		<td valign=top><b><a href="mailto:asjfcai@ntu.edu.sg">Jianfei Cai</a></b> </td>
 		<td valign=top> Nanyang Technological University, Singapore<br /><br /> </td>
-		<td valign=top> <!-- since --> </td>
+		<td valign=top> <font face="Verdana" size="1"><i>1/1/2013</i></font> </td>
 		<td valign=top> <font face="Verdana" size="1"><i>12/31/2014</i></font> </td>
 	</tr>
 	<tr>
@@ -109,19 +120,19 @@
 	<tr>
 		<td valign=top><b><a href="mailto:zhang@cis.uab.edu">Chengcui Zhang</a></b> </td>
 		<td valign=top>University of Alabama at Birmingham, USA<br /><br /></td>
-		<td valign=top> <!-- since --> </td>
+		<td valign=top> <font face="Verdana" size="1"><i>1/1/2015</i></font> </td>
 		<td valign=top> <font face="Verdana" size="1"><i>12/31/2016</i></font> </td>
 	</tr>
 	<tr>
 		<td valign=top><b><a href="mailto:jjoshi@pitt.edu">James Joshi</a></b> </td>
 		<td valign=top>University of Pittsburgh, USA<br /><br /></td>
-		<td valign=top> <!-- since --> </td>
+		<td valign=top> <font face="Verdana" size="1"><i>1/1/2014</i></font> </td>
 		<td valign=top> <font face="Verdana" size="1"><i>12/31/2015</i></font> </td>
 	</tr>
 	<tr>
 		<td valign=top><b><a href="mailto:psheu@uci.edu">Philip Sheu</a></b> </td>
 		<td valign=top>University California Irvine, USA<br /><br /> </td>
-		<td valign=top> <!-- since --> </td>
+		<td valign=top> <font face="Verdana" size="1"><i>1/1/2013</i></font> </td>
 		<td valign=top> <font face="Verdana" size="1"><i>12/31/2014</i></font> </td>
 	</tr>
 	<tr>
@@ -133,19 +144,19 @@
 	<tr>
 		<td valign=top><b><a href="mailto:tmei@microsoft.com">Mei Tao</a></b> </td>
 		<td valign=top> Microsoft, China<br /><br /> </td>
-		<td valign=top> <!-- since --> </td>
+		<td valign=top> <font face="Verdana" size="1"><i>1/1/2015</i></font> </td>
 		<td valign=top> <font face="Verdana" size="1"><i>12/31/2016</i></font> </td>
 	</tr>
 	<tr>
 		<td valign=top><b><a href="mailto:wslin@ntu.edu.sg">Weisi Lin</a></b> </td>
 		<td valign=top> Nanyang Technological University, Singapore<br /><br /> </td>
-		<td valign=top> <!-- since --> </td>
+		<td valign=top> <font face="Verdana" size="1"><i>1/1/2014</i></font> </td>
 		<td valign=top> <font face="Verdana" size="1"><i>12/31/2015</i></font> </td>
 	</tr>
 	<tr>
 		<td valign=top> <b><a href="mailto:homer@cc.ee.ntu.edu.tw">Homer Chen</a></b> </td>
 		<td valign=top> National Taiwan University, Taiwan<br /><br /> </td>
-		<td valign=top> <!-- since --> </td>
+		<td valign=top> <font face="Verdana" size="1"><i>1/1/2013</i></font> </td>
 		<td valign=top> <font face="Verdana" size="1"><i>12/31/2014</i></font> </td>
 	</tr>
 	
