@@ -1,7 +1,0 @@
-description1=Barcelona, As Seen From Tibidabo
-&description2=Plaça Catalunya, Barcelona's City Center
-&description3=Montjuic Plaça Espanya
-&description4=Diagonal Mar in 2004
-&description5=Hotel Vela
-&description6=Torre Agbar
-&description7=Port Vell
