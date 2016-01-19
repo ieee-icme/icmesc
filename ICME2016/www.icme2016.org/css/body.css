@@ -1,0 +1,33 @@
+BODY
+{
+    font-family:Arial;
+    font-size:11pt;
+    color:#505050;
+    /*background-color:#FAFAFA;*/
+}
+a
+{
+text-decoration: none;
+}
+
+/* unvisited link */
+a:link {
+    color: #49A3FF;
+}
+
+/* visited link */
+a:visited {
+    /* color: #49A3FF; */
+}
+
+/* mouse over link */
+a:hover {
+    /* color: #49A3FF; */
+    text-decoration:underline;
+}
+
+/* selected link */
+a:active {
+    /* color: #49A3FF; */
+}
+
