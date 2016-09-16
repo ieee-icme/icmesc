@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/default.css">
 
     <script type="text/javascript">
+
         function resizeheight() {
             document.getElementById('mainframe').style.height = document.getElementById('mainframe').contentWindow.document.body.scrollHeight + 50;
             //document.getElementById('mainframe').marginwidth = 50;
@@ -14,7 +15,7 @@
 
     <script type="text/javascript">
 <!-- Menu
-    var timeout = 500;
+    var timeout = 5000;
     var closetimer = 0;
     var ddmenuitem = 0;
 
@@ -50,7 +51,7 @@
     }
 
     // close layer when click-out
-    document.onclick = mclose;
+    //document.onclick = mclose;
     // -->
 </script>
 
@@ -62,10 +63,10 @@
 <link rel="shortcut icon" type="image/x-icon" href="http://www.google.com/images/icons/product/sites-16.ico" />
 <link rel="apple-touch-icon" href="../www.gstatic.com/sites/p/158cce/system/app/images/apple-touch-icon.png" type="image/png" />
 
-<link rel="canonical" href="home.html" />
-<meta name="title" content="ICME 2016" />
-<meta itemprop="name" content="ICME 2016" />
-<meta property="og:title" content="ICME 2016" />
+<link rel="canonical" href="index.html" />
+<meta name="title" content="The 2016 IEEE International Conference on Multimedia &amp; Expo (ICME 2016)" />
+<meta itemprop="name" content="The 2016 IEEE International Conference on Multimedia &amp; Expo (ICME 2016)" />
+<meta property="og:title" content="The 2016 IEEE International Conference on Multimedia &amp; Expo (ICME 2016)" />
 <meta name="description" content="The 2016 IEEE International Conference on Multimedia &amp; Expo" />
 <meta itemprop="description" content="The 2016 IEEE International Conference on Multimedia &amp; Expo" />
 <meta id="meta-tag-description" property="og:description" content="The 2016 IEEE International Conference on Multimedia &amp; Expo" />
@@ -76,7 +77,7 @@
 <!--[if IE]>
           <link rel="stylesheet" type="text/css" href="/system/app/css/camelot/allthemes%2die.css" />
         <![endif]-->
-<title>ICME 2016</title>
+<title>The 2016 IEEE International Conference on Multimedia &amp; Expo (ICME 2016)</title>
 <meta itemprop="image" content="http://www.icme2014.org/_/rsrc/1400492250673/home/Baidu.png?height=160&amp;width=320" />
 <meta property="og:image" content="http://www.icme2014.org/_/rsrc/1400492250673/home/Baidu.png?height=160&amp;width=320" />
 
@@ -90,6 +91,8 @@
         }
     </style>
     <link rel="stylesheet" type="text/css" href="css/body.css" />   
+
+
 </head>
 
 <body xmlns="http://www.google.com/ns/jotspot" id="body" class="en" style="background-color:#404040;">
@@ -99,17 +102,21 @@
         <tr id="sites-chrome-userheader">
             <td id="sites-header-title">
                 <ul id="sddm">
-	                <li><a href="#" onmouseover="mopen('home')" onmouseout="mclosetime()" onclick="javascript:document.getElementById('mainframe').src = 'home.html';"  dir="ltr">Home</a>
+	                <li><a href="#" onmouseover="mopen('home')" onmouseout="mclosetime()" touchend="mclosetime()" touchstart="mopen('home')" onclick="javascript:document.getElementById('mainframe').src = 'home.html';"  dir="ltr">Home</a>
 	                </li>
-	                <li><a href="#" onmouseover="mopen('General')" onmouseout="mclosetime()">General</a>
-		                <div id="General" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+	                <li><a href="#" onclick="mopen('General')" onmouseover="mopen('General')" touchstart="mopen('General')" onmouseout="mclosetime()" touchend="mclosetime()">General</a>
+		                <div id="General" onmouseover="mcancelclosetime()" touchstart="mcancelclosetime()" onmouseout="mclosetime()" touchend="mclosetime()">
+                            <a href="files\ICME16_Poster.pdf" target="new">ICME16 Poster</a>
                             <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'important-dates.html';" >Important Dates</a>
                             <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'organizing-committee.html';" >Organizing Committee</a>
+                            <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'areachairs.html';" >Area Chairs</a>
+                            <a href="files\others\Message-from-T-MM.pdf" target="new">Editorial</a>
                             <a href="#" onclick="javascript:document.getElementById('mainframe').src = 'sponsors.html';">Sponsors</a>
+                            <a href="#" onclick="javascript:document.getElementById('mainframe').src = 'contacts.html';">Contacts</a>
 		                </div>
 	                </li>
-	                <li><a href="#" onmouseover="mopen('CallsforParticipation')" onmouseout="mclosetime()">Calls</a>
-		                <div id="CallsforParticipation" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">                            
+	                <li><a href="#" onmouseover="mopen('CallsforParticipation')" onmouseover="mopen('CallsforParticipation')" touchstart="mopen('CallsforParticipation')"  onmouseout="mclosetime()" touchend="mclosetime()">Calls</a>
+		                <div id="CallsforParticipation" onmouseover="mcancelclosetime()" touchstart="mcancelclosetime()" onmouseout="mclosetime()" touchend="mclosetime()">                            
                             <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'call-for-papers.html';" >Call for Papers</a>
                             <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'call-for-workshops.html';" >Call for Workshops</a>
                             <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'call-for-tutorials.html';" >Call for Tutorials</a>
@@ -117,64 +124,67 @@
                             <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'call-for-panels.html';" >Call for Panels</a>                            
                             <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'call-for-demonstrations.html';" >Call for Demonstrations</a>                            
                             <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'call-for-grand-challenges.html';" >Call for Grand Challenges</a>
-                            <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'call-for-student-program.html';" >Call for Student Program</a> 
+                            <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'call-for-student-program.html';" >Call for Student Program Participation</a> 
+                            <a href="#" onclick="javascript:document.getElementById('mainframe').src = 'call-for-nsf.html';">NSF Student Travel Support</a>
                             <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'call-for-industry-track-papers.html';" >Call for Industry Forums &amp; Industry Track Papers</a>
-                            <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'call-for-hands-on-expo.html';" >Call for Hands-On Expo</font></a>
-                            <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'call-for-sponsorship.html';" >Call for Sponsorship</a>
-                            <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'call-for-tmm.html';" >Call for Presentation of T-MM Papers</a>                                                           
+                            <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'call-for-hands-on-expo.html';" >Call for Hands-on Expo</a>                            <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'call-for-sponsorship.html';" >Call for Sponsorship</a>
+                            <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'call-for-tmm.html';" >Call for Presentation of T-MM Papers</a>                                                                                       
 		                </div>
 	                </li>
-                    <li><a href="#" onmouseover="mopen('forstudents')" onmouseout="mclosetime()">Students</a>
-		                <div id="forstudents" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
-                            <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'call-for-student-program.html';" >Call for Student Program</a> 
-                            <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'grand-challenges.html';" >Grand Challenges</a>
-                            <a href="#" ><font  color="#888888">Three-Minute Thesis (3MT) Competition</font></a> 
-                            <a href="#" ><font  color="#888888">Student-Industry Luncheon</font></a> 
-		                </div>
-	                </li>
-
-	                <li><a href="#" onmouseover="mopen('forindustry')" onmouseout="mclosetime()">Industry</a>
-		                <div id="forindustry" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
-                            <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'call-for-industry-track-papers.html';" >Call for Industry Forums &amp; Industry Track Papers</a>
-                            <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'call-for-hands-on-expo.html';" >Call for Hands-On Expo</font></a>
-                            <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'call-for-sponsorship.html';" >Call for Sponsorship</a>
-                            <a href="#"><font  color="#888888">Industry Forum</font></a>
-                            <a href="#"><font  color="#888888">Industry Track</font></a>
-                            <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'call-for-hands-on-expo.html';" >Hands-On Expo</font></a>
-                            <a href="#" ><font  color="#888888">Student-Industry Luncheon</font></a> 
-                            <a href="#" onclick="javascript:document.getElementById('mainframe').src = 'sponsors.html';">Sponsors</a>
-		                </div>
-	                </li>
-                    <li><a href="#" onmouseover="mopen('forauthors')" onmouseout="mclosetime()">Authors</a>
-		                <div id="forauthors" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
-                            <a href="#" onclick="javascript:document.getElementById('mainframe').src = 'author-and-submission-instructions.html';" >Author Information and Submission Instructions</a>                                                        
-                            <a href="#" onclick="javascript:document.getElementById('mainframe').src = 'camera-ready-submission.html';" >Camera-Ready Submission</a>
-		                </div>
-	                </li>
-                    <li><a href="#" onmouseover="mopen('confereneprogram')" onmouseout="mclosetime()">Conference</a>
-		                <div id="confereneprogram" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
-                            <a href="#"><font  color="#888888">Schedule</font></a>
+                     <li><a href="#" onclick="mopen('confereneprogram')" onmouseover="mopen('confereneprogram')" touchstart="mopen('confereneprogram')" onmouseout="mclosetime()" touchend="mclosetime()">Conference</a>
+		                <div id="confereneprogram" onmouseover="mcancelclosetime()" touchstart="mcancelclosetime()" onmouseout="mclosetime()" touchend="mclosetime()">                                                        
+                            <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'ataglance.html';" >At a Glance</a>
+                            <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'schedule.html';" >Schedule</a>
                             <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'plenaries.html';" >Plenary Talks</a>
-                            <a href="#"><font  color="#888888">Papers</font></a>
+                            <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'accepted-papers.html';" >Papers</a>
                             <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'accepted-workshops.html';" >Workshops</a>
-                            <a href="#"><font  color="#888888">Tutorials</font></a>
-                            <a href="#"><font  color="#888888">Special Sessions</font></a>
-                            <a href="#"><font  color="#888888">Panels</font></a>
-                            <a href="#"><font  color="#888888">Demonstrations</font></a>
+                            <a href="#" onclick="javascript:document.getElementById('mainframe').src = 'accepted-tutorials.html';">Tutorials</a>
+                            <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'specialsessions.html';" >Special Sessions</a>
+                            <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'panels.html';" >Panels</a>
+                            <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'demons.html';" >Demonstrations</a>
                             <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'grand-challenges.html';" >Grand Challenges</a>
-                            <a href="#"><font  color="#888888">Student Program</font></a>
-                            <a href="#"><font  color="#888888">Industry Forum</font></a>
-                            <a href="#"><font  color="#888888">Industry Track</font></a>
-                            <a href="#"><font  color="#888888">Hands-On Expo</font></a>
+                            <a href="#" onclick="javascript:document.getElementById('mainframe').src = 'studentprogram.html';">Student Program</a>
+                            <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'indforum.html';" >Industry Forum</a>
+                            <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'handson.html';" >Hands-On Expo</a> 
                             <a href="#"><font  color="#888888">Awards</font></a>
 		                </div>
 	                </li>
+	                <li><a href="#" onclick="mopen('forindustry')" onmouseover="mopen('forindustry')" touchstart="mopen('forindustry')" onmouseout="mclosetime()" touchend="mclosetime()">Industry</a>
+		                <div id="forindustry" onmouseover="mcancelclosetime()" touchstart="mcancelclosetime()" onmouseout="mclosetime()" touchend="mclosetime()">
+                            <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'call-for-industry-track-papers.html';" >Call for Industry Forums &amp; Industry Track Papers</a>
+                            <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'call-for-hands-on-expo.html';" >Call for Hands-on Expo</a>
+                            <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'call-for-sponsorship.html';" >Call for Sponsorship</a>
+                            <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'indforum.html';" >Industry Forum</a>
+                            <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'handson.html';" >Hands-On Expo</a>
+                            <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'student-industry-luncheon.html';" >Student-Industry Luncheon</a>                            
+                            <a href="#" onclick="javascript:document.getElementById('mainframe').src = 'sponsors.html';">Sponsors</a>
+		                </div>
+	                </li>
+                    <li><a href="#" onclick="mopen('forauthors')" onmouseover="mopen('forauthors')" touchstart="mopen('forauthors')" onmouseout="mclosetime()" touchend="mclosetime()">Authors</a>
+		                <div id="forauthors" onmouseover="mcancelclosetime()" touchstart="mcancelclosetime()" onmouseout="mclosetime()" touchend="mclosetime()">
+                            <a href="#" onclick="javascript:document.getElementById('mainframe').src = 'author-and-submission-instructions.html';" >Author Information and Submission Instructions</a>                                                        
+                            <a href="#" onclick="javascript:document.getElementById('mainframe').src = 'camera-ready-submission.html';" >Camera-Ready Submission</a>
+                            <a href="#" onclick="javascript:document.getElementById('mainframe').src = 'presentation-guidelines.html';" >Presentation Guidelines</a>
+		                </div>
+	                </li>
+                    <li><a href="#" onclick="mopen('forstudents')" onmouseover="mopen('forstudents')" touchstart="mopen('forstudents')" onmouseout="mclosetime()" touchend="mclosetime()">Students</a>
+		                <div id="forstudents" onmouseover="mcancelclosetime()" touchstart="mcancelclosetime()" onmouseout="mclosetime()" touchend="mclosetime()">
+                            <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'call-for-student-program.html';" >Call for Student Program Participation</a> 
+                            <a href="#" onclick="javascript:document.getElementById('mainframe').src = 'call-for-nsf.html';">NSF Student Travel Support</a>
+                            <a href="#"  onclick="javascript:document.getElementById('mainframe').src = 'grand-challenges.html';" >Grand Challenges</a>
+		                </div>
+	                </li>
 
-                    <li><a href="#" onmouseover="mopen('attendees')" onmouseout="mclosetime()">Attendees</a>
-		                <div id="attendees" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
-                            <a href="#" onclick="javascript:document.getElementById('mainframe').src = 'venue.html';" >Venue Information</a>
+                    <li><a href="#" onclick="mopen('attendees')" onmouseover="mopen('attendees')" touchstart="mopen('attendees')" onmouseout="mclosetime()" touchend="mclosetime()">Attendees</a>
+		                <div id="attendees" onmouseover="mcancelclosetime()" touchstart="mcancelclosetime()" onmouseout="mclosetime()" touchend="mclosetime()">
+                            <a href="#" onclick="javascript:document.getElementById('mainframe').src = 'regdesk.html';">Registration Desk</a>
+                            <a href="#" onclick="javascript:document.getElementById('mainframe').src = 'registration.html';">Registration</a>
+                            <a href="#" onclick="javascript:document.getElementById('mainframe').src = 'visa.html';">Visa Information</a>
+                            <a href="#" onclick="javascript:document.getElementById('mainframe').src = 'venue.html';" >Venue and Travel</a>
                             <a href="#" onclick="javascript:document.getElementById('mainframe').src = 'localinfo.html';" >Local Information</a>
+                            <a href="#" onclick="javascript:document.getElementById('mainframe').src = 'accommodations.html';" >Accommodations</a>
                             <a href="#" onclick="javascript:document.getElementById('mainframe').src = 'seattle-attractions.html';">Seattle Attractions</a>
+                            <a href="#" onclick="javascript:document.getElementById('mainframe').src = 'socialevents.html';">Social Events</a>
                         </div>
                     </li>
                 </ul>
@@ -186,7 +196,8 @@
 <table id="sites-chrome-main" cellspacing="0" cellpadding="{scmCellpadding}" border="0">
 <tr>
 <td id="sites-canvas-wrapper" style="background-color:white;align-content:center;">
-<iframe id="mainframe" src="home.html" onload="resizeheight();" style="border-style: none; border-color: inherit; border-width: medium; display: block; height: 1434px; width: 93%; margin-top:20px; margin-left: 35px; margin-left: 35px;" >
+<iframe id="mainframe" onload="resizeheight();" style="border-style: none; border-color: inherit; border-width: medium; display: block; height: 1434px; width: 93%; margin-top:20px; margin-left: 35px; margin-left: 35px;" >
+
 </iframe>
 </td> 
 </tr>
@@ -203,6 +214,16 @@
         </td></tr>
 </table> 
 
+    <script type="text/javascript">
+        // Direct link to the sub pages!
+        var query = window.location.search.substring(1);
+        var pagename = query.split("=")[1];
+        //alert(pagename);
+        if (typeof pagename === 'undefined')
+            document.getElementById('mainframe').src = 'home.html';
+        else
+            document.getElementById('mainframe').src = pagename;        
+    </script>
 </body>
 
 <!-- Mirrored from www.icme2014.org/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Jul 2014 11:51:22 GMT -->

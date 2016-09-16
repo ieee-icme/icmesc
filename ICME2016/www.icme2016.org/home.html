@@ -1,9 +1,36 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" itemscope="" itemtype="http://schema.org/WebPage"><head><!-- Mirrored from www.icme2014.org/home by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Jul 2014 11:51:33 GMT --><!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack --><!-- <base target="_parent" /> --><!-- <base target="_blank" /> -->
 
- 
+    <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+    <script type="text/javascript">
+	$(function () {
+		var iframeOffset = $("#mainframe", window.parent.document).offset();
+        $("a").each(function () {
+            var link = $(this);
+            var href = link.attr("href");
+            if (href && href[0] == "#") {
+                var name = href.substring(1);
+                $(this).click(function () {
+                    var nameElement = $("[name='" + name + "']");
+                    var idElement = $("#" + name);
+                    var element = null;
+                    if (nameElement.length > 0) {
+                        element = nameElement;
+                    } else if (idElement.length > 0) {
+                        element = idElement;
+                    }
 
+                    if (element) {
+                        var offset = element.offset();
+                        window.parent.scrollTo(offset.left, offset.top + iframeOffset.top);
+                    }
 
+                    return false;
+                });
+            }
+        });
+	});
+	</script>
 <meta http-equiv="X-UA-Compatible" content="chrome=1" />
 <script type="text/javascript">/* Copyright 2008 Google. */ (function() { var b=window,e="chrome",g="tick",h="wtsrt_",l="tbsd_",m="tbnd_",n="start",p="_wtsrt",q="_tbnd",r="CSI/index.html";(function(){function k(a){this.t={};this.tick=function(a,d,c){this.t[a]=[void 0!=c?c:(new Date).getTime(),d];if(void 0==c)try{b.console.timeStamp(r+a)}catch(f){}};this[g](n,null,a)}var a;b.performance&&(a=b.performance.timing);var s=a?new k(a.responseStart):new k;b.jstiming={Timer:k,load:s};if(a){var d=a.navigationStart,f=a.responseStart;0<d&&f>=d&&(b.jstiming.srt=f-d)}if(a){var c=b.jstiming.load;0<d&&f>=d&&(c[g](p,void 0,d),c[g](h,p,f),c[g](l,h))}try{a=null,b[e]&&b[e].csi&&(a=Math.floor(b[e].csi().pageT),
 c&&0<d&&(c[g](q,void 0,b[e].csi().startE),c[g](m,q,d))),null==a&&b.gtbExternal&&(a=b.gtbExternal.pageT()),null==a&&b.external&&(a=b.external.pageT,c&&0<d&&(c[g](q,void 0,b.external.startE),c[g](m,q,d))),a&&(b.jstiming.pt=a)}catch(t){}})(); })()
@@ -17,7 +44,7 @@ d.JOT_formatRelativeToNow=function(c,a){var b=((new Date).getTime()-c)/6E4;if(14
 <script>
 
 
-var webspace = {"scottyUrl":"/_/upload","isConsumer":true,"canPublishScriptToAnyone":true,"serverFlags":{"cajaBaseUrl":"//www.gstatic.com/caja","cajaDebugMode":false},"sharingUrlPrefix":"/_/sharing","csiReportUri":"http://csi.gstatic.com/csi","sharingPolicy":"OPENED","analyticsAccountId":"","baseUri":"","enableUniversalAnalytics":false,"name":"ieeeicme2014","features":{"copySiteProgressUpdates":true,"horizontalNavLayout":true,"asyncPermanentDelete":false,"ritzSupport":true,"folderEmbed":true,"moreBackgroundTweaks":true,"flipFolderUrls":true,"animateNavigation":true,"driveInFileCabinet":true,"skiThemeIsDefault":true,"customHeaderThemes":true,"pdfEmbedSupport":false,"siteChromeSidebarWidgetsEditDialog":true,"animateToc":true,"canonicalLinkTagInHead":true,"analyticsTrackingForCorp":false,"driveImageEmbed":true,"siteChromeSystemFooterDialog":true,"plusOneButtonOptions":true,"plusOneButton":true,"adSenseDeprecate":true,"newKeyboardShortcuts":true,"mapsEngineEmbeds":true,"photoAlbumsInOnePick":true,"docosHideNotificationSettings":true,"helpBox":true,"openEditorMenuWithAltShift":true,"siteNotice":true,"skiTheme":true,"siteChromeDialogsToolbar":true,"plusBadge":false,"ritzChartSupport":true,"sitesLoveFixes2014Q2":true,"siteChromeHorizontalNavigationDialog":true,"youTubeEmbedSize":true,"linkPickerKeyboardShortcuts":true,"adSenseDeprecateMsg":true,"htmlEmbed":true,"publishDraftWithSaveShortcut":true,"newEditorMenuKeyboardHandling":true,"plusPost":true,"photoAlbumsGPlusUrlSupport":true,"siteChromeHeaderDialog":true,"fileCabinetOptions":true,"sitesLoveFixes":true},"domain":"defaultdomain","adsensePublisherId":null,"gvizVersion":1,"siteTitle":"ICME 2014","pageSharingId":"jotspot_page","plusPageId":"","onepickBaseUrl":"https://docs.google.com","siteNoticeRevision":null,"termsUrl":"http://sites.google.com/site/sites/system/app/pages/meta/terms","enableAnalytics":false,"siteNoticeMessage":null,"isPublic":true,"plusPageUrl":"","homePath":"/","sharingId":"jotspot","isAdsenseEnabled":true,"adsensePromoClickedOrSiteIneligible":true,"isStartPageEnabled":false,"domainAnalyticsAccountId":""};
+var webspace = {"scottyUrl":"/_/upload","isConsumer":true,"canPublishScriptToAnyone":true,"serverFlags":{"cajaBaseUrl":"//www.gstatic.com/caja","cajaDebugMode":false},"sharingUrlPrefix":"/_/sharing","csiReportUri":"http://csi.gstatic.com/csi","sharingPolicy":"OPENED","analyticsAccountId":"","baseUri":"","enableUniversalAnalytics":false,"name":"ieeeicme2014","features":{"copySiteProgressUpdates":true,"horizontalNavLayout":true,"asyncPermanentDelete":false,"ritzSupport":true,"folderEmbed":true,"moreBackgroundTweaks":true,"flipFolderUrls":true,"animateNavigation":true,"driveInFileCabinet":true,"skiThemeIsDefault":true,"customHeaderThemes":true,"pdfEmbedSupport":false,"siteChromeSidebarWidgetsEditDialog":true,"animateToc":true,"canonicalLinkTagInHead":true,"analyticsTrackingForCorp":false,"driveImageEmbed":true,"siteChromeSystemFooterDialog":true,"plusOneButtonOptions":true,"plusOneButton":true,"adSenseDeprecate":true,"newKeyboardShortcuts":true,"mapsEngineEmbeds":true,"photoAlbumsInOnePick":true,"docosHideNotificationSettings":true,"helpBox":true,"openEditorMenuWithAltShift":true,"siteNotice":true,"skiTheme":true,"siteChromeDialogsToolbar":true,"plusBadge":false,"ritzChartSupport":true,"sitesLoveFixes2014Q2":true,"siteChromeHorizontalNavigationDialog":true,"youTubeEmbedSize":true,"linkPickerKeyboardShortcuts":true,"adSenseDeprecateMsg":true,"htmlEmbed":true,"publishDraftWithSaveShortcut":true,"newEditorMenuKeyboardHandling":true,"plusPost":true,"photoAlbumsGPlusUrlSupport":true,"siteChromeHeaderDialog":true,"fileCabinetOptions":true,"sitesLoveFixes":true},"domain":"defaultdomain","adsensePublisherId":null,"gvizVersion":1,"siteTitle":"ICME 2016","pageSharingId":"jotspot_page","plusPageId":"","onepickBaseUrl":"https://docs.google.com","siteNoticeRevision":null,"termsUrl":"http://sites.google.com/site/sites/system/app/pages/meta/terms","enableAnalytics":false,"siteNoticeMessage":null,"isPublic":true,"plusPageUrl":"","homePath":"/","sharingId":"jotspot","isAdsenseEnabled":true,"adsensePromoClickedOrSiteIneligible":true,"isStartPageEnabled":false,"domainAnalyticsAccountId":""};
 
 
 
@@ -65,9 +92,9 @@ var JOT_siteRelTimeStrs = ["a minute ago","__duration__ minutes ago","an hour ag
                 window.jstiming.load.tick('scl');
               </script>
 <link rel="canonical" href="home.html" />
-<meta name="title" content="ICME 2016" />
-<meta itemprop="name" content="ICME 2016" />
-<meta property="og:title" content="ICME 2016" />
+<meta name="title" content="The 2016 IEEE International Conference on Multimedia &amp; Expo (ICME 2016)" />
+<meta itemprop="name" content="The 2016 IEEE International Conference on Multimedia &amp; Expo (ICME 2016)" />
+<meta property="og:title" content="The 2016 IEEE International Conference on Multimedia &amp; Expo (ICME 2016)" />
 <meta name="description" content="The 2016 IEEE International Conference on Multimedia &amp; Expo" />
 <meta itemprop="description" content="The 2016 IEEE International Conference on Multimedia &amp; Expo" />
 <meta id="meta-tag-description" property="og:description" content="The 2016 IEEE International Conference on Multimedia &amp; Expo" />
@@ -78,20 +105,19 @@ var JOT_siteRelTimeStrs = ["a minute ago","__duration__ minutes ago","an hour ag
         <![endif]-->
 
 
-<title>ICME 2016</title>
-<script type="text/javascript">
+
+<title>The 2016 IEEE International Conference on Multimedia &amp; Expo (ICME 2016)</title><script type="text/javascript">
                 window.jstiming.load.tick('cl');
               </script>
-<link rel="stylesheet" type="text/css" href="css/body.css" />   
+<link rel="stylesheet" type="text/css" href="css/body.css" />
     <style type="text/css">
         .auto-style1 {
-            text-decoration: none;
+            width: 271px;
         }
         .auto-style2 {
-            color: #003366;
+            color: #FF0000;
         }
-    </style>
-</head>
+    </style></head>
 <body xmlns="http://www.google.com/ns/jotspot" id="body" class="newStyle1">
 <div id="sites-canvas">
 <div id="goog-ws-editor-toolbar-container"> </div>
@@ -117,7 +143,7 @@ systems, communications, computer, and signal processing communities.
 ICME also features an Exposition of multimedia products and prototypes.</span></div>
     <br />    
     <div style="text-align: center;">
-       <h3 style="font-size: large; text-align: center;color: #323232;"><table align="center"><tr><td><hr style="width: 280px; color: #323232;" /></td><td width="auto">CONFIRMED PLENARY SPEAKERS</td><td><hr style="width:280px; color: #323232;" /></td></tr></table></h3>
+       <h3 style="font-size: large; text-align: center; color: rgb(50, 50, 50);"><table align="center"><tbody><tr><td><hr style="width: 280px; color: rgb(50, 50, 50);" /></td><td width="auto">CONFIRMED PLENARY SPEAKERS</td><td><hr style="width: 280px; color: rgb(50, 50, 50);" /></td></tr></tbody></table></h3>
     </div>    
     <div style="text-align: center;">
         <table align="center">            
@@ -127,63 +153,112 @@ ICME also features an Exposition of multimedia products and prototypes.</span></
                 <td><a href="plenaries.html#dariu"><img src="files/plenary/dariu.jpg" style="height: 176px; width: 176px;" /></a></td>
             </tr>                   
             <tr>
-                <td class="sites-sidebar-plus-badge"><strong style="text-align: center;"><a href="plenaries.html#feifei" >Fei-Fei Li</a></strong></td>
+                <td class="sites-sidebar-plus-badge"><strong style="text-align: center;"><a href="plenaries.html#feifei">Fei-Fei Li</a></strong></td>
                 <td class="sites-sidebar-plus-badge"><strong style="text-align: center;"><a href="plenaries.html#billinghurst">Mark Billinghurst</a></strong></td>
                 <td class="sites-sidebar-plus-badge"><strong style="text-align: center;"><a href="plenaries.html#dariu">Dariu M. Gavrila</a></strong></td>
             </tr>                
             <tr>
-                <td class="sites-sidebar-plus-badge">Stanford University, US</td>
-                <td class="sites-sidebar-plus-badge">University of South Australia, Australia</td>
-                <td class="sites-sidebar-plus-badge">Daimler R&amp;D in Ulm, Germany</td>
+                <td class="sites-sidebar-plus-badge">Stanford University, US<br /><a href="files/plenary/FeiFeiLi.pdf" target="_blank">Slides</a></td>
+                <td class="sites-sidebar-plus-badge">University of South Australia, Australia<br />
+                    </td>
+                <td class="sites-sidebar-plus-badge">Daimler R&amp;D in Ulm, Germany<br />
+                    <a href="files/plenary/2016_07_icme_gavrila.pdf" target="_blank">Slides</a></td>
             </tr>
         </tbody></table>     
            </div>
 <br />    
         <div style="text-align: center;">
-       <h3 style="font-size: large; text-align: center;color: #323232;"><table align="center"><tr><td><hr style="width: 345px; color: #323232;" /></td><td>NEWS AND UPDATES</td><td><hr style="width:345px; color: #323232;" /></td></tr></table></h3>
-    </div>    
-    <span style="font-weight: bold;">Upcoming important dates: </span><br /><br />
+       <h3 style="font-size: large; text-align: center; color: rgb(50, 50, 50);"><table align="center"><tbody><tr><td><hr style="width: 345px; color: rgb(50, 50, 50);" /></td><td>NEWS AND UPDATES</td><td><hr style="width: 345px; color: rgb(50, 50, 50);" /></td></tr></tbody></table></h3>
+    </div> 
+	<div align="justify">
+    <span style="line-height: 1.5; font-size: 1em;" align="justify">
+	<table>
+        <tbody>
+            <tr><td><b>* July 22, 2016</b></td><td>
+                <strong>Some slides from the keynote talks and tutorials are available on this site. Please check the <a href="plenaries.html">Plenary Talks page</a> and <a href="accepted-tutorials.html">Tutorials page</a> for more details.</strong>            
+            </td></tr>            
+            <tr><td><b>* July 22, 2016</b></td><td>
+                <strong>Winners of the on-site survey prize have been randomly drawn. They are Andreea Molnar, Univ. of Portsmouth, United Kingdom; Marek Domanski, Poznan Univ. of Technology, Poland; and Benoit Huet, EURECOM, France. Each will receive $100 in cash for the prize.</strong>            
+            </td></tr>            
+
+            <tr><td>* July 1, 2016</td><td>
+                The group rate for Westin Seattle is no longer available.
+            
+            </td></tr>            
+            <tr><td>* May 26, 2016</td><td>Hotel rooms for Westin 
+                Seattle at the early bird rate has been sold out. You can still book rooms at 
+                the group rate of $249 per night, which is still much lower than the market 
+                rate. <span class="auto-style2">This rate is available until June 17, 2016 or sold out.</span><strong class="scb-tooltip-text"> To take advantage of the group rate, please book your room 
+                </strong> <a href="https://www.starwoodmeeting.com/Book/2016IEEE" target="_blank"><strong class="scb-tooltip-text">here</strong></a><strong class="scb-tooltip-text">.</strong></td></tr>
+            <tr><td>* May 3, 2016</td><td><span style="line-height: 1.5; font-size: 1em;" align="justify">The
+copyright form submission is now operational and ready for camera-ready
+submission of Workshop, Demo, Grand Challenge, and Industry Track
+papers.&nbsp;The submission deadline is <span style="color: red;">May 13</span>.&nbsp;</span></td></tr><tr><td>* April 29, 2016</td><td>The application deadline for the NSF Travel Support is extended to May 13, 2016. </td></tr><tr><td>* April 28, 2016</td><td>The
+workhshop/demo paper copyright form submission is not ready yet. Please
+wait for a few days before submitting your camera-ready paper. Sorry
+about the delay.</td></tr><tr><td>* April 8, 2016</td><td>The registration is now open. Author registration deadline is May 15, and early bird registration deadline is May 31.</td></tr>
+            <tr><td>* March 31, 2016</td><td>The PDF eXpress ID for demo, industry track, grand challenge, and workshop paper submissions will be activiated on April 15.</td></tr><tr><td>* March 18, 2016</td><td>Please follow ICME 2016 on <a href="https://www.linkedin.com/groups/8181305" target="_blank">LinkedIn</a> or <a href="https://na01.safelinks.protection.outlook.com/?url=https%3a%2f%2fwww.facebook.com%2fieeeicme%2f%3fref%3dbookmarks&amp;data=01%7c01%7cchazhang%40microsoft.com%7ccf1ac021fc06415678ea08d34ec879e2%7c72f988bf86f141af91ab2d7cd011db47%7c1&amp;sdata=Id8fwZt2GtohQ5k9pSlH8PdA4iLoNv5fVf5KUoZPy9w%3d" target="_blank">Facebook</a>. If you are a student, please join our <a href="https://na01.safelinks.protection.outlook.com/?url=https%3a%2f%2fwww.facebook.com%2fIEEE-ICME-2016-Student-Participant-Page-1711452762432746%2f%3fskip_nax_wizard%3dtrue&amp;data=01%7c01%7cchazhang%40microsoft.com%7ccf1ac021fc06415678ea08d34ec879e2%7c72f988bf86f141af91ab2d7cd011db47%7c1&amp;sdata=8OsBme%2biwY9K4vN9XH3UsNBQVcjlu1%2bcphqOKbnJaSM%3d" target="_blank">student participant Facebook</a> page&nbsp;for information sharing and discussion (e.g., sharing hotel rooms). </td></tr>
+            <tr>   
+             <td valign="top" width="150">
+                 * March 17, 2016</td>
+             <td>
+Hotel reservation for the Westin Seattle is open. The group rate for a
+single occupancy room in is $249 per night. <strong>For early bird, there is a further $40 discount for a <span class="auto-style2">limited</span> amount of rooms, bringing the room rate to $209.</strong> To take advantage of the early bird rate, please book your room as soon as possible <a target="_blank" href="https://www.starwoodmeeting.com/Book/2016ICMEEarlyBird">here</a>.</td>
+        </tr>
+		    <tr>   
+             <td valign="top" width="150">
+    <span style="line-height: 1.5; font-size: 1em;" align="justify">
+	             * March 14, 2016</span></td>
+             <td>
+    <span style="line-height: 1.5; font-size: 1em;" align="justify">
+	             The list of accepted papers can be viewed <a href="accepted-papers.html">here</a>.</span></td>
+        </tr>
+		    <tr>   
+             <td valign="top" width="150">* February 3, 2016</td>
+             <td>We
+received National Science Foundation (NSF) award entitled "IEEE
+International Conference on Multimedia and Expo (ICME) 2016: Doctoral
+Symposium”. Selected students will receive financial aids participating
+this year’s exciting Student Program, including a Student-Industry
+Luncheon and Three Minute Thesis (3MT) competition.</td>
+        </tr>
+		<tr>   
+             <td>* February 10, 2016</td>
+             <td>Panel confirmed, <a href="panels.html">Making the Virtual Real: The Future of Augmented and Virtual Reality</a>, with star panelists from Google, Microsoft, and Valve moderated by our plenary speaker, <a href="plenaries.html#billinghurst">Mark Billinghurst</a>.</td>
+        </tr>
+        <tr>
+             <td>* January 31, 2016</td>
+             <td>A message from IEEE T-MM EiC (<a href="http://www.cse.buffalo.edu/faculty/chencw/" target="new">Prof. Chang Wen Chen</a>) on "Building a Stronger Multimedia Community" can be viewed <a href="files%5Cothers%5CMessage-from-T-MM.pdf" target="new">here</a>.</td>
+        </tr>   
+    </tbody></table>
+    <br />
+    <a style="font-weight: bold;">Upcoming important dates: </a><br /><br />
         <table>
-            <tr>
-                <td>* Panel/Tutorial Proposals Due:</td>
-                <td>January 15, 2016</td>
+	
+            <tbody>
+            
+			
+            
+			<tr>
+                <td class="auto-style1">* May 1, 2016</td>
+                <td>T-MM Presentation Submission</td>
             </tr>
-            <tr>
-                <td>* Notification of Panel/Tutorial Acceptance:</td>
-                <td>February 29, 2016</td>
+			<tr><td><span style="line-height: 1.5; font-size: 1em;" align="justify">* May 13, 2016</span></td><td><span style="line-height: 1.5; font-size: 1em;" align="justify"> Deadline for the NSF Travel Support application</span></td></tr><tr>
+                <td class="auto-style1">* May 13, 2016</td>
+                <td>Student Program (Student-Industry Luncheon and 3MT Competition) Submission</td>
             </tr>
-            <tr>
-                <td>* Notification of Regular Paper Acceptance:</td>
-                <td>March 11, 2016</td>
-            </tr>
-            <tr>
-                <td>* Workshop & Demo Paper Submission:</td>
-                <td>March 18, 2016</td>
-            </tr>
-            <tr>
-                <td>* Grand Challenge Paper and Data Submission:</td>
-                <td>April 3, 2016</td>
-            </tr>
-        </table>
-        </div>
-    <br/>
+        <tr><td class="auto-style1"><span style="line-height: 1.5; font-size: 1em;" align="justify">* May 15, 2016</span></td><td>Mandatory Author Registration</td></tr><tr><td class="auto-style1"><span style="line-height: 1.5; font-size: 1em;" align="justify"><span style="line-height: 1.5; font-size: 1em;" align="justify">* May 31, 2016</span></span></td><td>Early Bird Registration</td></tr></tbody></table>
+    </span></div>
+	<br />
 
 <div style="text-align: center;">
-       <h3 style="font-size: large; text-align: center;color: #323232;"><table align="center"><tr><td><hr style="width: 385px; color:; background-color: #323232;" /></td><td>SPONSORS</td><td><hr style="width:385px; color: ; background-color: #323232;" /></td></tr></table></h3>
+       <h3 style="font-size: large; text-align: center; color: rgb(50, 50, 50);"><table align="center"><tbody><tr><td><hr style="width: 385px; background-color: rgb(50, 50, 50);" /></td><td>SPONSORS</td><td><hr style="width: 385px; background-color: rgb(50, 50, 50);" /></td></tr></tbody></table></h3>
     </div>
     <div style="text-align: center;">               
-        <br />
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     <a href="http://research.microsoft.com" target="_blank"><img src="files/sponsors/microsoft_research.png" style="height: 60px;" /></a>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<a href="http://www.adobe.com" target="_blank"><img src="files/sponsors/adobe.png" style="height: 80px;" /></a>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <a href="http://www.disneyresearch.com" target="_blank"><img src="files/sponsors/disney_research.jpg" style="height: 70px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <br />
-        <br />
-        <br />
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     <a href="http://www.mediatek.com" target="_blank"><img src="files/sponsors/mediatek.png" style="height: 60px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <a href="http://www.cisco.com" target="_blank"><img src="files/sponsors/cisco.png" style="height: 80px;" /></a>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-        <a href="http://www.itri.org.tw" target="_blank"><img src="files/sponsors/ITRI.png" style="height: 60px; width: 299px;" /></a> 
-    </div>
-
-    </div></td></tr></tbody></table>
-</div>
-
-</body></html>
+        <br /><a href="http://www.nsf.gov/" target="_blank"><img style="border: 0px solid ; width: 414px; height: 80px;" alt="NSF" src="files/sponsors/nsf-long.gif" /></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.amazon.com/gp/video/getstarted" target="_blank"><img style="border: 0px solid inherit; width: 232px; height: 73px;" alt="Amazon Video" src="files/sponsors/amazon.png" /></a>
+        <br /><br /><a href="http://www.merl.com/" target="_blank"><img style="border: 0px solid ; width: 184px; height: 80px;" alt="MERL" src="files/sponsors/merl.jpg" /></a><br /><br /><br /> <a href="http://research.microsoft.com/" target="_blank"><img src="files/sponsors/microsoft_research.png" style="width: 247px; height: 72px;" /></a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="http://www.adobe.com/" target="_blank"><img src="files/sponsors/adobe.png" style="width: 73px; height: 76px;" /></a><br />
+        <br /><br /><a href="http://www.intel.com/content/www/us/en/architecture-and-technology/realsense-overview.html" target="_blank"><img style="border: 0px solid ; width: 334px; height: 70px;" alt="Intel" src="files/sponsors/intel-2.jpg" /></a><br /><br /><br /><a href="http://www.disneyresearch.com/" target="_blank"><img src="files/sponsors/disney_research.jpg" style="height: 70px;" /></a> &nbsp; &nbsp; &nbsp; &nbsp;<a href="http://www.mediatek.com/" target="_blank"><img src="files/sponsors/mediatek.png" style="width: 266px; height: 70px;" /></a><span style="background-color: white;"></span><br /><br /><br /><a href="http://www.itri.org.tw/" target="_blank"><img src="files/sponsors/ITRI.png" style="width: 336px; height: 71px;" /></a> &nbsp; &nbsp; &nbsp;<span style="text-decoration: underline;"></span> &nbsp; &nbsp;<a href="http://www.cisco.com/" target="_blank"><img src="files/sponsors/cisco.png" style="width: 108px; height: 72px;" /></a><br /><br /><br /><a href="http://www.google.com/" target="_blank"><img style="border: 0px solid ; width: 196px; height: 66px;" alt="Google" src="files/sponsors/google.png" /></a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="http://sites.ieee.org/seattle/" target="_blank"><img style="border: 0px solid inherit; width: 113px; height: 142px;" alt="IEEE Seattle Section" src="files/sponsors/ieee%20seattle%20logo.png" /></a>        
+        
+        <br /><br /></div></div></td></tr></tbody></table></div></div></body></html>
