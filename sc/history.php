@@ -41,8 +41,8 @@
 <div id="main">
 <h3>Conferences History</h3>
 	<ul>
-<li><a href="http://icme2017.azurewebsites.org/" target="_blank">ICME 2017</a>, Hongkong, China</li>				
-<li><a href="http://icme2016.azurewebsites.org/" target="_blank">ICME 2016</a>, Seattle, WA</li>			
+<li><a href="http://www.icme2017.org/" target="_blank">ICME 2017</a>, Hongkong, China</li>				
+<li><a href="http://www.ieee-icme.org/icme2016/" target="_blank">ICME 2016</a>, Seattle, WA</li>			
 <li><a href="http://www.icme2015.ieee-icme.org/" target="_blank">ICME 2015</a>, Torino, Italy</li>		
 <li><a href="http://www.icme2014.org/" target="_blank">ICME 2014</a>, Chengdu, China</li>	
 <li><a href="http://www.ieee-icme.org/icme2013/" target="_blank">ICME 2013</a>, San Jose, US</li>
