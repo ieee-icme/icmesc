@@ -40,11 +40,19 @@
     
 <div id="main">
 <h3>Prize Paper Award</h3>
-
+<p>IEEE ICME Announces the World's FIRST 10K Best Paper Award to promote research advances in the general Multimedia related areas: Text, Graphics, Vision, Image, Video, Audio, Speech, Sensing data, and their mining, learning, processing, compression, communications, rendering, and associated innovations and applications. An Award Committee with world top researchers in these areas are installed to make independent decision on the final Awards.
+</p>
+	<p>See you in <a href="http://www.icme2017.org/">ICME 2017 (Hong Kong)</a>.</p>
 	<div class="block">
-		<font size="3"><b>
-			Coming soon...
-		</b></font>
+		<span>
+				Download high resolution posters: <a href="images/prize/10K_Committee.png">10K_Award_Poster_Sample (7MB)</a> and <a href="images/prize/Award_Poster_Sample.PNG">10K_Award_Committee (8MB)</a>
+		</span>
+		<br /><br />
+
+		<image style="width:80%" src="images/prize/Award_Poster_Sample-mini.jpg"></image>
+		<br /><br />
+
+		<image style="width:80%" src="images/prize/10K_Committee-mini.jpg"></image>
 	</div>
 
 

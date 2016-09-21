@@ -5,7 +5,7 @@
 		return "
 			<a class=\"activenavitab\" href=\"home.php\">Home</a><span class=\"hide\"> | </span>
 			<a class=\"navitab\" href=\"topics.php\">TOPICS</a><span class=\"hide\"> | </span>
-			<a class=\"navitab\" href=\"author_info.php\">Author Information</a><span class=\"hide\"> | </span>
+			<!-- <a class=\"navitab\" href=\"author_info.php\">Author Information</a><span class=\"hide\"> | </span> -->
 			<a class=\"navitab\" href=\"steering_committee.php\">Steering Committee</a><span class=\"hide\"> | </span>
 			<a class=\"navitab\" href=\"history.php\">History</a><span class=\"hide\"> | </span>
 			<a class=\"navitab\" href=\"ICME_CFP_2019.pdf\">Call For Proposal</a><span class=\"hide\"> | </span>
@@ -16,16 +16,16 @@
 	{
 		return "
 			<p>
-			<a class=\"sidelink\" href=\"board/index.php\"><b>Message Borad</b></a><span class=\"hide\"> | </span>
+			<a class=\"sidelink\" href=\"index.php\"><b>Message Borad</b></a><span class=\"hide\"> | </span>
 			<a class=\"sidelink\" href=\"home.php\">Home</a><span class=\"hide\"> | </span>
 			<a class=\"sidelink\" href=\"news.php\">News</a><span class=\"hide\"> | </span>
-			<a class=\"sidelink\" href=\"ICME_SC_Charter.pdf\">Charter </a><span class=\"hide\"> | </span>
-			<a class=\"sidelink\" href=\"ICME_guidelines.pdf\">Guidelines </a><span class=\"hide\"> | </span>
-			<a class=\"sidelink\" href=\"minutes.php\">Minutes </a><span class=\"hide\"> | </span>
+			<!--<a class=\"sidelink\" href=\"ICME_SC_Charter.pdf\">Charter </a><span class=\"hide\"> | </span>-->
+			<!--<a class=\"sidelink\" href=\"ICME_guidelines.pdf\">Guidelines </a><span class=\"hide\"> | </span>-->
+			<!--<a class=\"sidelink\" href=\"minutes.php\">Minutes </a><span class=\"hide\"> | </span>-->
 			<a class=\"sidelink\" href=\"topics.php\">Topics</a><span class=\"hide\"> | </span>
-			<a class=\"sidelink\" href=\"author_info.php\">Author Information</a><span class=\"hide\"> | </span>
+			<!--<a class=\"sidelink\" href=\"author_info.php\">Author Information</a><span class=\"hide\"> | </span>-->
 			<a class=\"sidelink\" href=\"steering_committee.php\">Steering Committee</a><span class=\"hide\"> | </span>
-			<a class=\"sidelink\" href=\"history.php\">Upcoming conference</a><span class=\"hide\"> | </span>
+			<a class=\"sidelink\" href=\"upcoming_conference.php\">Upcoming conference</a><span class=\"hide\"> | </span>
 			<a class=\"sidelink\" href=\"history.php\">Previous conferences</a><span class=\"hide\"> | </span>
 			<a class=\"sidelink\" href=\"award.php\">Prize Paper Award</a><span class=\"hide\"> | </span>
 			</p>

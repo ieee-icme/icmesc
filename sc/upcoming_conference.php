@@ -44,13 +44,7 @@
 
 <h3>Upcoming Conferences</h3>
 <ul>
-
-	<li><a href="http://www.icme2014.org/" target="_blank">ICME 2014</a> Chengdu, China</li>
-	<li><a target="_blank">ICME 2015</a> Torino, Italy</li>
-	<li><a target="_blank">ICME 2016</a> Seattle, USA</li>
-	<li><a target="_blank">ICME 2017</a> Hong Kong, China</li>
-	
-	
+	<li><a href="http://www.icme2017.org/">ICME 2017</a> Hong Kong, China</li>
 </ul>
 
  
