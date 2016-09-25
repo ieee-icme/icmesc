@@ -40,275 +40,112 @@
     
 <div id="main">
 <h1>ICME Steering Committee</h1>
-
-<h3>Chair</h3>
+<h2>2015-2017</h2>
+<h3>Chair:</h3>
     <blockquote><h4>
-    	<font size="2">Jin Li, Microsoft, USA</font>
+    	<font size="2">Haohong Wang</font>
     </h4></blockquote>
-<br/><br/>
-
+<br/>
 <!-- name, company, since, until -->
-<table width=100%>
-	<tr>
-		<td width=20%>  </td>
-		<td width=50% valign="bottom">  </td>
-		<td valign=top><font size=1><i>Member since</i></font> </td>
-		<td valign=top><font size=1><i>Serves until</i></font> </td>
-	</tr>
-	
-	<tr>
-		<td width=20%>  </td>
-		<td width=50% valign="bottom"> <font size="3"><b><i>Voting Members</i></b></font> </td>
-		<td valign=top> </td>
-		<td valign=top> </td>
-	</tr>
-
-	<tr>
-		<td valign=top><!-- name --></td>
-		<td valign=top><h3>Circuits and Systems Society</h3></td>
-		<td valign=top> <!-- since --> </td>
-		<td valign=top> <!-- until --> </td>
-	</tr>
-	<tr>
-		<td valign=top><b> <a href="mailto:spli@microsoft.com">Shipeng Li</a></b> </td>
-		<td valign=top>Microsoft Research Asia, China<br /><br /> </td>
-		<td valign=top> <font face="Verdana" size="1"><i>1/1/2015</i></font>  </td>
-		<td valign=top> <font face="Verdana" size="1"><i>12/31/2016</i></font> </td>
-	</tr>
-	<tr>
-		<td valign=top><b> <a href="mailto:nling@scu.edu">Nam Ling</a></b> </td>
-		<td valign=top>Santa Clara University, USA<br /><br /> </td>
-		<td valign=top> <font face="Verdana" size="1"><i>1/1/2014</i></font> </td>
-		<td valign=top> <font face="Verdana" size="1"><i>12/31/2015</i></font> </td>
-	</tr>
-	<tr>
-		<td valign=top><b><a href="mailto:Jian.Zhang@uts.edu.au">Jian Zhang</a></b> </td>
-		<td valign=top> University of Technology, Sydney, Australia<br /><br /> </td>
-		<td valign=top> <font face="Verdana" size="1"><i>1/1/2013</i></font> </td>
-		<td valign=top> <font face="Verdana" size="1"><i>12/31/2014</i></font> </td>
-	</tr>
-		<tr valign=top>
-		<td valign=top><!-- name --></td>
-		<td valign=top><h3>Communications Society</h3></td>
-		<td valign=top> <!-- since --> </td>
-		<td valign=top> <!-- until --> </td>
-	</tr>
-	<tr>
-		<td valign=top><b><a href="mailto:peris@it.teithe.gr">Periklis Chatzimisios</a></b> </td>
-		<td valign=top> Alexander Technological Educational Institute of Thessaloniki, Greece<br /><br /> </td>
-		<td valign=top> <font face="Verdana" size="1"><i>1/1/2015</i></font> </td>
-		<td valign=top> <font face="Verdana" size="1"><i>12/31/2016</i></font>  </td>
-	</tr>
-	<tr>
-		<td valign=top><b><a href="mailto:smao@ieee.org">Shiwen Mao</a></b> </td>
-		<td valign=top> Auburn University, USA<br /><br /> </td>
-		<td valign=top> <font face="Verdana" size="1"><i>1/1/2014</i></font> </td>
-		<td valign=top> <font face="Verdana" size="1"><i>12/31/2015</i></font>  </td>
-	</tr>
-	<tr>
-		<td valign=top><b><a href="mailto:asjfcai@ntu.edu.sg">Jianfei Cai</a></b> </td>
-		<td valign=top> Nanyang Technological University, Singapore<br /><br /> </td>
-		<td valign=top> <font face="Verdana" size="1"><i>1/1/2013</i></font> </td>
-		<td valign=top> <font face="Verdana" size="1"><i>12/31/2014</i></font> </td>
-	</tr>
-	<tr>
-		<td valign=top><!-- name --></td>
-		<td valign=top> <h3>Computer Society</h3> </td>
-		<td valign=top> <!-- since --> </td>
-		<td valign=top> <!-- until --> </td>
-	</tr>
-	<tr>
-		<td valign=top><b><a href="mailto:zhang@cis.uab.edu">Chengcui Zhang</a></b> </td>
-		<td valign=top>University of Alabama at Birmingham, USA<br /><br /></td>
-		<td valign=top> <font face="Verdana" size="1"><i>1/1/2015</i></font> </td>
-		<td valign=top> <font face="Verdana" size="1"><i>12/31/2016</i></font> </td>
-	</tr>
-	<tr>
-		<td valign=top><b><a href="mailto:jjoshi@pitt.edu">James Joshi</a></b> </td>
-		<td valign=top>University of Pittsburgh, USA<br /><br /></td>
-		<td valign=top> <font face="Verdana" size="1"><i>1/1/2014</i></font> </td>
-		<td valign=top> <font face="Verdana" size="1"><i>12/31/2015</i></font> </td>
-	</tr>
-	<tr>
-		<td valign=top><b><a href="mailto:psheu@uci.edu">Philip Sheu</a></b> </td>
-		<td valign=top>University California Irvine, USA<br /><br /> </td>
-		<td valign=top> <font face="Verdana" size="1"><i>1/1/2013</i></font> </td>
-		<td valign=top> <font face="Verdana" size="1"><i>12/31/2014</i></font> </td>
-	</tr>
-	<tr>
-		<td valign=top><!-- name --></td>
-		<td valign=top><h3>Signal Processing Society</h3></td>
-		<td valign=top> <!-- since --> </td>
-		<td valign=top> <!-- until --> </td>
-	</tr>
-	<tr>
-		<td valign=top><b><a href="mailto:tmei@microsoft.com">Mei Tao</a></b> </td>
-		<td valign=top> Microsoft, China<br /><br /> </td>
-		<td valign=top> <font face="Verdana" size="1"><i>1/1/2015</i></font> </td>
-		<td valign=top> <font face="Verdana" size="1"><i>12/31/2016</i></font> </td>
-	</tr>
-	<tr>
-		<td valign=top><b><a href="mailto:wslin@ntu.edu.sg">Weisi Lin</a></b> </td>
-		<td valign=top> Nanyang Technological University, Singapore<br /><br /> </td>
-		<td valign=top> <font face="Verdana" size="1"><i>1/1/2014</i></font> </td>
-		<td valign=top> <font face="Verdana" size="1"><i>12/31/2015</i></font> </td>
-	</tr>
-	<tr>
-		<td valign=top> <b><a href="mailto:homer@cc.ee.ntu.edu.tw">Homer Chen</a></b> </td>
-		<td valign=top> National Taiwan University, Taiwan<br /><br /> </td>
-		<td valign=top> <font face="Verdana" size="1"><i>1/1/2013</i></font> </td>
-		<td valign=top> <font face="Verdana" size="1"><i>12/31/2014</i></font> </td>
-	</tr>
-	
-	<tr>
-		<td valign=top><!-- name --></td>
-		<td valign=top><h3><i>Non-voting Members</i></h3></td>
-		<td valign=top> <!-- since --> </td>
-		<td valign=top> <!-- until --> </td>
-	</tr>
-
-	<tr>
-		<td valign=top><b><a href="mailto:chencw@buffalo.edu">Chang Wen Chen</a></b> </td>
-		<td valign=top>State University of New York at Buffalo, USA<br /> Editor-in-Chief of IEEE Trans. on Multimedia <br /><br /></td>
-		<td valign=top> <font face="Verdana" size="1"><i>01/2014</i></font> </td>
-		<td valign=top> <!-- until --> </td>
-	</tr>
-
-	<tr>
-		<td valign=top><b><a href="mailto:cwlinnthu@gmail.com">Chia-Wen Lin</a></b> </td>
-		<td valign=top>National Tsing Hua University, Taiwan<br /> CAS MSATC Chair <br /><br /></td>
-		<td valign=top> <font face="Verdana" size="1"><i>09/2013</i></font> </td>
-		<td valign=top> <!-- until --> </td>
-	</tr>
-	<tr>
-		<td valign=top><b><a href="mailto:YGWEN@ntu.edu.sg">Yonggang Wen</a></b>  </td>
-		<td valign=top>Nanyang Technological University, Singapore <br />ComSoc MMTC Chair<br /><br /></td>
-		<td valign=top> <font face="Verdana" size="1"><i>01/2014</i></font> </td>
-		<td valign=top> <!-- until --> </td>
-	</tr>
-	<tr>
-		<td valign=top><b><a href="mailto:chens@cs.fiu.edu">Shu-Ching Chen</a></b> </td>
-		<td valign=top>Florida International University, USA <br />(CS TCMC Chair)<br /><br /> </td>
-		<td valign=top> <font face="Verdana" size="1"><i>03/2013</i></font> </td>
-		<td valign=top> <!-- until --> </td>
-	</tr>
-	<tr>
-		<td valign=top><b><a href="mailto:dinei@microsoft.com">Dinei Florencio</a></b> </td>
-		<td valign=top> Microsoft, USA <br />SP MMSP TC Chair <br /></td>
-		<td valign=top> <font face="Verdana" size="1"><i>01/2014</i></font> </td>
-		<td valign=top> <!-- until --> </td>
-	</tr>
-	<tr>
-		<td valign=top><b><a href="mailto:Qiang.Wu@uts.edu.au">Qiang Wu</a></b> </td>
-		<td valign=top>University of Technology, Sydney, Australia <br />Representing ICME2012 <br /><br /> </td>
-		<td valign=top> <font face="Verdana" size="1"><i>01/2014</i></font> </td>
-		<td valign=top> <!-- until --> </td>
-	</tr>
-	<tr>
-		<td valign=top><b><a href="mailto:anupbasu1@gmail.com">Anup Basu</a></b>  </td>
-		<td valign=top>University of Alberta, Canada <br />Representing ICME2013<br /><br />  </td>
-		<td valign=top> <font face="Verdana" size="1"><i>01/2014</i></font> </td>
-		<td valign=top> <!-- until --> </td>
-	</tr>
-	<tr>
-		<td valign=top><b><a href="mailto:spli@microsoft.com">Shipeng Li</a></b>  </td>
-		<td valign=top>Microsoft, China <br />Representing ICME2014<br /><br />  </td>
-		<td valign=top> <font face="Verdana" size="1"><i>01/2014</i></font> </td>
-		<td valign=top> <!-- until --> </td>
-	</tr>
-	<tr>
-		<td valign=top><b><a href="mailto:zliu@microsoft.com">Zicheng Liu</a></b>  </td>
-		<td valign=top>Microsoft, USA <br />Representing ICME2014<br /><br />  </td>
-		<td valign=top> <font face="Verdana" size="1"><i>01/2014</i></font> </td>
-		<td valign=top> <!-- until --> </td>
-	</tr>
-	<tr>
-		<td valign=top><b><a href="mailto:enrico.magli@polito.it">Enrico Magli</a></b> </td>
-		<td valign=top>Polytechnic University of Turin, Italy <br />Representing ICME 2015<br /></td>
-		<td valign=top> <font face="Verdana" size="1"><i>01/2014</i></font> </td>
-		<td valign=top> <!-- until --> </td>
-	</tr>
-	<tr>
-		<td valign=top><b><a href="mailto:marco.tagliasacchi@polimi.it">Marco Tagliasacchi</a></b> </td>
-		<td valign=top>Polytechnic University of Turin, Italy <br />Representing ICME 2015 <br /></td>
-		<td valign=top> <font face="Verdana" size="1"><i>01/2014</i></font> </td>
-		<td valign=top> <!-- until --> </td>
-	</tr>
-	<tr>
-		<td valign=top><b><a href="mailto:pachou@microsoft.com">Philip Chou</a></b>  </td>
-		<td valign=top>Microsoft, USA <br />Representing ICME2016<br /><br />  </td>
-		<td valign=top> <font face="Verdana" size="1"><i>01/2014</i></font> </td>
-		<td valign=top> <!-- until --> </td>
-	</tr>
-	<tr>
-		<td valign=top><b><a href="mailto:chazhang@microsoft.com">Cha Zhang</a></b>  </td>
-		<td valign=top>Microsoft, USA <br />Representing ICME2016<br /><br />  </td>
-		<td valign=top> <font face="Verdana" size="1"><i>01/2014</i></font> </td>
-		<td valign=top> <!-- until --> </td>
-	</tr>
-	<tr>
-		<td valign=top><b><a href="mailto:eeau@ust.uk">Oscar Au</a></b>  </td>
-		<td valign=top> Hong Kong University of Science &Aacute; Technology, Hong Kong <br />Representing ICME2017<br /><br />  </td>
-		<td valign=top> <font face="Verdana" size="1"><i>01/2014</i></font> </td>
-		<td valign=top> <!-- until --> </td>
-	</tr>
-	<tr>
-		<td valign=top><b><a href="mailto:qianzh@ust.uk">Qian Zhang</a></b>  </td>
-		<td valign=top> Hong Kong University of Science &Aacute; Technology, Hong Kong <br />Representing ICME2017<br /><br />  </td>
-		<td valign=top> <font face="Verdana" size="1"><i>01/2014</i></font> </td>
-		<td valign=top> <!-- until --> </td>
-	</tr>
-	<tr>
-		<td valign=top><b><a href="mailto:cckuo@sipi.usc.edu">Jay, C.-C. Kuo</a></b>  </td>
-		<td valign=top> University of Southern California, USA <br />Representing ICME2018<br /><br />  </td>
-		<td valign=top> <font face="Verdana" size="1"><i>01/2014</i></font> </td>
-		<td valign=top> <!-- until --> </td>
-	</tr>
-	<tr>
-		<td valign=top><b><a href="mailto:haohongwang@gmail.com">Haohong Wang</a></b>  </td>
-		<td valign=top> TCL Research America, USA <br />Subcommittee on Multimedia Society and History<br /><br />  </td>
-		<td valign=top> <font face="Verdana" size="1"><i>01/2014</i></font> </td>
-		<td valign=top> <!-- until --> </td>
-	</tr>
-	<tr>
-		<td valign=top><b><a href="mailto:chingyung@us.ibm.com">Ching-Yung Lin</a></b>  </td>
-		<td valign=top> IBM, USA <br />Subcommittee on Multimedia Society and History<br /><br />  </td>
-		<td valign=top> <font face="Verdana" size="1"><i>01/2014</i></font> </td>
-		<td valign=top> <!-- until --> </td>
-	</tr>
-	<tr>
-		<td valign=top><b><a href="mailto:zengw@missouri.edu">Wenjun Zeng</a></b>  </td>
-		<td valign=top> Univ. of Missouri, USA <br />Subcommittee on Multimedia Society and History<br /><br />  </td>
-		<td valign=top> <font face="Verdana" size="1"><i>01/2014</i></font> </td>
-		<td valign=top> <!-- until --> </td>
-	</tr>
-	<tr>
-		<td valign=top><b><a href="mailto:avetro@merl.com">Anthony Vetro</a></b>  </td>
-		<td valign=top> MERL, USA <br />Subcommittee on Conference Operation<br /><br />  </td>
-		<td valign=top> <font face="Verdana" size="1"><i>01/2014</i></font> </td>
-		<td valign=top> <!-- until --> </td>
-	</tr>
-
-	<tr>
-		<td valign=top><!-- name --></td>
-		<td valign=top> <h3>Administration</h3> </td>
-		<td valign=top> <!-- since --> </td>
-		<td valign=top> <!-- until --> </td>
-	</tr>
-	<tr>
-		<td valign=top><b><a href="mailto:d.hurley@ieee.org">Denise Hurley</a></b> </td>
-		<td valign=top>IEEE Signal Processing Society <br /><br /></td>
-		<td valign=top> <!-- since --> </td>
-		<td valign=top> <!-- until --> </td>
-	</tr>
-	<tr>
-		<td valign=top><b><a href="mailto:n.allen@ieee.org">Nicole Allen</a></b> </td>
-		<td valign=top>IEEE Signal Processing Society</td>
-		<td valign=top> <!-- since --> </td>
-		<td valign=top> <!-- until --> </td>
-	</tr>
-</table>
-
+	<h3>Finance Committee:</h3>
+	<blockquote><h4>
+			<font size="2">Chengcui Zhang (Chair)</font>
+		</h4></blockquote>
+	<blockquote><h4>
+			<font size="2">Anup Basu (Co-Chair)</font>
+		</h4></blockquote>
+	<blockquote><h4>
+			<font size="2">Zicheng Liu – ICME 2014 Program Chair, CAS MSATC Chair</font>
+		</h4></blockquote>
+	<blockquote><h4>
+			<font size="2">Enrico Magli – ICME 2015 General Chair, SP MMSP Chair</font>
+		</h4></blockquote>
+	<blockquote><h4>
+			<font size="2">Cha Zhang – ICME 2016 General Chair</font>
+		</h4></blockquote>
+	<blockquote><h4>
+			<font size="2">Kenneth K. M. Lam – ICME 2017 General Chair</font>
+		</h4></blockquote>
+	<blockquote><h4>
+			<font size="2">Wenjun Zeng – ICME 2018 General Chair</font>
+		</h4></blockquote>
+	<br/>
+	<h3>Paper Committee:</h3>
+	<blockquote><h4>
+			<font size="2">Tao Mei (Chair)</font>
+		</h4></blockquote>
+	<blockquote><h4>
+			<font size="2">Zhu Li (Co-Chair)</font>
+		</h4></blockquote>
+	<blockquote><h4>
+			<font size="2">Mei-Ling Shyu – CS TCMC Chair</font>
+		</h4></blockquote>
+	<blockquote><h4>
+			<font size="2">Yonggang Wen – ComSoc MMTC Past Chair</font>
+		</h4></blockquote>
+	<blockquote><h4>
+			<font size="2">Gene Cheung – SP MMSPTC</font>
+		</h4></blockquote>
+	<blockquote><h4>
+			<font size="2">Joern Ostermann – ICME 2017 General Chair</font>
+		</h4></blockquote>
+	<blockquote><h4>
+			<font size="2">C. C. Jay Kuo – ICME 2018 General Chair</font>
+		</h4></blockquote>
+	<br/>
+	<h3>Award Committee:</h3>
+	<blockquote><h4>
+			<font size="2">Min Chen (Chair)</font>
+		</h4></blockquote>
+	<blockquote><h4>
+			<font size="2">Periklis (Co-Chair)</font>
+		</h4></blockquote>
+	<blockquote><h4>
+			<font size="2">Qian Zhang – ICME 2017 Program Chair </font>
+		</h4></blockquote>
+	<blockquote><h4>
+			<font size="2">Jin Li – ICME SC Past Chair</font>
+		</h4></blockquote>
+	<br/>
+	<h3>Program Committee:</h3>
+	<blockquote><h4>
+			<font size="2">Shipeng Li (Chair)</font>
+		</h4></blockquote>
+	<blockquote><h4>
+			<font size="2">Dong Xu (Co-Chair)</font>
+		</h4></blockquote>
+	<blockquote><h4>
+			<font size="2">Yap-Peng Tan – ICME 2015 Program Chair, ICME’10 General Chair</font>
+		</h4></blockquote>
+	<blockquote><h4>
+			<font size="2">Phillip Chou – ICME 2016 Program Chair</font>
+		</h4></blockquote>
+	<blockquote><h4>
+			<font size="2">Lina Karam – ICME 2017 Program Chair</font>
+		</h4></blockquote>
+	<br/>
+	<h3>Strategy Development Committee:</h3>
+	<blockquote><h4>
+			<font size="2">Irene Cheng (Chair) </font>
+		</h4></blockquote>
+	<blockquote><h4>
+			<font size="2">Chia-Wen Lin (Co-Chair)</font>
+		</h4></blockquote>
+	<blockquote><h4>
+			<font size="2">Shiwen Mao – ComSoc MMTC Chair</font>
+		</h4></blockquote>
+	<blockquote><h4>
+			<font size="2">Frossard Pascal – ICME 2002 General Chair</font>
+		</h4></blockquote>
+	<blockquote><h4>
+			<font size="2">Alexander C Loui – Past member of ICME Steering Committee</font>
+		</h4></blockquote>
+	<br/>
+	<h3>Others:</h3>
+	<blockquote><h4>
+			<font size="2">Alvin, Xinyao Sun - Webmaster </font>
+		</h4></blockquote>
+	<br/><br/>
 <br /><br />
 <h3><a href="past_members.php">Past Members</a></h3>
 

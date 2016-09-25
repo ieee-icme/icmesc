@@ -45,14 +45,15 @@
 	<p>See you in <a href="http://www.icme2017.org/">ICME 2017 (Hong Kong)</a>.</p>
 	<div class="block">
 		<span>
-				Download high resolution posters: <a href="images/prize/10K_Committee.png">10K_Award_Poster_Sample (7MB)</a> and <a href="images/prize/Award_Poster_Sample.PNG">10K_Award_Committee (8MB)</a>
+				Download high resolution posters:  <a href="images/prize/Award_Poster_Sample.PNG">10K_Award_Committee (8MB)</a> and <a href="images/prize/10K_Committee.png">10K_Award_Poster_Sample (7MB)</a>
 		</span>
 		<br /><br />
 
-		<image style="width:80%" src="images/prize/Award_Poster_Sample-mini.jpg"></image>
+		<image style="width:80%" src="images/prize/10K_Committee-mini.jpg"></image>
 		<br /><br />
 
-		<image style="width:80%" src="images/prize/10K_Committee-mini.jpg"></image>
+		<image style="width:80%" src="images/prize/Award_Poster_Sample-mini.jpg"></image>
+
 	</div>
 
 

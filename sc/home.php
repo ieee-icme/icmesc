@@ -69,7 +69,7 @@ With around 1000 submissions and 500 participants each year, the IEEE Internatio
 	<center>
 	<div class="block">
 		<font size="3"><b>
-			<a href="upcoming_conference.php">Upcoming ICME</a> | <a href="previous_conferences.php">Previous ICME</a>
+			<a href="upcoming_conference.php">Upcoming ICME</a> | <a href="history.php">Previous ICME</a>
 		</b></font>
 	</div>
 	</center>
