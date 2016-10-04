@@ -29,6 +29,13 @@
 			<a class=\"sidelink\" href=\"history.php\">Previous conferences</a><span class=\"hide\"> | </span>
 			<a class=\"sidelink\" href=\"award.php\">Prize Paper Award</a><span class=\"hide\"> | </span>
 			</p>
+			<h3>SC Discussion</h3>
+			<p>
+			<a class=\"sidelink\" href=\"sc_charter.php\">Charter </a><span class=\"hide\"> | </span>
+			<a class=\"sidelink\" href=\"sc_guidelines.php\">Guidelines </a><span class=\"hide\"> | </span>
+			<a class=\"sidelink\" href=\"minutes.php\">Minutes </a><span class=\"hide\"> | </span>
+			<a class=\"sidelink\" href=\"author_info.php\">Author Information</a><span class=\"hide\"> | </span>
+			</p>
 		";
 	}
 	

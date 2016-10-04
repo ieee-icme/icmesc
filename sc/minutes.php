@@ -1,3 +1,4 @@
+<? include('headerAuth.php'); ?>
 <? include('includes.php'); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -15,7 +16,7 @@
 
 <body>
 <div id="toptabs">
-<p>Site Network: 
+<p>Site Network:
 <a class="activetoptab" href="#">Papers</a><span class="hide"> | </span>
 <a class="toptab" href="#">Projects</a><span class="hide"> | </span>
 <a class="toptab" href="#">Shop</a></p>
@@ -33,11 +34,11 @@
 <h2>Site menu:</h2>
 <?= nav_menu(); ?>
 </div>
-	
+
 <div id="desc">
 <?= desc(); ?>
 </div>
-    
+
 <div id="main">
 <h3>Meeting Minutes</h3>
 	<ul>
@@ -65,7 +66,7 @@
 
 <? echo quote(); ?>
 </div>
-    
+
 <div id="footer">
 <? footer(); ?>
 </div>
