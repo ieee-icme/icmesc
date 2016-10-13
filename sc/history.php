@@ -44,7 +44,7 @@
 <li><a href="http://www.icme2017.org/" target="_blank">ICME 2017</a>, Hongkong, China</li>				
 <li><a href="http://www.ieee-icme.org/icme2016/" target="_blank">ICME 2016</a>, Seattle, WA</li>			
 <li><a href="http://www.icme2015.ieee-icme.org/" target="_blank">ICME 2015</a>, Torino, Italy</li>		
-<li><a href="http://www.icme2014.org/" target="_blank">ICME 2014</a>, Chengdu, China</li>	
+<li><a href="http://www.ieee-icme.org/icme2014/www.icme2014.org/index.html" target="_blank">ICME 2014</a>, Chengdu, China</li>
 <li><a href="http://www.ieee-icme.org/icme2013/" target="_blank">ICME 2013</a>, San Jose, US</li>
 <li><a href="http://www.ieee-icme.org/icme2012/" target="_blank">ICME 2012</a>, Melbourne, Australia</li>
 <li> <a href="http://www.ieee-icme.org/icme2011/" target="_blank">ICME 2011</a>, Barcelona, Spain </li>
